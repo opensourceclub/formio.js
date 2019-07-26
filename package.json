@@ -1,6 +1,6 @@
 {
   "name": "formiojs",
-  "version": "4.0.0-rc.9-zh",
+  "version": "4.0.1-rc.9",
   "description": "Common js library for client side interaction with <form.io>",
   "main": "index.js",
   "files": [
@@ -27,8 +27,7 @@
     "test:unit": "mocha --compilers js:@babel/register src/**/*.unit.js -b --exit",
     "test:unit:watch": "mocha --compilers js:@babel/register src/**/*.unit.js d--watch",
     "test:e2e": "NODE_OPTIONS=\"--max-old-space-size=4096\" karma start --verbose --single-run",
-    "test:e2e:watch": "NODE_OPTIONS=\"--max-old-space-size=4096\" karma start --no-single-run --auto-watch",
-    "release-to-branch": "branch-release -b chinese-translation-releases -d lib -s build"
+    "test:e2e:watch": "NODE_OPTIONS=\"--max-old-space-size=4096\" karma start --no-single-run --auto-watch"
   },
   "repository": {
     "type": "git",
@@ -65,7 +64,6 @@
   },
   "homepage": "https://github.com/formio/formio.js#readme",
   "dependencies": {
-    "branch-release": "^1.0.4",
     "browser-cookies": "^1.2.0",
     "choices.js": "^7.0.0",
     "core-js": "^3.1.4",
