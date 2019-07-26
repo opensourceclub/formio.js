@@ -244,6 +244,9 @@ export default class WebformBuilder extends Component {
     else {
       options = arguments[0];
     }
+    // Reset skipInit in case PDFBuilder has set it.
+    options.skipInit = false;
+
     super(null, options);
 
     this.element = element;
@@ -520,24 +523,24 @@ export default class WebformBuilder extends Component {
   get defaultGroups() {
     return {
       basic: {
-        title: &apos;Basic&apos;,
+        title: &apos;&#x57FA;&#x7840;&#x63A7;&#x4EF6;&apos;,
         weight: 0,
         default: true,
       },
       advanced: {
-        title: &apos;Advanced&apos;,
+        title: &apos;&#x7279;&#x6B8A;&#x63A7;&#x4EF6;&apos;,
         weight: 10
       },
       layout: {
-        title: &apos;Layout&apos;,
+        title: &apos;UI&#x5E03;&#x5C40;&apos;,
         weight: 20
       },
       data: {
-        title: &apos;Data&apos;,
+        title: &apos;&#x6570;&#x636E;&#x5C55;&#x793A;&apos;,
         weight: 30
       },
       premium: {
-        title: &apos;Premium&apos;,
+        title: &apos;&#x9AD8;&#x7EA7;&#x63A7;&#x4EF6;&apos;,
         weight: 40
       },
     };
@@ -560,7 +563,7 @@ export default class WebformBuilder extends Component {
     if (!value.components.length) {
       value.components.push({
         type: &apos;button&apos;,
-        label: &apos;Submit&apos;,
+        label: &apos;&#x4FDD;&#x5B58;&apos;,
         key: &apos;submit&apos;,
         size: &apos;md&apos;,
         block: false,

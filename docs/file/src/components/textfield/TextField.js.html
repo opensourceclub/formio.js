@@ -227,7 +227,7 @@ import Input from &apos;../_classes/input/Input&apos;;
 export default class TextFieldComponent extends Input {
   static schema(...extend) {
     return Input.schema({
-      label: &apos;Text Field&apos;,
+      label: &apos;&#x8F93;&#x5165;&#x6846;&apos;,
       key: &apos;textField&apos;,
       type: &apos;textfield&apos;,
       mask: false,
@@ -247,7 +247,7 @@ export default class TextFieldComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: &apos;Text Field&apos;,
+      title: &apos;&#x8F93;&#x5165;&#x6846;&apos;,
       icon: &apos;terminal&apos;,
       group: &apos;basic&apos;,
       documentation: &apos;http://help.form.io/userguide/#textfield&apos;,
@@ -351,7 +351,7 @@ export default class TextFieldComponent extends Input {
     const self = this;
     const maskOptions = this.maskOptions;
     this.selectOptions(maskInput, &apos;maskOption&apos;, maskOptions);
-    // Change the text field mask when another mask is selected.
+    // Change the &#x8F93;&#x5165;&#x6846; mask when another mask is selected.
     maskInput.onchange = function() {
       self.updateMask(textInput, this.value);
     };

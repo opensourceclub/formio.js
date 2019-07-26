@@ -4,7 +4,7 @@ import Input from '../_classes/input/Input';
 export default class TextFieldComponent extends Input {
   static schema(...extend) {
     return Input.schema({
-      label: 'Text Field',
+      label: '输入框',
       key: 'textField',
       type: 'textfield',
       mask: false,
@@ -24,7 +24,7 @@ export default class TextFieldComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Text Field',
+      title: '输入框',
       icon: 'terminal',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#textfield',
@@ -128,7 +128,7 @@ export default class TextFieldComponent extends Input {
     const self = this;
     const maskOptions = this.maskOptions;
     this.selectOptions(maskInput, 'maskOption', maskOptions);
-    // Change the text field mask when another mask is selected.
+    // Change the 输入框 mask when another mask is selected.
     maskInput.onchange = function() {
       self.updateMask(textInput, this.value);
     };

@@ -300,24 +300,24 @@ export default class WebformBuilder extends Component {
   get defaultGroups() {
     return {
       basic: {
-        title: 'Basic',
+        title: '基础控件',
         weight: 0,
         default: true,
       },
       advanced: {
-        title: 'Advanced',
+        title: '特殊控件',
         weight: 10
       },
       layout: {
-        title: 'Layout',
+        title: 'UI布局',
         weight: 20
       },
       data: {
-        title: 'Data',
+        title: '数据展示',
         weight: 30
       },
       premium: {
-        title: 'Premium',
+        title: '高级控件',
         weight: 40
       },
     };
@@ -340,7 +340,7 @@ export default class WebformBuilder extends Component {
     if (!value.components.length) {
       value.components.push({
         type: 'button',
-        label: 'Submit',
+        label: '保存',
         key: 'submit',
         size: 'md',
         block: false,

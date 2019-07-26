@@ -240,8 +240,33 @@ export default [
         { label: &apos;URL&apos;, value: &apos;url&apos; },
         { label: &apos;Resource&apos;, value: &apos;resource&apos; },
         { label: &apos;Custom&apos;, value: &apos;custom&apos; },
+        { label: &apos;IndexedDB&apos;, value: &apos;indexeddb&apos; },
       ],
     },
+  },
+  {
+    type: &apos;textfield&apos;,
+    as: &apos;indexeddb&apos;,
+    editor: &apos;ace&apos;,
+    weight: 10,
+    input: true,
+    key: &apos;findDatabase&apos;,
+    label: &apos;Database name&apos;,
+    tooltip: &apos;The name of the database you want to get data from.&apos;,
+    conditional: {
+      json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;indexeddb&apos;] },
+    },
+  },
+  {
+    type: &apos;textfield&apos;,
+    input: true,
+    key: &apos;findTable&apos;,
+    label: &apos;Datatable name&apos;,
+    weight: 16,
+    tooltip: &apos;The name of table the from database you want to get data from.&apos;,
+    conditional: {
+      json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;indexeddb&apos;] },
+    }
   },
   {
     type: &apos;textarea&apos;,

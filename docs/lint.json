@@ -884,23 +884,23 @@
     "filePath": "src/components/select/Select.js",
     "lines": [
       {
-        "lineNumber": 784,
+        "lineNumber": 827,
         "line": "  /**"
       },
       {
-        "lineNumber": 785,
+        "lineNumber": 828,
         "line": "   * @param {*} value"
       },
       {
-        "lineNumber": 786,
+        "lineNumber": 829,
         "line": "   * @param {Array} items"
       },
       {
-        "lineNumber": 787,
+        "lineNumber": 830,
         "line": "   */"
       },
       {
-        "lineNumber": 788,
+        "lineNumber": 831,
         "line": "  addCurrentChoices(values, items, keyValue) {"
       }
     ],

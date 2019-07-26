@@ -1120,7 +1120,7 @@ export default class Webform extends NestedComponent {
    */
   cancel(noconfirm) {
     const shouldReset = this.hook('beforeCancel', true);
-    if (shouldReset && (noconfirm || confirm('Are you sure you want to cancel?'))) {
+    if (shouldReset && (noconfirm || confirm('取消保存？'))) {
       this.resetValue();
       return true;
     }
@@ -1286,7 +1286,7 @@ export default class Webform extends NestedComponent {
       try {
         Formio.makeStaticRequest(API_URL,settings.method,submission, { headers: settings.headers }).then(() => {
           this.emit('requestDone');
-          this.setAlert('success', '<p> Success </p>');
+          this.setAlert('success', '<p> 保存成功 </p>');
         });
       }
       catch (e) {

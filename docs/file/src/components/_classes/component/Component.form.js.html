@@ -223,13 +223,9 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/_classes/component/Component.form.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import _ from &apos;lodash&apos;;
 
-import ComponentEditConditional from &apos;./editForm/Component.edit.conditional&apos;;
 import ComponentEditData from &apos;./editForm/Component.edit.data&apos;;
-import ComponentEditAPI from &apos;./editForm/Component.edit.api&apos;;
 import ComponentEditDisplay from &apos;./editForm/Component.edit.display&apos;;
-import ComponentEditLogic from &apos;./editForm/Component.edit.logic&apos;;
 import ComponentEditValidation from &apos;./editForm/Component.edit.validation&apos;;
-import ComponentEditLayout from &apos;./editForm/Component.edit.layout&apos;;
 import EditFormUtils from &apos;./editForm/utils&apos;;
 
 export default function(...extend) {
@@ -239,46 +235,22 @@ export default function(...extend) {
       key: &apos;tabs&apos;,
       components: [
         {
-          label: &apos;Display&apos;,
+          label: &apos;&#x5C5E;&#x6027;&apos;,
           key: &apos;display&apos;,
           weight: 0,
           components: ComponentEditDisplay
         },
         {
-          label: &apos;Data&apos;,
+          label: &apos;&#x6570;&#x636E;&apos;,
           key: &apos;data&apos;,
           weight: 10,
           components: ComponentEditData
         },
         {
-          label: &apos;Validation&apos;,
+          label: &apos;&#x9A8C;&#x8BC1;&apos;,
           key: &apos;validation&apos;,
           weight: 20,
           components: ComponentEditValidation
-        },
-        {
-          label: &apos;API&apos;,
-          key: &apos;api&apos;,
-          weight: 30,
-          components: ComponentEditAPI
-        },
-        {
-          label: &apos;Conditional&apos;,
-          key: &apos;conditional&apos;,
-          weight: 40,
-          components: ComponentEditConditional
-        },
-        {
-          label: &apos;Logic&apos;,
-          key: &apos;logic&apos;,
-          weight: 50,
-          components: ComponentEditLogic
-        },
-        {
-          label: &apos;Layout&apos;,
-          key: &apos;layout&apos;,
-          weight: 60,
-          components: ComponentEditLayout
         }
       ]
     }

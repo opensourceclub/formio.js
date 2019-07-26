@@ -720,6 +720,49 @@ export default class SelectComponent extends Field {
         this.loadItems(url, searchInput, this.requestHeaders, options, method, body);
         break;
       }
+      case &apos;indexeddb&apos;: {
+        if (!window.indexedDB) {
+          window.alert(&quot;Your browser doesn&apos;t support current version of indexedDB&quot;);
+        }
+
+        if (this.component.findDatabase &amp;&amp; this.component.findTable) {
+          const request = window.indexedDB.open(this.component.findDatabase, 3);
+
+          request.onupgradeneeded = (event) =&gt; {
+            if (this.component.customOptions) {
+              const db = event.target.result;
+              const objectStore = db.createObjectStore(this.component.findTable, { keyPath: &apos;myKey&apos;, autoIncrement: true });
+              objectStore.transaction.oncomplete = () =&gt; {
+                const transaction = db.transaction(this.component.findTable, &apos;readwrite&apos;);
+                this.component.customOptions.forEach((item) =&gt; {
+                  transaction.objectStore(this.component.findTable).put(item);
+                });
+              };
+            }
+          };
+
+          request.onerror = () =&gt; {
+            window.alert(request.errorCode);
+          };
+
+          request.onsuccess = (event) =&gt; {
+            const db = event.target.result;
+            const transaction = db.transaction(this.component.findTable, &apos;readwrite&apos;);
+            const objectStore = transaction.objectStore(this.component.findTable);
+            new Promise((resolve) =&gt; {
+              const responseItems = [];
+              objectStore.getAll().onsuccess = (event) =&gt; {
+                event.target.result.forEach((item) =&gt; {
+                  responseItems.push(item);
+                });
+                resolve(responseItems);
+              };
+            }).then((items) =&gt; {
+              this.setItems(items);
+            });
+          };
+        }
+      }
     }
   }
   /* eslint-enable max-statements */

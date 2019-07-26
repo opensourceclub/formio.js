@@ -5,9 +5,9 @@ export default [
     type: 'textfield',
     input: true,
     key: 'label',
-    label: 'Label',
-    placeholder: 'Field Label',
-    tooltip: 'The label for this field that will appear next to it.',
+    label: '标签',
+    placeholder: '标签文本',
+    tooltip: '用于显示在控件上的标签文本',
     validate: {
       required: true
     }
