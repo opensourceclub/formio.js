@@ -355,31 +355,31 @@
     "filePath": "src/components/_classes/component/Component.js",
     "lines": [
       {
-        "lineNumber": 1344,
+        "lineNumber": 1341,
         "line": "  /**"
       },
       {
-        "lineNumber": 1345,
+        "lineNumber": 1342,
         "line": "   * Add a new input error to this element."
       },
       {
-        "lineNumber": 1346,
+        "lineNumber": 1343,
         "line": "   *"
       },
       {
-        "lineNumber": 1347,
+        "lineNumber": 1344,
         "line": "   * @param message"
       },
       {
-        "lineNumber": 1348,
+        "lineNumber": 1345,
         "line": "   * @param dirty"
       },
       {
-        "lineNumber": 1349,
+        "lineNumber": 1346,
         "line": "   */"
       },
       {
-        "lineNumber": 1350,
+        "lineNumber": 1347,
         "line": "  addInputError(message, dirty, elements) {"
       }
     ],
@@ -398,31 +398,31 @@
     "filePath": "src/components/_classes/component/Component.js",
     "lines": [
       {
-        "lineNumber": 1704,
+        "lineNumber": 1684,
         "line": "  /**"
       },
       {
-        "lineNumber": 1705,
+        "lineNumber": 1685,
         "line": "   * Set the value at a specific index."
       },
       {
-        "lineNumber": 1706,
+        "lineNumber": 1686,
         "line": "   *"
       },
       {
-        "lineNumber": 1707,
+        "lineNumber": 1687,
         "line": "   * @param index"
       },
       {
-        "lineNumber": 1708,
+        "lineNumber": 1688,
         "line": "   * @param value"
       },
       {
-        "lineNumber": 1709,
+        "lineNumber": 1689,
         "line": "   */"
       },
       {
-        "lineNumber": 1710,
+        "lineNumber": 1690,
         "line": "  setValueAt(index, value, flags) {"
       }
     ],
@@ -441,33 +441,33 @@
     "filePath": "src/components/_classes/component/Component.js",
     "lines": [
       {
-        "lineNumber": 1747,
+        "lineNumber": 1740,
         "line": "  /**"
       },
       {
-        "lineNumber": 1748,
+        "lineNumber": 1741,
         "line": "   * Update a value of this component."
       },
       {
-        "lineNumber": 1749,
+        "lineNumber": 1742,
         "line": "   *"
       },
       {
-        "lineNumber": 1750,
+        "lineNumber": 1743,
         "line": "   * @param flags"
       },
       {
-        "lineNumber": 1751,
+        "lineNumber": 1744,
         "line": "   */"
       },
       {
-        "lineNumber": 1752,
-        "line": "  updateValue(flags, value) {"
+        "lineNumber": 1745,
+        "line": "  updateValue(value, flags) {"
       }
     ],
     "codeParams": [
-      "flags",
-      "value"
+      "value",
+      "flags"
     ],
     "docParams": [
       "flags"
@@ -478,35 +478,35 @@
     "filePath": "src/components/_classes/component/Component.js",
     "lines": [
       {
-        "lineNumber": 1817,
+        "lineNumber": 1803,
         "line": "  /**"
       },
       {
-        "lineNumber": 1818,
+        "lineNumber": 1804,
         "line": "   * Perform a calculated value operation."
       },
       {
-        "lineNumber": 1819,
+        "lineNumber": 1805,
         "line": "   *"
       },
       {
-        "lineNumber": 1820,
+        "lineNumber": 1806,
         "line": "   * @param data - The global data object."
       },
       {
-        "lineNumber": 1821,
+        "lineNumber": 1807,
         "line": "   *"
       },
       {
-        "lineNumber": 1822,
+        "lineNumber": 1808,
         "line": "   * @return {boolean} - If the value changed during calculation."
       },
       {
-        "lineNumber": 1823,
+        "lineNumber": 1809,
         "line": "   */"
       },
       {
-        "lineNumber": 1824,
+        "lineNumber": 1810,
         "line": "  calculateValue(data, flags) {"
       }
     ],
@@ -523,35 +523,35 @@
     "filePath": "src/components/_classes/component/Component.js",
     "lines": [
       {
-        "lineNumber": 1907,
+        "lineNumber": 1893,
         "line": "  /**"
       },
       {
-        "lineNumber": 1908,
+        "lineNumber": 1894,
         "line": "   * Returns the invalid message, or empty string if the component is valid."
       },
       {
-        "lineNumber": 1909,
+        "lineNumber": 1895,
         "line": "   *"
       },
       {
-        "lineNumber": 1910,
+        "lineNumber": 1896,
         "line": "   * @param data"
       },
       {
-        "lineNumber": 1911,
+        "lineNumber": 1897,
         "line": "   * @param dirty"
       },
       {
-        "lineNumber": 1912,
+        "lineNumber": 1898,
         "line": "   * @return {*}"
       },
       {
-        "lineNumber": 1913,
+        "lineNumber": 1899,
         "line": "   */"
       },
       {
-        "lineNumber": 1914,
+        "lineNumber": 1900,
         "line": "  invalidMessage(data, dirty, ignoreCondition) {"
       }
     ],
@@ -798,39 +798,41 @@
     ]
   },
   {
-    "name": "FormComponent#filterSubForm",
+    "name": "FormComponent#renderSubForm",
     "filePath": "src/components/form/Form.js",
     "lines": [
       {
-        "lineNumber": 260,
+        "lineNumber": 232,
         "line": "  /**"
       },
       {
-        "lineNumber": 261,
-        "line": "   * Filter a subform to ensure all submit button components are hidden."
+        "lineNumber": 233,
+        "line": "   * Render a subform."
       },
       {
-        "lineNumber": 262,
+        "lineNumber": 234,
         "line": "   *"
       },
       {
-        "lineNumber": 263,
+        "lineNumber": 235,
         "line": "   * @param form"
       },
       {
-        "lineNumber": 264,
+        "lineNumber": 236,
         "line": "   * @param options"
       },
       {
-        "lineNumber": 265,
+        "lineNumber": 237,
         "line": "   */"
       },
       {
-        "lineNumber": 266,
-        "line": "  filterSubForm() {"
+        "lineNumber": 238,
+        "line": "  renderSubForm(form) {"
       }
     ],
-    "codeParams": [],
+    "codeParams": [
+      "form"
+    ],
     "docParams": [
       "form",
       "options"
@@ -884,23 +886,23 @@
     "filePath": "src/components/select/Select.js",
     "lines": [
       {
-        "lineNumber": 827,
+        "lineNumber": 832,
         "line": "  /**"
       },
       {
-        "lineNumber": 828,
+        "lineNumber": 833,
         "line": "   * @param {*} value"
       },
       {
-        "lineNumber": 829,
+        "lineNumber": 834,
         "line": "   * @param {Array} items"
       },
       {
-        "lineNumber": 830,
+        "lineNumber": 835,
         "line": "   */"
       },
       {
-        "lineNumber": 831,
+        "lineNumber": 836,
         "line": "  addCurrentChoices(values, items, keyValue) {"
       }
     ],

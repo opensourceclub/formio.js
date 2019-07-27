@@ -502,17 +502,17 @@ export default class SelectComponent extends Field {
           window.alert("Your browser doesn't support current version of indexedDB");
         }
 
-        if (this.component.findDatabase && this.component.findTable) {
-          const request = window.indexedDB.open(this.component.findDatabase, 3);
+        if (this.component.indexeddb && this.component.indexeddb.database && this.component.indexeddb.table) {
+          const request = window.indexedDB.open(this.component.indexeddb.database);
 
           request.onupgradeneeded = (event) => {
             if (this.component.customOptions) {
               const db = event.target.result;
-              const objectStore = db.createObjectStore(this.component.findTable, { keyPath: 'myKey', autoIncrement: true });
+              const objectStore = db.createObjectStore(this.component.indexeddb.table, { keyPath: 'myKey', autoIncrement: true });
               objectStore.transaction.oncomplete = () => {
-                const transaction = db.transaction(this.component.findTable, 'readwrite');
+                const transaction = db.transaction(this.component.indexeddb.table, 'readwrite');
                 this.component.customOptions.forEach((item) => {
-                  transaction.objectStore(this.component.findTable).put(item);
+                  transaction.objectStore(this.component.indexeddb.table).put(item);
                 });
               };
             }
@@ -524,9 +524,9 @@ export default class SelectComponent extends Field {
 
           request.onsuccess = (event) => {
             const db = event.target.result;
-            const transaction = db.transaction(this.component.findTable, 'readwrite');
-            const objectStore = transaction.objectStore(this.component.findTable);
-            new Promise((resolve) => {
+            const transaction = db.transaction(this.component.indexeddb.table, 'readwrite');
+            const objectStore = transaction.objectStore(this.component.indexeddb.table);
+            new NativePromise((resolve) => {
               const responseItems = [];
               objectStore.getAll().onsuccess = (event) => {
                 event.target.result.forEach((item) => {
@@ -535,6 +535,9 @@ export default class SelectComponent extends Field {
                 resolve(responseItems);
               };
             }).then((items) => {
+              if (!_.isEmpty(this.component.indexeddb.filter)) {
+                items = _.filter(items, this.component.indexeddb.filter);
+              }
               this.setItems(items);
             });
           };
@@ -616,7 +619,9 @@ export default class SelectComponent extends Field {
     if (!input) {
       return;
     }
-    this.addEventListener(input, this.inputInfo.changeEvent, () => this.updateValue());
+    this.addEventListener(input, this.inputInfo.changeEvent, () => this.updateValue(null, {
+      modified: true
+    }));
 
     if (this.component.widget === 'html5') {
       this.triggerUpdate();
@@ -922,26 +927,31 @@ export default class SelectComponent extends Field {
   }
 
   redraw() {
-    super.redraw();
+    const done = super.redraw();
     this.triggerUpdate();
+    return done;
+  }
+
+  /**
+   * Normalize values coming into updateValue.
+   *
+   * @param value
+   * @return {*}
+   */
+  normalizeValue(value) {
+    if (!isNaN(parseFloat(value)) && isFinite(value)) {
+      value = +value;
+    }
+    return super.normalizeValue(value);
   }
 
   setValue(value, flags) {
-    const isNumeric = (val) => {
-      return !isNaN(parseFloat(val)) && isFinite(val);
-    };
-    if (isNumeric(value)) {
-      value = +value;
-    }
-    flags = this.getFlags.apply(this, arguments);
+    flags = flags || {};
     const previousValue = this.dataValue;
-    if (this.component.multiple && !Array.isArray(value)) {
-      value = value ? [value] : [];
-    }
+    const changed = this.updateValue(value, flags);
+    value = this.dataValue;
     const hasPreviousValue = Array.isArray(previousValue) ? previousValue.length : previousValue;
     const hasValue = Array.isArray(value) ? value.length : value;
-    const changed = this.hasChanged(value, previousValue);
-    this.dataValue = value;
 
     // Do not set the value if we are loading... that will happen after it is done.
     if (this.loading) {
@@ -959,7 +969,7 @@ export default class SelectComponent extends Field {
     ) {
       this.loading = true;
       this.lazyLoadInit = true;
-      this.triggerUpdate(this.dataValue, true);
+      this.triggerUpdate(value, true);
       return changed;
     }
 
@@ -971,7 +981,7 @@ export default class SelectComponent extends Field {
       if (hasValue) {
         this.choices.removeActiveItems();
         // Add the currently selected choices if they don't already exist.
-        const currentChoices = Array.isArray(this.dataValue) ? this.dataValue : [this.dataValue];
+        const currentChoices = Array.isArray(value) ? value : [value];
         if (!this.addCurrentChoices(currentChoices, this.selectOptions, true)) {
           this.choices.setChoices(this.selectOptions, 'value', 'label', true);
         }
@@ -1004,7 +1014,6 @@ export default class SelectComponent extends Field {
       }
     }
 
-    this.updateOnChange(flags, changed);
     return changed;
   }
 

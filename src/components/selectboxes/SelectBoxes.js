@@ -70,10 +70,7 @@ export default class SelectBoxesComponent extends RadioComponent {
   }
 
   getValue() {
-    if (this.viewOnly) {
-      return this.dataValue;
-    }
-    if (!this.refs.input || !this.refs.input.length) {
+    if (this.viewOnly || !this.refs.input || !this.refs.input.length) {
       return this.dataValue;
     }
     const value = {};
@@ -84,12 +81,12 @@ export default class SelectBoxesComponent extends RadioComponent {
   }
 
   /**
-   * Set the value of this component.
+   * Normalize values coming into updateValue.
    *
    * @param value
-   * @param flags
+   * @return {*}
    */
-  setValue(value, flags) {
+  normalizeValue(value) {
     value = value || {};
     if (typeof value !== 'object') {
       if (typeof value === 'string') {
@@ -101,21 +98,31 @@ export default class SelectBoxesComponent extends RadioComponent {
         value = {};
       }
     }
-    flags = this.getFlags.apply(this, arguments);
     if (Array.isArray(value)) {
       _.each(value, (val) => {
         value[val] = true;
       });
     }
 
+    return value;
+  }
+
+  /**
+   * Set the value of this component.
+   *
+   * @param value
+   * @param flags
+   */
+  setValue(value, flags) {
+    const changed = this.updateValue(value, flags);
+    value = this.dataValue;
     _.each(this.refs.input, (input) => {
       if (_.isUndefined(value[input.value])) {
         value[input.value] = false;
       }
       input.checked = !!value[input.value];
     });
-
-    this.updateValue(flags);
+    return changed;
   }
 
   getView(value) {

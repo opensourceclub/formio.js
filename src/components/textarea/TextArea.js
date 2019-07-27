@@ -121,9 +121,9 @@ export default class TextAreaComponent extends TextFieldComponent {
   updateEditorValue(newValue) {
     newValue = this.getConvertedValue(this.removeBlanks(newValue));
     if ((newValue !== this.dataValue) && (!_.isEmpty(newValue) || !_.isEmpty(this.dataValue))) {
-      this.updateValue({
+      this.updateValue(newValue, {
         modified: !this.autoModified
-      }, newValue);
+      });
     }
     this.autoModified = false;
   }
@@ -221,7 +221,9 @@ export default class TextAreaComponent extends TextFieldComponent {
         break;
       default:
         this.addEventListener(element, this.inputInfo.changeEvent, () => {
-          this.updateValue(null, null, index);
+          this.updateValue(null, {
+            modified: true
+          }, index);
         });
     }
 
@@ -488,7 +490,7 @@ export default class TextAreaComponent extends TextFieldComponent {
       if (typeof input !== 'string') {
         return input;
       }
-      return input.replace(/<p>&nbsp;<\/p>|<p><br><\/p>|<p><br>&nbsp;<\/p>/g, '');
+      return input.replace(/<p>&nbsp;<\/p>|<p><br><\/p>|<p><br>&nbsp;<\/p>/g, '').trim();
     };
 
     if (Array.isArray(value)) {
@@ -510,8 +512,8 @@ export default class TextAreaComponent extends TextFieldComponent {
     return changed;
   }
 
-  hasChanged(before, after) {
-    return super.hasChanged(this.removeBlanks(before), this.removeBlanks(after));
+  hasChanged(newValue, oldValue) {
+    return super.hasChanged(this.removeBlanks(newValue), this.removeBlanks(oldValue));
   }
 
   isEmpty(value) {

@@ -777,6 +777,7 @@ export default class Component extends Element {
   }
 
   build(element) {
+    element = element || this.element;
     this.empty(element);
     this.setContent(element, this.render());
     this.attach(element);
@@ -820,9 +821,6 @@ export default class Component extends Element {
 
     // Attach logic.
     this.attachLogic();
-
-    // this.restoreValue();
-
     this.autofocus();
 
     // Allow global attach.
@@ -1159,8 +1157,7 @@ export default class Component extends Element {
     const index = Array.prototype.indexOf.call(parent.children, this.element);
     this.element.outerHTML = this.sanitize(this.render());
     this.element = parent.children[index];
-
-    this.attach(this.element);
+    return this.attach(this.element);
   }
 
   rebuild() {
@@ -1393,12 +1390,8 @@ export default class Component extends Element {
 
   onChange(flags, fromRoot) {
     flags = flags || {};
-    if (!flags.noValidate) {
-      this.pristine = false;
-    }
-
     if (flags.modified) {
-      // Add a modified class if this element was manually modified.
+      this.pristine = false;
       this.addClass(this.getElement(), 'formio-modified');
     }
 
@@ -1633,10 +1626,7 @@ export default class Component extends Element {
    * @return {*}
    */
   getValue() {
-    if (!this.hasInput) {
-      return;
-    }
-    if (this.viewOnly) {
+    if (!this.hasInput || this.viewOnly || !this.refs.input || !this.refs.input.length) {
       return this.dataValue;
     }
     const values = [];
@@ -1675,21 +1665,11 @@ export default class Component extends Element {
    * @return {boolean} - If the value changed.
    */
   setValue(value, flags) {
-    this.dataValue = value;
-
-    // If we aren't connected to the dom yet, skip updating values.
-    if (!this.attached) {
-      return;
-    }
-
-    flags = this.getFlags.apply(this, arguments);
+    const changed = this.updateValue(value, flags);
+    value = this.dataValue;
     if (!this.hasInput) {
-      return false;
+      return changed;
     }
-    if (this.component.multiple && !Array.isArray(value)) {
-      value = value ? [value] : [];
-    }
-
     const isArray = Array.isArray(value);
     if (isArray && this.refs.input && this.refs.input.length !== value.length) {
       this.redraw();
@@ -1699,7 +1679,7 @@ export default class Component extends Element {
         this.setValueAt(i, isArray ? value[i] : value, flags);
       }
     }
-    return this.updateValue(flags);
+    return changed;
   }
 
   /**
@@ -1746,23 +1726,29 @@ export default class Component extends Element {
   }
 
   /**
+   * Normalize values coming into updateValue.
+   *
+   * @param value
+   * @return {*}
+   */
+  normalizeValue(value) {
+    if (this.component.multiple && !Array.isArray(value)) {
+      value = value ? [value] : [];
+    }
+    return value;
+  }
+
+  /**
    * Update a value of this component.
    *
    * @param flags
    */
-  updateValue(flags, value) {
-    if (!this.hasInput) {
-      return false;
-    }
-
+  updateValue(value, flags) {
     flags = flags || {};
-    const newValue = value === undefined || value === null ? this.getValue() : value;
+    let newValue = (value === undefined || value === null) ? this.getValue() : value;
+    newValue = this.normalizeValue(newValue);
     const changed = (newValue !== undefined) ? this.hasChanged(newValue, this.dataValue) : false;
     this.dataValue = newValue;
-    if (this.viewOnly) {
-      this.updateViewOnlyValue(newValue);
-    }
-
     this.updateOnChange(flags, changed);
     return changed;
   }
@@ -1787,18 +1773,18 @@ export default class Component extends Element {
   /**
    * Determine if the value of this component has changed.
    *
-   * @param before
-   * @param after
+   * @param newValue
+   * @param oldValue
    * @return {boolean}
    */
-  hasChanged(before, after) {
+  hasChanged(newValue, oldValue) {
     if (
-      ((before === undefined) || (before === null)) &&
-      ((after === undefined) || (after === null))
+      ((newValue === undefined) || (newValue === null)) &&
+      ((oldValue === undefined) || (oldValue === null) || this.isEmpty(oldValue))
     ) {
       return false;
     }
-    return !_.isEqual(before, after);
+    return !_.isEqual(newValue, oldValue);
   }
 
   /**
@@ -1983,22 +1969,26 @@ export default class Component extends Element {
     if (this.refs.messageContainer) {
       this.empty(this.refs.messageContainer);
     }
-    if (!this.refs.input) {
-      return;
-    }
     if (message) {
       this.error = {
         component: this.component,
         message: message
       };
       this.emit('componentError', this.error);
-      this.addInputError(message, dirty, this.refs.input);
+      if (this.refs.input) {
+        this.addInputError(message, dirty, this.refs.input);
+      }
     }
     else {
-      this.refs.input.forEach((input) => this.removeClass(this.performInputMapping(input), 'is-invalid'));
+      if (this.refs.input) {
+        this.refs.input.forEach((input) => this.removeClass(this.performInputMapping(input), 'is-invalid'));
+      }
       this.removeClass(this.element, 'alert alert-danger');
       this.removeClass(this.element, 'has-error');
       this.error = null;
+    }
+    if (!this.refs.input) {
+      return;
     }
     this.refs.input.forEach(input => {
       input = this.performInputMapping(input);
@@ -2017,13 +2007,6 @@ export default class Component extends Element {
     ];
 
     return rules.some(pred => pred());
-  }
-
-  getFlags() {
-    return (typeof arguments[1] === 'boolean') ? {
-      noUpdateEvent: arguments[1],
-      noValidate: arguments[2]
-    } : (arguments[1] || {});
   }
 
   // Maintain reverse compatibility.

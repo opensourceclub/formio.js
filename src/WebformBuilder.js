@@ -176,14 +176,14 @@ export default class WebformBuilder extends Component {
       containerElement.formioContainer = container;
       containerElement.formioComponent = component;
 
-      // If this is an existing datagrid element, don't make it draggable.
-      if (component.type === 'datagrid' && components.length > 0) {
-        return element;
-      }
-
       // Add container to draggable list.
       if (this.dragula) {
         this.dragula.containers.push(containerElement);
+      }
+
+      // If this is an existing datagrid element, don't make it draggable.
+      if (component.type === 'datagrid' && components.length > 0) {
+        return element;
       }
 
       // Since we added a wrapper, need to return the original element so that we can find the components inside it.
@@ -435,6 +435,14 @@ export default class WebformBuilder extends Component {
         Templates.current.handleBuilderSidebarScroll.call(this, this);
       }
 
+      // Add the paste status in form
+      if (window.sessionStorage) {
+        const data = window.sessionStorage.getItem('formio.clipboard');
+        if (data) {
+          this.addClass(this.refs.form, 'builder-paste-mode');
+        }
+      }
+
       if (!bootstrapVersion(this.options)) {
         // Initialize
         this.refs['sidebar-group'].forEach((group) => {
@@ -525,6 +533,7 @@ export default class WebformBuilder extends Component {
       if (this.schemas.hasOwnProperty(type)) {
         info = _.cloneDeep(this.schemas[type]);
         info.key = _.camelCase(
+          info.title ||
           info.label ||
           info.placeholder ||
           info.type
@@ -580,7 +589,23 @@ export default class WebformBuilder extends Component {
       target.formioContainer.push(info);
     }
 
-    this.emit('addComponent', info);
+    const parent = target.formioComponent;
+    // Get path to the component in the parent component.
+    let path = 'components';
+    switch (parent.type) {
+      case 'table':
+        path = `rows[${info.tableRow}][${info.tableColumn}].components`;
+        break;
+      case 'columns':
+        path = `columns[${info.column}].components`;
+        break;
+      case 'tabs':
+        path = `components[${info.tab}].components`;
+        break;
+    }
+    // Index within container
+    const index = _.findIndex(_.get(parent.schema, path), { key: info.key }) || 0;
+    this.emit('addComponent', info, parent, path, index);
 
     if (isNew && !this.options.noNewEdit) {
       this.editComponent(info, target, isNew);
@@ -777,13 +802,14 @@ export default class WebformBuilder extends Component {
           componentCopy.keyModified = true;
         }
 
-        if (event.changed.component && (event.changed.component.key === 'label')) {
+        if (event.changed.component && (['label', 'title'].includes(event.changed.component.key))) {
           // Ensure this component has a key.
           if (isNew) {
             if (!event.data.keyModified) {
               this.editForm.everyComponent(component => {
                 if (component.key === 'key' && component.parent.component.key === 'tabs') {
                   component.setValue(_.camelCase(
+                    event.data.title ||
                     event.data.label ||
                     event.data.placeholder ||
                     event.data.type
@@ -883,10 +909,11 @@ export default class WebformBuilder extends Component {
       const data = window.sessionStorage.getItem('formio.clipboard');
       if (data) {
         const schema = JSON.parse(data);
-        window.sessionStorage.removeItem('formio.clipboard');
-        BuilderUtils.uniquify(this.findNamespaceRoot(component.parent.component), schema);
-        component.parent.addComponent(schema, false, component.element.nextElementSibling ? component.element.nextElementSibling.lastElementChild : null);
-        this.form = this.schema;
+        const parent = this.getParentElement(component.element);
+        BuilderUtils.uniquify(this.findNamespaceRoot(parent.formioComponent.component), schema);
+        const index = parent.formioContainer.indexOf(component.component);
+        parent.formioContainer.splice(index + 1, 0, schema);
+        parent.formioComponent.rebuild();
         this.emit('saveComponent');
       }
     }

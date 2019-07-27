@@ -886,7 +886,7 @@ export default class Webform extends NestedComponent {
     }
     this.clear();
     this.setContent(this.element, this.render());
-    this.attach(this.element);
+    return this.attach(this.element);
   }
 
   attach(element) {
@@ -1148,7 +1148,7 @@ export default class Webform extends NestedComponent {
         browserName: navigator.appName,
         userAgent: navigator.userAgent,
         pathName: window.location.pathname,
-        onLine: navigator.onLine,
+        onLine: navigator.onLine
       });
 
       const submission = _.cloneDeep(this.submission || {});
