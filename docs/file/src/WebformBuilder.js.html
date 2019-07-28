@@ -531,18 +531,18 @@ export default class WebformBuilder extends Component {
         title: &apos;&#x7279;&#x6B8A;&#x63A7;&#x4EF6;&apos;,
         weight: 10
       },
-      layout: {
-        title: &apos;UI&#x5E03;&#x5C40;&apos;,
-        weight: 20
-      },
-      data: {
-        title: &apos;&#x6570;&#x636E;&#x5C55;&#x793A;&apos;,
-        weight: 30
-      },
-      premium: {
-        title: &apos;&#x9AD8;&#x7EA7;&#x63A7;&#x4EF6;&apos;,
-        weight: 40
-      },
+      // layout: {
+      //   title: &apos;UI&#x5E03;&#x5C40;&apos;,
+      //   weight: 20
+      // },
+      // data: {
+      //   title: &apos;&#x6570;&#x636E;&#x5C55;&#x793A;&apos;,
+      //   weight: 30
+      // },
+      // premium: {
+      //   title: &apos;&#x9AD8;&#x7EA7;&#x63A7;&#x4EF6;&apos;,
+      //   weight: 40
+      // },
     };
   }
 
@@ -756,9 +756,7 @@ export default class WebformBuilder extends Component {
       if (this.schemas.hasOwnProperty(type)) {
         info = _.cloneDeep(this.schemas[type]);
         info.key = _.camelCase(
-          info.title ||
-          info.label ||
-          info.placeholder ||
+          info.key ||
           info.type
         );
       }

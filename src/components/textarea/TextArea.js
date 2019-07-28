@@ -9,7 +9,7 @@ export default class TextAreaComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'textarea',
-      label: 'Text Area',
+      label: '文本域',
       key: 'textArea',
       rows: 3,
       wysiwyg: false,
@@ -24,7 +24,7 @@ export default class TextAreaComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Text Area',
+      title: '文本域',
       group: 'basic',
       icon: 'font',
       documentation: 'http://help.form.io/userguide/#textarea',

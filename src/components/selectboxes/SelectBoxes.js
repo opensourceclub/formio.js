@@ -5,7 +5,7 @@ export default class SelectBoxesComponent extends RadioComponent {
   static schema(...extend) {
     return RadioComponent.schema({
       type: 'selectboxes',
-      label: 'Select Boxes',
+      label: '选择器',
       key: 'selectBoxes',
       inline: false
     }, ...extend);
@@ -13,7 +13,7 @@ export default class SelectBoxesComponent extends RadioComponent {
 
   static get builderInfo() {
     return {
-      title: 'Select Boxes',
+      title: '选择器',
       group: 'basic',
       icon: 'plus-square',
       weight: 60,

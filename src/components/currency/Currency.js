@@ -8,14 +8,14 @@ export default class CurrencyComponent extends NumberComponent {
   static schema(...extend) {
     return NumberComponent.schema({
       type: 'currency',
-      label: 'Currency',
+      label: '货币',
       key: 'currency'
     }, ...extend);
   }
 
   static get builderInfo() {
     return {
-      title: 'Currency',
+      title: '货币',
       group: 'advanced',
       icon: 'usd',
       documentation: 'http://help.form.io/userguide/#currency',

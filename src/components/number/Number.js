@@ -8,7 +8,7 @@ export default class NumberComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'number',
-      label: 'Number',
+      label: '数字输入框',
       key: 'number',
       validate: {
         min: '',
@@ -21,7 +21,7 @@ export default class NumberComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Number',
+      title: '数字输入框',
       icon: 'hashtag',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#number',

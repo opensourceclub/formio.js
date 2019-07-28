@@ -2,23 +2,7 @@
   {% if (dayFirst && showDay) { %}
   <div class="col col-xs-3">
     {% if (!component.hideInputLabels) { %}
-    <label for="{{component.key}}-day" class="{% if(component.fields.day.required) { %}field-required{% } %}">{{t('Day')}}</label>
-    {% } %}
-    <div>{{day}}</div>
-  </div>
-  {% } %}
-  {% if (showMonth) { %}
-  <div class="col col-xs-4">
-    {% if (!component.hideInputLabels) { %}
-    <label for="{{component.key}}-month" class="{% if(component.fields.month.required) { %}field-required{% } %}">{{t('Month')}}</label>
-    {% } %}
-    <div>{{month}}</div>
-  </div>
-  {% } %}
-  {% if (!dayFirst && showDay) { %}
-  <div class="col col-xs-3">
-    {% if (!component.hideInputLabels) { %}
-    <label for="{{component.key}}-day" class="{% if(component.fields.day.required) { %}field-required{% } %}">{{t('Day')}}</label>
+    <label for="{{component.key}}-day" class="{% if(component.fields.day.required) { %}field-required{% } %}">{{t('日期')}}</label>
     {% } %}
     <div>{{day}}</div>
   </div>
@@ -26,9 +10,25 @@
   {% if (showYear) { %}
   <div class="col col-xs-5">
     {% if (!component.hideInputLabels) { %}
-    <label for="{{component.key}}-year" class="{% if(component.fields.year.required) { %}field-required{% } %}">{{t('Year')}}</label>
+    <label for="{{component.key}}-year" class="{% if(component.fields.year.required) { %}field-required{% } %}">{{t('年')}}</label>
     {% } %}
     <div>{{year}}</div>
+  </div>
+  {% } %}
+  {% if (showMonth) { %}
+  <div class="col col-xs-4">
+    {% if (!component.hideInputLabels) { %}
+    <label for="{{component.key}}-month" class="{% if(component.fields.month.required) { %}field-required{% } %}">{{t('月')}}</label>
+    {% } %}
+    <div>{{month}}</div>
+  </div>
+  {% } %}
+  {% if (!dayFirst && showDay) { %}
+  <div class="col col-xs-3">
+    {% if (!component.hideInputLabels) { %}
+    <label for="{{component.key}}-day" class="{% if(component.fields.day.required) { %}field-required{% } %}">{{t('日')}}</label>
+    {% } %}
+    <div>{{day}}</div>
   </div>
   {% } %}
 </div>

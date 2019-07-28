@@ -6,7 +6,7 @@ export default class DayComponent extends Field {
   static schema(...extend) {
     return Field.schema({
       type: 'day',
-      label: 'Day',
+      label: '日期',
       key: 'day',
       fields: {
         day: {
@@ -31,7 +31,7 @@ export default class DayComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Day',
+      title: '日期',
       group: 'advanced',
       icon: 'calendar',
       documentation: 'http://help.form.io/userguide/#day',

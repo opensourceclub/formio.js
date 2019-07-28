@@ -9,7 +9,7 @@ export default class SelectComponent extends Field {
   static schema(...extend) {
     return Field.schema({
       type: 'select',
-      label: 'Select',
+      label: '下拉框',
       key: 'select',
       data: {
         values: [],
@@ -43,7 +43,7 @@ export default class SelectComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Select',
+      title: '下拉框',
       group: 'basic',
       icon: 'th-list',
       weight: 70,

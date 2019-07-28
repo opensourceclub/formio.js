@@ -4,7 +4,7 @@ export default class EmailComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'email',
-      label: 'Email',
+      label: '电子邮箱',
       key: 'email',
       inputType: 'email',
       kickbox: {
@@ -15,7 +15,7 @@ export default class EmailComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Email',
+      title: '电子邮箱',
       group: 'advanced',
       icon: 'at',
       documentation: 'http://help.form.io/userguide/#email',

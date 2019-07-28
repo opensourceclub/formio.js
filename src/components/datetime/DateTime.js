@@ -4,7 +4,7 @@ export default class DateTimeComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'datetime',
-      label: 'Date / Time',
+      label: '日期 / 时间',
       key: 'dateTime',
       format: 'yyyy-MM-dd hh:mm a',
       useLocaleSettings: false,
@@ -39,7 +39,7 @@ export default class DateTimeComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Date / Time',
+      title: '日期 / 时间',
       group: 'advanced',
       icon: 'calendar',
       documentation: 'http://help.form.io/userguide/#datetime',

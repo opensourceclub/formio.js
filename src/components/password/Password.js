@@ -5,7 +5,7 @@ export default class PasswordComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'password',
-      label: 'Password',
+      label: '密码框',
       key: 'password',
       protected: true,
       tableView: false,
@@ -14,7 +14,7 @@ export default class PasswordComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Password',
+      title: '密码框',
       icon: 'asterisk',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#password',

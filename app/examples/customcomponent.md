@@ -55,7 +55,7 @@ CheckMatrixComponent.schema = function() {
  * @type {{title: string, group: string, icon: string, weight: number, documentation: string, schema: *}}
  */
 CheckMatrixComponent.builderInfo = {
-  title: 'Check Matrix',
+  title: '选择矩阵',
   group: 'basic',
   icon: 'fa fa-table',
   weight: 70,
@@ -235,7 +235,7 @@ CheckMatrixComponent.schema = function() {
 };
 
 CheckMatrixComponent.builderInfo = {
-  title: 'Check Matrix',
+  title: '选择矩阵',
   group: 'basic',
   icon: 'fa fa-table',
   weight: 70,

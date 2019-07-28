@@ -7,7 +7,7 @@ export default class ButtonComponent extends Field {
   static schema(...extend) {
     return Input.schema({
       type: 'button',
-      label: 'Submit',
+      label: '确定',
       key: 'submit',
       size: 'md',
       leftIcon: '',
@@ -23,7 +23,7 @@ export default class ButtonComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: 'Button',
+      title: '按钮',
       group: 'basic',
       icon: 'stop',
       documentation: 'http://help.form.io/userguide/#button',

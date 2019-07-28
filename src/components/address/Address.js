@@ -8,7 +8,7 @@ export default class AddressComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'address',
-      label: 'Address',
+      label: '地址',
       key: 'address',
       map: {
         region: '',
@@ -19,7 +19,7 @@ export default class AddressComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Address',
+      title: '地址',
       group: 'advanced',
       icon: 'home',
       documentation: 'http://help.form.io/userguide/#address',

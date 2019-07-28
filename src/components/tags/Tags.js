@@ -6,7 +6,7 @@ export default class TagsComponent extends Input {
   static schema(...extend) {
     return Input.schema({
       type: 'tags',
-      label: 'Tags',
+      label: '标签',
       key: 'tags',
       delimeter: ',',
       storeas: 'string',
@@ -16,7 +16,7 @@ export default class TagsComponent extends Input {
 
   static get builderInfo() {
     return {
-      title: 'Tags',
+      title: '标签',
       icon: 'tags',
       group: 'advanced',
       documentation: 'http://help.form.io/userguide/#tags',
