@@ -672,7 +672,7 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'address',
-        label: 'Address',
+        label: '地址',
         key: 'address',
         map: {
           region: '',
@@ -684,7 +684,7 @@ function (_TextFieldComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Address',
+        title: '地址',
         group: 'advanced',
         icon: 'home',
         documentation: 'http://help.form.io/userguide/#address',

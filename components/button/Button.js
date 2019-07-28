@@ -534,7 +534,7 @@ function (_Field) {
 
       return _Input.default.schema.apply(_Input.default, [{
         type: 'button',
-        label: 'Submit',
+        label: '确定',
         key: 'submit',
         size: 'md',
         leftIcon: '',
@@ -551,7 +551,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Button',
+        title: '按钮',
         group: 'basic',
         icon: 'stop',
         documentation: 'http://help.form.io/userguide/#button',

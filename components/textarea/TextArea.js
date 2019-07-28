@@ -707,7 +707,7 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'textarea',
-        label: 'Text Area',
+        label: '文本域',
         key: 'textArea',
         rows: 3,
         wysiwyg: false,
@@ -723,7 +723,7 @@ function (_TextFieldComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Text Area',
+        title: '文本域',
         group: 'basic',
         icon: 'font',
         documentation: 'http://help.form.io/userguide/#textarea',

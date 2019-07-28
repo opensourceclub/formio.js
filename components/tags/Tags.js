@@ -196,7 +196,7 @@ function (_Input) {
 
       return _Input2.default.schema.apply(_Input2.default, [{
         type: 'tags',
-        label: 'Tags',
+        label: '标签',
         key: 'tags',
         delimeter: ',',
         storeas: 'string',
@@ -207,7 +207,7 @@ function (_Input) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Tags',
+        title: '标签',
         icon: 'tags',
         group: 'advanced',
         documentation: 'http://help.form.io/userguide/#tags',

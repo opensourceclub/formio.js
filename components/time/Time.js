@@ -71,7 +71,7 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'time',
-        label: 'Time',
+        label: '时间',
         key: 'time',
         inputType: 'time',
         format: 'HH:mm'
@@ -153,7 +153,7 @@ function (_TextFieldComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Time',
+        title: '时间',
         icon: 'clock-o',
         group: 'advanced',
         documentation: 'http://help.form.io/userguide/#time',

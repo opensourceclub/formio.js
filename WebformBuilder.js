@@ -640,7 +640,7 @@ function (_Component) {
         // This is a new component
         if (this.schemas.hasOwnProperty(type)) {
           info = _lodash.default.cloneDeep(this.schemas[type]);
-          info.key = _lodash.default.camelCase(info.title || info.label || info.placeholder || info.type);
+          info.key = _lodash.default.camelCase(info.key || info.type);
         } else {
           // This is an existing resource field.
           var _type$split = type.split('_'),
@@ -1089,19 +1089,19 @@ function (_Component) {
         advanced: {
           title: '特殊控件',
           weight: 10
-        },
-        layout: {
-          title: 'UI布局',
-          weight: 20
-        },
-        data: {
-          title: '数据展示',
-          weight: 30
-        },
-        premium: {
-          title: '高级控件',
-          weight: 40
-        }
+        } // layout: {
+        //   title: 'UI布局',
+        //   weight: 20
+        // },
+        // data: {
+        //   title: '数据展示',
+        //   weight: 30
+        // },
+        // premium: {
+        //   title: '高级控件',
+        //   weight: 40
+        // },
+
       };
     }
   }, {

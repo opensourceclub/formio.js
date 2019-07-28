@@ -83,7 +83,7 @@ function (_RadioComponent) {
 
       return _Radio.default.schema.apply(_Radio.default, [{
         type: 'selectboxes',
-        label: 'Select Boxes',
+        label: '选择器',
         key: 'selectBoxes',
         inline: false
       }].concat(extend));
@@ -92,7 +92,7 @@ function (_RadioComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Select Boxes',
+        title: '选择器',
         group: 'basic',
         icon: 'plus-square',
         weight: 60,

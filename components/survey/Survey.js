@@ -195,7 +195,7 @@ function (_Field) {
 
       return _Field2.default.schema.apply(_Field2.default, [{
         type: 'survey',
-        label: 'Survey',
+        label: '调查表',
         key: 'survey',
         questions: [],
         values: []
@@ -205,7 +205,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Survey',
+        title: '调查表',
         group: 'advanced',
         icon: 'list',
         weight: 110,

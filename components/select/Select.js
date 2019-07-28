@@ -1291,7 +1291,7 @@ function (_Field) {
 
       return _Field2.default.schema.apply(_Field2.default, [{
         type: 'select',
-        label: 'Select',
+        label: '下拉框',
         key: 'select',
         data: {
           values: [],
@@ -1326,7 +1326,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Select',
+        title: '下拉框',
         group: 'basic',
         icon: 'th-list',
         weight: 70,

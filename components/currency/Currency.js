@@ -77,7 +77,7 @@ function (_NumberComponent) {
 
       return _Number.default.schema.apply(_Number.default, [{
         type: 'currency',
-        label: 'Currency',
+        label: '货币',
         key: 'currency'
       }].concat(extend));
     }
@@ -85,7 +85,7 @@ function (_NumberComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Currency',
+        title: '货币',
         group: 'advanced',
         icon: 'usd',
         documentation: 'http://help.form.io/userguide/#currency',

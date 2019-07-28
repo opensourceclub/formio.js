@@ -699,7 +699,7 @@ function (_Field) {
 
       return _Field2.default.schema.apply(_Field2.default, [{
         type: 'day',
-        label: 'Day',
+        label: '日期',
         key: 'day',
         fields: {
           day: {
@@ -725,7 +725,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Day',
+        title: '日期',
         group: 'advanced',
         icon: 'calendar',
         documentation: 'http://help.form.io/userguide/#day',

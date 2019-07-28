@@ -297,7 +297,7 @@ function (_Input) {
 
       return _Input2.default.schema.apply(_Input2.default, [{
         type: 'signature',
-        label: 'Signature',
+        label: '签名',
         key: 'signature',
         footer: 'Sign above',
         width: '100%',
@@ -312,7 +312,7 @@ function (_Input) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Signature',
+        title: '签名',
         group: 'advanced',
         icon: 'pencil',
         weight: 120,

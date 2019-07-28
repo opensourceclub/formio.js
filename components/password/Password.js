@@ -88,7 +88,7 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'password',
-        label: 'Password',
+        label: '密码框',
         key: 'password',
         protected: true,
         tableView: false
@@ -98,7 +98,7 @@ function (_TextFieldComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Password',
+        title: '密码框',
         icon: 'asterisk',
         group: 'basic',
         documentation: 'http://help.form.io/userguide/#password',

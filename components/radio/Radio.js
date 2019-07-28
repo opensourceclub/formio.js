@@ -221,7 +221,7 @@ function (_Field) {
       return _Field2.default.schema.apply(_Field2.default, [{
         type: 'radio',
         inputType: 'radio',
-        label: 'Radio',
+        label: '单选框',
         key: 'radio',
         values: [{
           label: '',
@@ -234,7 +234,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Radio',
+        title: '单选框',
         group: 'basic',
         icon: 'dot-circle-o',
         weight: 80,

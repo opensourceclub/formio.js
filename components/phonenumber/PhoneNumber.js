@@ -70,17 +70,17 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'phoneNumber',
-        label: 'Phone Number',
+        label: '手机号码',
         key: 'phoneNumber',
         inputType: 'tel',
-        inputMask: '(999) 999-9999'
+        inputMask: '13511111111'
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Phone Number',
+        title: '手机号码',
         group: 'advanced',
         icon: 'phone-square',
         weight: 30,

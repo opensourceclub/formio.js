@@ -93,7 +93,7 @@ function (_TextFieldComponent) {
 
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'email',
-        label: 'Email',
+        label: '电子邮箱',
         key: 'email',
         inputType: 'email',
         kickbox: {
@@ -105,7 +105,7 @@ function (_TextFieldComponent) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Email',
+        title: '电子邮箱',
         group: 'advanced',
         icon: 'at',
         documentation: 'http://help.form.io/userguide/#email',

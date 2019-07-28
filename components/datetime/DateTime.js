@@ -73,7 +73,7 @@ function (_Input) {
 
       return _Input2.default.schema.apply(_Input2.default, [{
         type: 'datetime',
-        label: 'Date / Time',
+        label: '日期 / 时间',
         key: 'dateTime',
         format: 'yyyy-MM-dd hh:mm a',
         useLocaleSettings: false,
@@ -109,7 +109,7 @@ function (_Input) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Date / Time',
+        title: '日期 / 时间',
         group: 'advanced',
         icon: 'calendar',
         documentation: 'http://help.form.io/userguide/#datetime',

@@ -91,7 +91,7 @@ function (_Input) {
 
       return _Input2.default.schema.apply(_Input2.default, [{
         type: 'number',
-        label: 'Number',
+        label: '数字输入框',
         key: 'number',
         validate: {
           min: '',
@@ -105,7 +105,7 @@ function (_Input) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: 'Number',
+        title: '数字输入框',
         icon: 'hashtag',
         group: 'basic',
         documentation: 'http://help.form.io/userguide/#number',
