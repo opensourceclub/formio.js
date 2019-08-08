@@ -33,52 +33,52 @@ export default [
   },
   {
     type: 'number',
-    label: 'Number of Rows',
+    label: '行数',
     key: 'numRows',
     input: true,
     weight: 1,
-    placeholder: 'Number of Rows',
-    tooltip: 'Enter the number or rows that should be displayed by this table.'
+    placeholder: '行数',
+    tooltip: '输入该表应该显示的数字或行'
   },
   {
     type: 'number',
-    label: 'Number of Columns',
+    label: '列数',
     key: 'numCols',
     input: true,
     weight: 2,
-    placeholder: 'Number of Columns',
-    tooltip: 'Enter the number or columns that should be displayed by this table.'
+    placeholder: '列数',
+    tooltip: '输入该表应该显示的数字或列'
   },
   {
     type: 'checkbox',
-    label: 'Striped',
+    label: '条纹',
     key: 'striped',
-    tooltip: 'This will stripe the table if checked.',
+    tooltip: '如果勾选此项，将对该表条纹显示',
     input: true,
     weight: 701
   },
   {
     type: 'checkbox',
-    label: 'Bordered',
+    label: '边框',
     key: 'bordered',
     input: true,
-    tooltip: 'This will border the table if checked.',
+    tooltip: '如果选中此选项，表会有边框',
     weight: 702
   },
   {
     type: 'checkbox',
-    label: 'Hover',
+    label: '悬停',
     key: 'hover',
     input: true,
-    tooltip: 'Highlight a row on hover.',
+    tooltip: '悬停时高亮',
     weight: 703
   },
   {
     type: 'checkbox',
-    label: 'Condensed',
+    label: '压缩',
     key: 'condensed',
     input: true,
-    tooltip: 'Condense the size of the table.',
+    tooltip: '压缩表的大小',
     weight: 704
   }
 ];

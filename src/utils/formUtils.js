@@ -561,7 +561,7 @@ export function getStrings(form) {
     }
 
     if (component.type === 'editgrid') {
-      const string = this.component.addAnother || 'Add Another';
+      const string = this.component.addAnother || '添加';
       if (component.addAnother) {
         strings.push({
           key: component.key,
@@ -573,8 +573,8 @@ export function getStrings(form) {
 
     if (component.type === 'select') {
       [
-        'loading...',
-        'Type to search'
+        '加载中...',
+        '搜索'
       ].forEach(string => {
         strings.push({
           key: component.key,

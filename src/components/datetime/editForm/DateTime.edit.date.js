@@ -11,18 +11,18 @@ export default [
     type: 'textfield',
     input: true,
     key: 'datePicker.minDate',
-    label: 'Minimum Date',
+    label: '最小日期',
     placeholder: 'yyyy-MM-dd',
-    tooltip: 'The minimum date that can be picked. You can also use Moment.js functions. For example: \n \n moment().subtract(10, \'days\')',
+    tooltip: '可以选择的最小日期。您还可以使用Moment.js函数。例如: \n \n moment().subtract(10, \'days\')',
     weight: 10
   },
   {
     type: 'textfield',
     input: true,
     key: 'datePicker.maxDate',
-    label: 'Maximum Date',
+    label: '最大日期',
     placeholder: 'yyyy-MM-dd',
-    tooltip: 'The maximum date that can be picked. You can also use Moment.js functions. For example: \n \n moment().add(10, \'days\')',
+    tooltip: '可以选择的最大日期。 您还可以使用Moment.js函数。例如:  \n \n moment().add(10, \'days\')',
     weight: 20
   }
 ];

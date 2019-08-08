@@ -8,7 +8,7 @@ export default class SignatureComponent extends Input {
       type: 'signature',
       label: '签名',
       key: 'signature',
-      footer: 'Sign above',
+      footer: '以上',
       width: '100%',
       height: '150px',
       penColor: 'black',

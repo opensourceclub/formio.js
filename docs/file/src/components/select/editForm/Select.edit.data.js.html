@@ -228,10 +228,10 @@ export default [
     type: &apos;select&apos;,
     input: true,
     weight: 0,
-    tooltip: &apos;The source to use for the select data. Values lets you provide your own values and labels. JSON lets you provide raw JSON data. URL lets you provide a URL to retrieve the JSON data from.&apos;,
+    tooltip: &apos;&#x7528;&#x4E8E;&#x9009;&#x62E9;&#x6570;&#x636E;&#x7684;&#x6E90;&#x3002;&quot;Values&quot;&#x5141;&#x8BB8;&#x60A8;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x7684;&#x503C;&#x548C;&#x6807;&#x7B7E;&#x3002;&quot;JSON&quot;&#x5141;&#x8BB8;&#x60A8;&#x63D0;&#x4F9B;&#x539F;&#x59CB;JSON&#x6570;&#x636E;&#x3002;&quot;URL&quot;&#x5141;&#x8BB8;&#x60A8;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;URL&#x6765;&#x68C0;&#x7D22;JSON&#x6570;&#x636E;&#x3002;&apos;,
     key: &apos;dataSrc&apos;,
     defaultValue: &apos;values&apos;,
-    label: &apos;Data Source Type&apos;,
+    label: &apos;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;&apos;,
     dataSrc: &apos;values&apos;,
     data: {
       values: [
@@ -249,8 +249,8 @@ export default [
     weight: 10,
     input: true,
     key: &apos;indexeddb.database&apos;,
-    label: &apos;Database name&apos;,
-    tooltip: &apos;The name of the indexeddb database.&apos;,
+    label: &apos;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&apos;,
+    tooltip: &apos;&#x7D22;&#x5F15;&#x6570;&#x636E;&#x5E93;&#x7684;&#x540D;&#x79F0;&#x3002;&apos;,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;indexeddb&apos;] },
     },
@@ -259,9 +259,9 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;indexeddb.table&apos;,
-    label: &apos;Table name&apos;,
+    label: &apos;&#x8868;&#x540D;&apos;,
     weight: 16,
-    tooltip: &apos;The name of table in the indexeddb database.&apos;,
+    tooltip: &apos;&#x7D22;&#x5F15;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x540D;&#x79F0;&apos;,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;indexeddb&apos;] },
     }
@@ -273,8 +273,8 @@ export default [
     weight: 18,
     input: true,
     key: &apos;indexeddb.filter&apos;,
-    label: &apos;Row Filter&apos;,
-    tooltip: &apos;Filter table items that match the object.&apos;,
+    label: &apos;&#x884C;&#x8FC7;&#x6EE4;&apos;,
+    tooltip: &apos;&#x7B5B;&#x9009;&#x5339;&#x914D;&#x5BF9;&#x8C61;&#x7684;&#x8868;&#x9879;&apos;,
     defaultValue: {},
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;indexeddb&apos;] },
@@ -287,8 +287,8 @@ export default [
     weight: 10,
     input: true,
     key: &apos;data.json&apos;,
-    label: &apos;Data Source Raw JSON&apos;,
-    tooltip: &apos;A raw JSON array to use as a data source.&apos;,
+    label: &apos;&#x6570;&#x636E;&#x6E90;&#x539F;&#x59CB;JSON&apos;,
+    tooltip: &apos;&#x7528;&#x4F5C;&#x6570;&#x636E;&#x6E90;&#x7684;&#x539F;&#x59CB;JSON&#x6570;&#x7EC4;&apos;,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;json&apos;] },
     },
@@ -298,9 +298,9 @@ export default [
     input: true,
     key: &apos;data.url&apos;,
     weight: 10,
-    label: &apos;Data Source URL&apos;,
-    placeholder: &apos;Data Source URL&apos;,
-    tooltip: &apos;A URL that returns a JSON array to use as the data source.&apos;,
+    label: &apos;&#x6570;&#x636E;&#x6E90;URL&apos;,
+    placeholder: &apos;&#x6570;&#x636E;&#x6E90;URL&apos;,
+    tooltip: &apos;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;JSON&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x6E90;URL&apos;,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.dataSrc&apos; }, &apos;url&apos;] },
     },
@@ -308,7 +308,7 @@ export default [
   {
     type: &apos;checkbox&apos;,
     input: true,
-    label: &apos;Lazy Load Data&apos;,
+    label: &apos;&#x6570;&#x636E;&#x61D2;&#x52A0;&#x8F7D;&apos;,
     key: &apos;lazyLoad&apos;,
     tooltip: &apos;When set, this will not fire off the request to the URL until this control is within focus. This can improve performance if you have many Select dropdowns on your form where the API\&apos;s will only fire when the control is activated.&apos;,
     weight: 11,

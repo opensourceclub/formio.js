@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 144,
+  "end": 149,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 144,
+    "end": 149,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 0,
-        "end": 143,
+        "end": 147,
         "loc": {
           "start": {
             "line": 1,
@@ -45,7 +45,7 @@
         "declaration": {
           "type": "ObjectExpression",
           "start": 15,
-          "end": 142,
+          "end": 146,
           "loc": {
             "start": {
               "line": 1,
@@ -59,8 +59,8 @@
           "properties": [
             {
               "type": "ObjectProperty",
-              "start": 19,
-              "end": 54,
+              "start": 20,
+              "end": 55,
               "loc": {
                 "start": {
                   "line": 2,
@@ -76,8 +76,8 @@
               "computed": false,
               "key": {
                 "type": "StringLiteral",
-                "start": 19,
-                "end": 44,
+                "start": 20,
+                "end": 45,
                 "loc": {
                   "start": {
                     "line": 2,
@@ -96,8 +96,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 46,
-                "end": 54,
+                "start": 47,
+                "end": 55,
                 "loc": {
                   "start": {
                     "line": 2,
@@ -117,8 +117,8 @@
             },
             {
               "type": "ObjectProperty",
-              "start": 58,
-              "end": 92,
+              "start": 60,
+              "end": 94,
               "loc": {
                 "start": {
                   "line": 3,
@@ -134,8 +134,8 @@
               "computed": false,
               "key": {
                 "type": "StringLiteral",
-                "start": 58,
-                "end": 82,
+                "start": 60,
+                "end": 84,
                 "loc": {
                   "start": {
                     "line": 3,
@@ -154,8 +154,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 84,
-                "end": 92,
+                "start": 86,
+                "end": 94,
                 "loc": {
                   "start": {
                     "line": 3,
@@ -175,8 +175,8 @@
             },
             {
               "type": "ObjectProperty",
-              "start": 96,
-              "end": 140,
+              "start": 99,
+              "end": 143,
               "loc": {
                 "start": {
                   "line": 4,
@@ -192,8 +192,8 @@
               "computed": false,
               "key": {
                 "type": "StringLiteral",
-                "start": 96,
-                "end": 130,
+                "start": 99,
+                "end": 133,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -212,8 +212,8 @@
               },
               "value": {
                 "type": "StringLiteral",
-                "start": 132,
-                "end": 140,
+                "start": 135,
+                "end": 143,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -336,8 +336,8 @@
         "updateContext": null
       },
       "value": "formio-tab-panel-active",
-      "start": 19,
-      "end": 44,
+      "start": 20,
+      "end": 45,
       "loc": {
         "start": {
           "line": 2,
@@ -362,8 +362,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 44,
-      "end": 45,
+      "start": 45,
+      "end": 46,
       "loc": {
         "start": {
           "line": 2,
@@ -389,8 +389,8 @@
         "updateContext": null
       },
       "value": "active",
-      "start": 46,
-      "end": 54,
+      "start": 47,
+      "end": 55,
       "loc": {
         "start": {
           "line": 2,
@@ -415,8 +415,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 54,
-      "end": 55,
+      "start": 55,
+      "end": 56,
       "loc": {
         "start": {
           "line": 2,
@@ -442,8 +442,8 @@
         "updateContext": null
       },
       "value": "formio-tab-link-active",
-      "start": 58,
-      "end": 82,
+      "start": 60,
+      "end": 84,
       "loc": {
         "start": {
           "line": 3,
@@ -468,8 +468,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 82,
-      "end": 83,
+      "start": 84,
+      "end": 85,
       "loc": {
         "start": {
           "line": 3,
@@ -495,8 +495,8 @@
         "updateContext": null
       },
       "value": "active",
-      "start": 84,
-      "end": 92,
+      "start": 86,
+      "end": 94,
       "loc": {
         "start": {
           "line": 3,
@@ -521,8 +521,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 92,
-      "end": 93,
+      "start": 94,
+      "end": 95,
       "loc": {
         "start": {
           "line": 3,
@@ -548,8 +548,8 @@
         "updateContext": null
       },
       "value": "formio-tab-link-container-active",
-      "start": 96,
-      "end": 130,
+      "start": 99,
+      "end": 133,
       "loc": {
         "start": {
           "line": 4,
@@ -574,8 +574,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 130,
-      "end": 131,
+      "start": 133,
+      "end": 134,
       "loc": {
         "start": {
           "line": 4,
@@ -601,8 +601,8 @@
         "updateContext": null
       },
       "value": "active",
-      "start": 132,
-      "end": 140,
+      "start": 135,
+      "end": 143,
       "loc": {
         "start": {
           "line": 4,
@@ -626,8 +626,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 141,
-      "end": 142,
+      "start": 145,
+      "end": 146,
       "loc": {
         "start": {
           "line": 5,
@@ -652,8 +652,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 142,
-      "end": 143,
+      "start": 146,
+      "end": 147,
       "loc": {
         "start": {
           "line": 5,
@@ -678,8 +678,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 144,
-      "end": 144,
+      "start": 149,
+      "end": 149,
       "loc": {
         "start": {
           "line": 6,

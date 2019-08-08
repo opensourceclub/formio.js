@@ -5,9 +5,9 @@ export default [
   },
   {
     type: 'checkbox',
-    label: 'Disable Adding / Removing Rows',
+    label: '禁用添加/删除行',
     key: 'disableAddingRemovingRows',
-    tooltip: 'Check if you want to hide Add Another button and Remove Row button',
+    tooltip: '是否要隐藏“添加另一个按钮”和“删除行”按钮',
     weight: 405,
     input: true,
     clearOnHide: false,
@@ -16,34 +16,34 @@ export default [
   },
   {
     type: 'checkbox',
-    label: 'Allow Reorder',
+    label: '允许重新排序',
     key: 'reorder',
     weight: 407,
     input: true,
   },
   {
     type: 'textfield',
-    label: 'Add Another Text',
+    label: '添加文本',
     key: 'addAnother',
-    tooltip: 'Set the text of the Add Another button.',
-    placeholder: 'Add Another',
+    tooltip: '设置添加按钮的文本',
+    placeholder: '添加',
     weight: 410,
     input: true,
     customConditional: 'show = !data.disableAddingRemovingRows'
   },
   {
     type: 'select',
-    label: 'Add Another Position',
+    label: '添加位置',
     key: 'addAnotherPosition',
     dataSrc: 'values',
-    tooltip: 'Position for Add Another button with respect to Data Grid Array.',
+    tooltip: '用于相对于数据网格数组，添加按钮的位置',
     defaultValue: 'bottom',
     input: true,
     data: {
       values: [
-        { label: 'Top', value: 'top' },
-        { label: 'Bottom', value: 'bottom' },
-        { label: 'Both', value: 'both' }
+        { label: '顶部', value: 'top' },
+        { label: '底部', value: 'bottom' },
+        { label: '都', value: 'both' }
       ]
     },
     weight: 411,
@@ -51,15 +51,15 @@ export default [
   },
   {
     type: 'checkbox',
-    label: 'Default Open Rows',
+    label: '默认打开的行',
     key: 'defaultOpen',
-    tooltip: 'Check this if you would like for the rows of the edit grid to be defaulted to opened if values exist.',
+    tooltip: '如果希望编辑网格的行默认为打开(如果存在值)，请检查此选项。',
     weight: 420,
     input: true
   },
   {
     type: 'checkbox',
-    label: 'Equal column width',
+    label: '相等的列宽',
     key: 'layoutFixed',
     weight: 430,
     input: true,
@@ -67,7 +67,7 @@ export default [
   {
     key: 'enableRowGroups',
     type: 'checkbox',
-    label: 'Enable Row Groups',
+    label: '允许行组',
     weight: 440,
     input: true
   },
@@ -101,7 +101,7 @@ export default [
         row: '0-0'
       },
       {
-        label: 'Number of Rows',
+        label: '行数',
         mask: false,
         tableView: true,
         alwaysEnabled: false,
@@ -115,7 +115,7 @@ export default [
     conditional: { json: { var: 'data.enableRowGroups' } }
   },
   {
-    label: 'Hide Group on Header Click',
+    label: '在标题单击上时隐藏组',
     type: 'checkbox',
     input: true,
     key: 'groupToggle',

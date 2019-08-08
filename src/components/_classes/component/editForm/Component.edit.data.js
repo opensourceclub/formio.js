@@ -4,48 +4,48 @@ export default [
   {
     weight: 0,
     type: 'checkbox',
-    label: 'Multiple Values',
-    tooltip: 'Allows multiple values to be entered for this field.',
+    label: '多个值',
+    tooltip: '允许该字段输入多个值',
     key: 'multiple',
     input: true
   },
   {
     type: 'textfield',
-    label: 'Default Value',
+    label: '默认值',
     key: 'defaultValue',
     weight: 20,
-    placeholder: 'Default Value',
-    tooltip: 'The will be the value for this field, before user interaction. Having a default value will override the placeholder text.',
+    placeholder: '默认值',
+    tooltip: '在用户交互之前，将是该字段的值。具有默认值将覆盖占位符文本',
     input: true
   },
   {
     weight: 30,
     type: 'radio',
-    label: 'Persistent',
-    tooltip: 'A persistent field will be stored in database when the form is submitted.',
+    label: '持久化',
+    tooltip: '提交表单时，持久性字段将存储在数据库中',
     key: 'persistent',
     input: true,
     inline: true,
     defaultValue: true,
     values: [
-      { label: 'None', value: false },
-      { label: 'Server', value: true },
-      { label: 'Client', value: 'client-only' },
+      { label: '否', value: false },
+      { label: '服务端', value: true },
+      { label: '仅客户端', value: 'client-only' },
     ]
   },
   {
     weight: 40,
     type: 'checkbox',
-    label: 'Protected',
-    tooltip: 'A protected field will not be returned when queried via API.',
+    label: '受保护',
+    tooltip: '当通过API查询受保护字段时，将不会返回该字段',
     key: 'protected',
     input: true
   },
   {
     weight: 400,
     type: 'checkbox',
-    label: 'Encrypted (Enterprise Only)',
-    tooltip: 'Encrypt this field on the server. This is two way encryption which is not suitable for passwords.',
+    label: '加密',
+    tooltip: '在服务器上加密此字段。这是一种不适合密码的双向加密',
     key: 'encrypted',
     input: true
   },
@@ -54,33 +54,33 @@ export default [
     input: true,
     weight: 200,
     key: 'dbIndex',
-    label: 'Database Index',
-    tooltip: 'Set this field as an index within the database. Increases performance for submission queries.'
+    label: '数据库索引',
+    tooltip: '将此字段设置为数据库中的索引。提高提交查询的性能'
   },
   {
     weight: 700,
     type: 'checkbox',
-    label: 'Clear Value When Hidden',
+    label: '隐藏时清除',
     key: 'clearOnHide',
     defaultValue: true,
-    tooltip: 'When a field is hidden, clear the value.',
+    tooltip: '当字段被隐藏时，清除该值',
     input: true
   },
-  EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 1000,
-    '<p><h4>Example:</h4><pre>value = data.firstName + " " + data.lastName;</pre></p>',
-    '<p><h4>Example:</h4><pre>{"cat": [{"var": "data.firstName"}, " ", {"var": "data.lastName"}]}</pre>'
-  ),
-  EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 1100,
-    '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',
-    '<p><h4>Example:</h4><pre>{"sum": [{"var": "data.a"}, {"var": "data.b"}, {"var": "data.c"}]}</pre><p><a target="_blank" href="http://formio.github.io/formio.js/app/examples/calculated.html">Click here for an example</a></p>'
-  ),
+  // EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 1000,
+  //   '<p><h4>Example:</h4><pre>value = data.firstName + " " + data.lastName;</pre></p>',
+  //   '<p><h4>Example:</h4><pre>{"cat": [{"var": "data.firstName"}, " ", {"var": "data.lastName"}]}</pre>'
+  // ),
+  // EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 1100,
+  //   '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',
+  //   '<p><h4>Example:</h4><pre>{"sum": [{"var": "data.a"}, {"var": "data.b"}, {"var": "data.c"}]}</pre><p><a target="_blank" href="http://formio.github.io/formio.js/app/examples/calculated.html">Click here for an example</a></p>'
+  // ),
   {
     type: 'checkbox',
     input: true,
     weight: 1200,
     key: 'allowCalculateOverride',
-    label: 'Allow Manual Override of Calculated Value',
-    tooltip: 'When checked, this will allow the user to manually override the calculated value.'
+    label: '允许手动覆盖计算值',
+    tooltip: '选中此选项后，将允许用户手动覆盖计算值'
   },
 ];
 /* eslint-enable max-len */

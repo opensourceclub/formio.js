@@ -228,9 +228,9 @@ export default [
     type: &apos;select&apos;,
     input: true,
     key: &apos;widget.type&apos;,
-    label: &apos;Widget&apos;,
-    placeholder: &apos;Select a widget&apos;,
-    tooltip: &apos;The widget is the display UI used to input the value of the field.&apos;,
+    label: &apos;&#x63A7;&#x4EF6;&apos;,
+    placeholder: &apos;&#x9009;&#x62E9;&#x63A7;&#x4EF6;&apos;,
+    tooltip: &apos;&#x63A7;&#x4EF6;&#x662F;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x5B57;&#x6BB5;&#x503C;&#x7684;&#x663E;&#x793A;UI&apos;,
     defaultValue: &apos;input&apos;,
     onChange: (context) =&gt; {
       context.data.widget = _.pick(context.data.widget, &apos;type&apos;);
@@ -238,8 +238,8 @@ export default [
     dataSrc: &apos;values&apos;,
     data: {
       values: [
-        { label: &apos;Input Field&apos;, value: &apos;input&apos; },
-        { label: &apos;Calendar Picker&apos;, value: &apos;calendar&apos; },
+        { label: &apos;&#x8F93;&#x5165;&#x5B57;&#x6BB5;&apos;, value: &apos;input&apos; },
+        { label: &apos;&#x65E5;&#x5386;&#x9009;&#x62E9;&#x5668;&apos;, value: &apos;calendar&apos; },
       ]
     },
     conditional: {
@@ -251,8 +251,8 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;inputMask&apos;,
-    label: &apos;Input Mask&apos;,
-    tooltip: &apos;An input mask helps the user with input by ensuring a predefined format.&lt;br&gt;&lt;br&gt;9: numeric&lt;br&gt;a: alphabetical&lt;br&gt;*: alphanumeric&lt;br&gt;&lt;br&gt;Example telephone mask: (999) 999-9999&lt;br&gt;&lt;br&gt;See the &lt;a target=\&apos;_blank\&apos; href=\&apos;https://github.com/RobinHerbots/jquery.inputmask\&apos;&gt;jquery.inputmask documentation&lt;/a&gt; for more information.&lt;/a&gt;&apos;,
+    label: &apos;&#x8F93;&#x5165;&#x63A9;&#x7801;&apos;,
+    tooltip: &apos;&#x901A;&#x8FC7;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x683C;&#x5F0F;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x63A9;&#x7801;.&lt;br&gt;&lt;br&gt;9: &#x6570;&#x5B57;&lt;br&gt;a: &#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x6392;&#x5217;&lt;br&gt;*: &#x5B57;&#x6BCD;&#x6570;&#x5B57;&lt;br&gt;&lt;br&gt;&#x7535;&#x8BDD;&#x63A9;&#x7801;&#x4E3E;&#x4F8B;: (999) 999-9999&lt;br&gt;&lt;br&gt;&#x53C2;&#x770B; &lt;a target=\&apos;_blank\&apos; href=\&apos;https://github.com/RobinHerbots/jquery.inputmask\&apos;&gt;jquery.inputmask&#x6587;&#x6863;&lt;/a&gt;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;&lt;/a&gt;&apos;,
     customConditional: &apos;show = !data.allowMultipleMasks;&apos;
   },
   {
@@ -260,27 +260,27 @@ export default [
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;allowMultipleMasks&apos;,
-    label: &apos;Allow Multiple Masks&apos;
+    label: &apos;&#x5141;&#x8BB8;&#x591A;&#x91CD;&#x63A9;&#x7801;&apos;
   },
   {
     weight: 417,
     type: &apos;datagrid&apos;,
     input: true,
     key: &apos;inputMasks&apos;,
-    label: &apos;Input Masks&apos;,
+    label: &apos;&#x8F93;&#x5165;&#x63A9;&#x7801;&apos;,
     customConditional: &apos;show = data.allowMultipleMasks === true;&apos;,
     reorder: true,
     components: [
       {
         type: &apos;textfield&apos;,
         key: &apos;label&apos;,
-        label: &apos;Label&apos;,
+        label: &apos;&#x6807;&#x7B7E;&apos;,
         input: true
       },
       {
         type: &apos;textfield&apos;,
         key: &apos;mask&apos;,
-        label: &apos;Mask&apos;,
+        label: &apos;&#x63A9;&#x7801;&apos;,
         input: true
       }
     ]
@@ -290,27 +290,27 @@ export default [
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;allowMultipleMasks&apos;,
-    label: &apos;Allow Multiple Masks&apos;
+    label: &apos;&#x5141;&#x8BB8;&#x591A;&#x91CD;&#x63A9;&#x7801;&apos;
   },
   {
     weight: 417,
     type: &apos;datagrid&apos;,
     input: true,
     key: &apos;inputMasks&apos;,
-    label: &apos;Input Masks&apos;,
+    label: &apos;&#x8F93;&#x5165;&#x63A9;&#x7801;&apos;,
     customConditional: &apos;show = data.allowMultipleMasks === true;&apos;,
     reorder: true,
     components: [
       {
         type: &apos;textfield&apos;,
         key: &apos;label&apos;,
-        label: &apos;Label&apos;,
+        label: &apos;&#x6807;&#x7B7E;&apos;,
         input: true
       },
       {
         type: &apos;textfield&apos;,
         key: &apos;mask&apos;,
-        label: &apos;Mask&apos;,
+        label: &apos;&#x63A9;&#x7801;&apos;,
         input: true
       }
     ]
@@ -320,36 +320,36 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;prefix&apos;,
-    label: &apos;Prefix&apos;
+    label: &apos;&#x524D;&#x7F6E;&#x6587;&#x672C;&apos;
   },
   {
     weight: 330,
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;suffix&apos;,
-    label: &apos;Suffix&apos;
+    label: &apos;&#x540E;&#x7F6E;&#x6587;&#x672C;&apos;
   },
   {
     weight: 1300,
     type: &apos;checkbox&apos;,
-    label: &apos;Hide Input&apos;,
-    tooltip: &apos;Hide the input in the browser. This does not encrypt on the server. Do not use for passwords.&apos;,
+    label: &apos;&#x9690;&#x85CF;&#x8F93;&#x5165;&apos;,
+    tooltip: &apos;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9690;&#x85CF;&#x8F93;&#x5165;&#x3002;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E0D;&#x52A0;&#x5BC6;&#xFF0C;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x5BC6;&#x7801;&apos;,
     key: &apos;mask&apos;,
     input: true
   },
   {
     weight: 1200,
     type: &apos;checkbox&apos;,
-    label: &apos;Show Word Counter&apos;,
-    tooltip: &apos;Show a live count of the number of words.&apos;,
+    label: &apos;&#x663E;&#x793A;&#x5355;&#x8BCD;&#x6570;&apos;,
+    tooltip: &apos;&#x5B9E;&#x65F6;&#x663E;&#x793A;&#x5355;&#x8BCD;&#x6570;&#x91CF;&apos;,
     key: &apos;showWordCount&apos;,
     input: true
   },
   {
     weight: 1201,
     type: &apos;checkbox&apos;,
-    label: &apos;Show Character Counter&apos;,
-    tooltip: &apos;Show a live count of the number of characters.&apos;,
+    label: &apos;&#x663E;&#x793A;&#x5B57;&#x7B26;&#x8BA1;&#x6570;&apos;,
+    tooltip: &apos;&#x5B9E;&#x65F6;&#x663E;&#x793A;&#x5B57;&#x7B26;&#x8BA1;&#x6570;&apos;,
     key: &apos;showCharCount&apos;,
     input: true
   },

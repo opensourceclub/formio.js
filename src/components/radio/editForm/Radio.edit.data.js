@@ -8,21 +8,21 @@ export default [
   {
     type: 'datagrid',
     input: true,
-    label: 'Values',
+    label: '可选值',
     key: 'values',
-    tooltip: 'The radio button values that can be picked for this field. Values are text submitted with the form data. Labels are text that appears next to the radio buttons on the form.',
+    tooltip: '可以为该字段选择的值。"值"是与表单数据一起提交的文本。"标签"是出现在表单单选按钮旁边的文本',
     weight: 10,
     reorder: true,
     defaultValue: [{ label: '', value: '' }],
     components: [
       {
-        label: 'Label',
+        label: '标签',
         key: 'label',
         input: true,
         type: 'textfield',
       },
       {
-        label: 'Value',
+        label: '值',
         key: 'value',
         input: true,
         type: 'textfield',
@@ -33,9 +33,9 @@ export default [
         type: 'select',
         input: true,
         weight: 180,
-        label: 'Shortcut',
+        label: '快照',
         key: 'shortcut',
-        tooltip: 'The shortcut key for this option.',
+        tooltip: '此选项的快照',
         dataSrc: 'custom',
         data: {
           custom({

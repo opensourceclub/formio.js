@@ -27,7 +27,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <button class="btn btn-primary formio-button-add-another" ref="addButton"><i class="glyphicons glyphicons-plus"></i> Add Another</button>
+              <button class="btn btn-primary formio-button-add-another" ref="addButton"><i class="glyphicons glyphicons-plus"></i> 添加</button>
             </td>
           </tr>
         </tbody>
@@ -57,7 +57,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <button class="btn btn-primary formio-button-add-another" ref="addButton"><i class="glyphicons glyphicons-plus"></i> Add Another</button>
+              <button class="btn btn-primary formio-button-add-another" ref="addButton"><i class="glyphicons glyphicons-plus"></i> 添加</button>
             </td>
           </tr>
         </tbody>
@@ -67,7 +67,7 @@
     </div>
     <div id="number" class="form-group has-feedback formio-component formio-component-number formio-component-number  form-group" ref="component">
       <label class="control-label ">
-        Number
+        数字
       </label>
       <div ref="element">
         <input ref="input" name="data[number]" type="text" class="form-control" lang="en" inputmode="numeric" value=""></input>
@@ -76,7 +76,7 @@
     </div>
     <div id="password" class="form-group has-feedback formio-component formio-component-password formio-component-password  form-group" ref="component">
       <label class="control-label ">
-        Password
+        密码
       </label>
       <div ref="element">
         <input ref="input" name="data[password]" type="password" class="form-control" lang="en" value=""></input>
@@ -85,7 +85,7 @@
     </div>
     <div id="textArea" class="form-group has-feedback formio-component formio-component-textarea formio-component-textArea  form-group" ref="component">
       <label class="control-label ">
-        Text Area
+        文本区域
       </label>
       <div ref="element">
         <textarea ref="input" name="data[textArea]" type="text" class="form-control" lang="en" spellcheck="true" rows="3"></textarea>
@@ -96,7 +96,7 @@
       <div class="form-check">
         <label class="form-group has-feedback formio-component formio-component-checkbox formio-component-checkbox  checkbox form-check-label">
           <input ref="input" name="data[checkbox]" type="checkbox" class="form-check-input" lang="en" value="0">
-          <span>Checkbox</span>
+          <span>复选按钮</span>
           </input>
         </label>
       </div>
@@ -104,25 +104,25 @@
     </div>
     <div id="selectBoxes" class="form-group has-feedback formio-component formio-component-selectboxes formio-component-selectBoxes  form-group" ref="component">
       <label class="control-label ">
-        Select Boxes
+        选择框
       </label>
       <div class="input-group">
         <div class="checkbox" ref="wrapper">
           <label class="control-label form-check-label" for="selectBoxes-one">
             <input ref="input" name="data[selectBoxes][]" type="checkbox" class="form-check-input" lang="en" value="one" id="selectBoxes-one">
-            <span>One</span>
+            <span>一</span>
           </label>
         </div>
         <div class="checkbox" ref="wrapper">
           <label class="control-label form-check-label" for="selectBoxes-two">
             <input ref="input" name="data[selectBoxes][]" type="checkbox" class="form-check-input" lang="en" value="two" id="selectBoxes-two">
-            <span>Two</span>
+            <span>二</span>
           </label>
         </div>
         <div class="checkbox" ref="wrapper">
           <label class="control-label form-check-label" for="selectBoxes-three">
             <input ref="input" name="data[selectBoxes][]" type="checkbox" class="form-check-input" lang="en" value="three" id="selectBoxes-three">
-            <span>Three</span>
+            <span>三</span>
           </label>
         </div>
       </div>
@@ -130,32 +130,32 @@
     </div>
     <div id="select" class="form-group has-feedback formio-component formio-component-select formio-component-select  form-group" ref="component">
       <label class="control-label ">
-        Select
+        单选框
       </label>
       <select ref="selectContainer" name="data[select]" type="text" class="form-control" lang="en"></select>
       <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
     </div>
     <div id="radio" class="form-group has-feedback formio-component formio-component-radio formio-component-radio  form-group" ref="component">
       <label class="control-label ">
-        Radio
+        单选按钮
       </label>
       <div class="input-group">
         <div class="radio" ref="wrapper">
           <label class="control-label form-check-label" for="radio-one">
             <input ref="input" name="data[radio][radio]" type="radio" class="form-check-input" lang="en" value="one" id="radio-one">
-            <span>One</span>
+            <span>一</span>
           </label>
         </div>
         <div class="radio" ref="wrapper">
           <label class="control-label form-check-label" for="radio-two">
             <input ref="input" name="data[radio][radio]" type="radio" class="form-check-input" lang="en" value="two" id="radio-two">
-            <span>Two</span>
+            <span>二</span>
           </label>
         </div>
         <div class="radio" ref="wrapper">
           <label class="control-label form-check-label" for="radio-three">
             <input ref="input" name="data[radio][radio]" type="radio" class="form-check-input" lang="en" value="three" id="radio-three">
-            <span>Three</span>
+            <span>三</span>
           </label>
         </div>
       </div>
@@ -163,43 +163,43 @@
     </div>
     <div id="radioInline" class="form-group has-feedback formio-component formio-component-radio formio-component-radioInline  form-group" ref="component">
       <label class="control-label ">
-        Radio Inline
+        行内单选按钮
       </label>
       <div class="input-group">
         <div class="radio-inline" ref="wrapper">
           <label class="control-label form-check-label" for="radioInline-one">
             <input ref="input" name="data[radioInline][radioInline]" type="radio" class="form-check-input" lang="en" value="one" id="radioInline-one">
-            <span>One</span>
+            <span>一</span>
           </label>
         </div>
         <div class="radio-inline" ref="wrapper">
           <label class="control-label form-check-label" for="radioInline-two">
             <input ref="input" name="data[radioInline][radioInline]" type="radio" class="form-check-input" lang="en" value="two" id="radioInline-two">
-            <span>Two</span>
+            <span>二</span>
           </label>
         </div>
         <div class="radio-inline" ref="wrapper">
           <label class="control-label form-check-label" for="radioInline-three">
             <input ref="input" name="data[radioInline][radioInline]" type="radio" class="form-check-input" lang="en" value="three" id="radioInline-three">
-            <span>Three</span>
+            <span>三</span>
           </label>
         </div>
       </div>
       <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
     </div>
     <div id="content" class="formio-component formio-component-htmlelement formio-component-content  form-group" ref="component">
-      <p ref="html" attribute="value">HTML Content</p>
+      <p ref="html" attribute="value">HTML 内容</p>
       <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
     </div>
     <div id="content2" class="formio-component formio-component-content formio-component-content2  form-group" ref="component">
       <div ref="html">
-        <p>Content <strong>Bold</strong></p>
+        <p>内容 <strong>流</strong></p>
       </div>
       <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
     </div>
     <div id="submit" class="form-group has-feedback formio-component formio-component-button formio-component-submit  form-group form-group" ref="component">
       <button ref="button" name="data[submit]" type="submit" class="btn btn-primary btn-md" lang="en">
-        Submit
+        提交
       </button>
       <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
     </div>

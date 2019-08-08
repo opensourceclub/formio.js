@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 851,
+  "end": 888,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 851,
+    "end": 888,
     "loc": {
       "start": {
         "line": 1,
@@ -100,8 +100,8 @@
           {
             "type": "CommentBlock",
             "value": " eslint-disable max-len ",
-            "start": 69,
-            "end": 97,
+            "start": 70,
+            "end": 98,
             "loc": {
               "start": {
                 "line": 2,
@@ -117,8 +117,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 98,
-        "end": 822,
+        "start": 100,
+        "end": 857,
         "loc": {
           "start": {
             "line": 3,
@@ -131,8 +131,8 @@
         },
         "declaration": {
           "type": "ArrayExpression",
-          "start": 113,
-          "end": 821,
+          "start": 115,
+          "end": 856,
           "loc": {
             "start": {
               "line": 3,
@@ -143,391 +143,13 @@
               "column": 1
             }
           },
-          "elements": [
-            {
-              "type": "CallExpression",
-              "start": 117,
-              "end": 416,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 2
-                },
-                "end": {
-                  "line": 7,
-                  "column": 3
-                }
-              },
-              "callee": {
-                "type": "MemberExpression",
-                "start": 117,
-                "end": 146,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 31
-                  }
-                },
-                "object": {
-                  "type": "Identifier",
-                  "start": 117,
-                  "end": 130,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 15
-                    },
-                    "identifierName": "EditFormUtils"
-                  },
-                  "name": "EditFormUtils",
-                  "leadingComments": null
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 131,
-                  "end": 146,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 16
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 31
-                    },
-                    "identifierName": "javaScriptValue"
-                  },
-                  "name": "javaScriptValue"
-                },
-                "computed": false,
-                "leadingComments": null
-              },
-              "arguments": [
-                {
-                  "type": "StringLiteral",
-                  "start": 147,
-                  "end": 169,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 32
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 54
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "Custom Default Value",
-                    "raw": "'Custom Default Value'"
-                  },
-                  "value": "Custom Default Value"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 171,
-                  "end": 191,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 56
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 76
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "customDefaultValue",
-                    "raw": "'customDefaultValue'"
-                  },
-                  "value": "customDefaultValue"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 193,
-                  "end": 213,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 78
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 98
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "customDefaultValue",
-                    "raw": "'customDefaultValue'"
-                  },
-                  "value": "customDefaultValue"
-                },
-                {
-                  "type": "NumericLiteral",
-                  "start": 215,
-                  "end": 218,
-                  "loc": {
-                    "start": {
-                      "line": 4,
-                      "column": 100
-                    },
-                    "end": {
-                      "line": 4,
-                      "column": 103
-                    }
-                  },
-                  "extra": {
-                    "rawValue": 120,
-                    "raw": "120"
-                  },
-                  "value": 120
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 224,
-                  "end": 306,
-                  "loc": {
-                    "start": {
-                      "line": 5,
-                      "column": 4
-                    },
-                    "end": {
-                      "line": 5,
-                      "column": 86
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>",
-                    "raw": "'<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>'"
-                  },
-                  "value": "<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 312,
-                  "end": 412,
-                  "loc": {
-                    "start": {
-                      "line": 6,
-                      "column": 4
-                    },
-                    "end": {
-                      "line": 6,
-                      "column": 104
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>",
-                    "raw": "'<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>'"
-                  },
-                  "value": "<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>"
-                }
-              ],
-              "leadingComments": null
-            },
-            {
-              "type": "CallExpression",
-              "start": 420,
-              "end": 819,
-              "loc": {
-                "start": {
-                  "line": 8,
-                  "column": 2
-                },
-                "end": {
-                  "line": 11,
-                  "column": 3
-                }
-              },
-              "callee": {
-                "type": "MemberExpression",
-                "start": 420,
-                "end": 449,
-                "loc": {
-                  "start": {
-                    "line": 8,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 8,
-                    "column": 31
-                  }
-                },
-                "object": {
-                  "type": "Identifier",
-                  "start": 420,
-                  "end": 433,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 15
-                    },
-                    "identifierName": "EditFormUtils"
-                  },
-                  "name": "EditFormUtils"
-                },
-                "property": {
-                  "type": "Identifier",
-                  "start": 434,
-                  "end": 449,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 16
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 31
-                    },
-                    "identifierName": "javaScriptValue"
-                  },
-                  "name": "javaScriptValue"
-                },
-                "computed": false
-              },
-              "arguments": [
-                {
-                  "type": "StringLiteral",
-                  "start": 450,
-                  "end": 468,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 32
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 50
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "Calculated Value",
-                    "raw": "'Calculated Value'"
-                  },
-                  "value": "Calculated Value"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 470,
-                  "end": 486,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 52
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 68
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "calculateValue",
-                    "raw": "'calculateValue'"
-                  },
-                  "value": "calculateValue"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 488,
-                  "end": 504,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 70
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 86
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "calculateValue",
-                    "raw": "'calculateValue'"
-                  },
-                  "value": "calculateValue"
-                },
-                {
-                  "type": "NumericLiteral",
-                  "start": 506,
-                  "end": 509,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 88
-                    },
-                    "end": {
-                      "line": 8,
-                      "column": 91
-                    }
-                  },
-                  "extra": {
-                    "rawValue": 130,
-                    "raw": "130"
-                  },
-                  "value": 130
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 515,
-                  "end": 585,
-                  "loc": {
-                    "start": {
-                      "line": 9,
-                      "column": 4
-                    },
-                    "end": {
-                      "line": 9,
-                      "column": 74
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>",
-                    "raw": "'<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>'"
-                  },
-                  "value": "<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>"
-                },
-                {
-                  "type": "StringLiteral",
-                  "start": 591,
-                  "end": 815,
-                  "loc": {
-                    "start": {
-                      "line": 10,
-                      "column": 4
-                    },
-                    "end": {
-                      "line": 10,
-                      "column": 228
-                    }
-                  },
-                  "extra": {
-                    "rawValue": "<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>",
-                    "raw": "'<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>'"
-                  },
-                  "value": "<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>"
-                }
-              ]
-            }
-          ],
+          "elements": [],
           "leadingComments": [
             {
               "type": "CommentBlock",
               "value": " eslint-disable max-len ",
-              "start": 69,
-              "end": 97,
+              "start": 70,
+              "end": 98,
               "loc": {
                 "start": {
                   "line": 2,
@@ -540,12 +162,142 @@
               }
             }
           ],
+          "innerComments": [
+            {
+              "type": "CommentLine",
+              "value": " EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 120,",
+              "start": 120,
+              "end": 225,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 2
+                },
+                "end": {
+                  "line": 4,
+                  "column": 107
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "   '<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>',",
+              "start": 229,
+              "end": 317,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 2
+                },
+                "end": {
+                  "line": 5,
+                  "column": 90
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "   '<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>'",
+              "start": 321,
+              "end": 426,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 2
+                },
+                "end": {
+                  "line": 6,
+                  "column": 107
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": " ),",
+              "start": 430,
+              "end": 435,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 2
+                },
+                "end": {
+                  "line": 7,
+                  "column": 7
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": " EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 130,",
+              "start": 439,
+              "end": 532,
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 2
+                },
+                "end": {
+                  "line": 8,
+                  "column": 95
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "   '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',",
+              "start": 536,
+              "end": 612,
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 2
+                },
+                "end": {
+                  "line": 9,
+                  "column": 78
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "   '<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>'",
+              "start": 616,
+              "end": 845,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 2
+                },
+                "end": {
+                  "line": 10,
+                  "column": 231
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": " )",
+              "start": 849,
+              "end": 853,
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 2
+                },
+                "end": {
+                  "line": 11,
+                  "column": 6
+                }
+              }
+            }
+          ],
           "trailingComments": [
             {
               "type": "CommentBlock",
               "value": " eslint-enable max-len ",
-              "start": 823,
-              "end": 850,
+              "start": 859,
+              "end": 886,
               "loc": {
                 "start": {
                   "line": 13,
@@ -563,8 +315,8 @@
           {
             "type": "CommentBlock",
             "value": " eslint-disable max-len ",
-            "start": 69,
-            "end": 97,
+            "start": 70,
+            "end": 98,
             "loc": {
               "start": {
                 "line": 2,
@@ -581,8 +333,8 @@
           {
             "type": "CommentBlock",
             "value": " eslint-enable max-len ",
-            "start": 823,
-            "end": 850,
+            "start": 859,
+            "end": 886,
             "loc": {
               "start": {
                 "line": 13,
@@ -603,8 +355,8 @@
     {
       "type": "CommentBlock",
       "value": " eslint-disable max-len ",
-      "start": 69,
-      "end": 97,
+      "start": 70,
+      "end": 98,
       "loc": {
         "start": {
           "line": 2,
@@ -617,10 +369,138 @@
       }
     },
     {
+      "type": "CommentLine",
+      "value": " EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 120,",
+      "start": 120,
+      "end": 225,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 2
+        },
+        "end": {
+          "line": 4,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>',",
+      "start": 229,
+      "end": 317,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 2
+        },
+        "end": {
+          "line": 5,
+          "column": 90
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>'",
+      "start": 321,
+      "end": 426,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 2
+        },
+        "end": {
+          "line": 6,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " ),",
+      "start": 430,
+      "end": 435,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 130,",
+      "start": 439,
+      "end": 532,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 8,
+          "column": 95
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',",
+      "start": 536,
+      "end": 612,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 9,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>'",
+      "start": 616,
+      "end": 845,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": 231
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " )",
+      "start": 849,
+      "end": 853,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 6
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": " eslint-enable max-len ",
-      "start": 823,
-      "end": 850,
+      "start": 859,
+      "end": 886,
       "loc": {
         "start": {
           "line": 13,
@@ -770,8 +650,8 @@
     {
       "type": "CommentBlock",
       "value": " eslint-disable max-len ",
-      "start": 69,
-      "end": 97,
+      "start": 70,
+      "end": 98,
       "loc": {
         "start": {
           "line": 2,
@@ -798,8 +678,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 98,
-      "end": 104,
+      "start": 100,
+      "end": 106,
       "loc": {
         "start": {
           "line": 3,
@@ -826,8 +706,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 105,
-      "end": 112,
+      "start": 107,
+      "end": 114,
       "loc": {
         "start": {
           "line": 3,
@@ -852,8 +732,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 113,
-      "end": 114,
+      "start": 115,
+      "end": 116,
       "loc": {
         "start": {
           "line": 3,
@@ -866,20 +746,10 @@
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "EditFormUtils",
-      "start": 117,
-      "end": 130,
+      "type": "CommentLine",
+      "value": " EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 120,",
+      "start": 120,
+      "end": 225,
       "loc": {
         "start": {
           "line": 4,
@@ -887,839 +757,111 @@
         },
         "end": {
           "line": 4,
-          "column": 15
+          "column": 107
         }
       }
     },
     {
-      "type": {
-        "label": ".",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 130,
-      "end": 131,
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>',",
+      "start": 229,
+      "end": 317,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 15
+          "line": 5,
+          "column": 2
         },
         "end": {
-          "line": 4,
-          "column": 16
+          "line": 5,
+          "column": 90
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "javaScriptValue",
-      "start": 131,
-      "end": 146,
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>'",
+      "start": 321,
+      "end": 426,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 16
+          "line": 6,
+          "column": 2
         },
         "end": {
-          "line": 4,
-          "column": 31
+          "line": 6,
+          "column": 107
         }
       }
     },
     {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 146,
-      "end": 147,
+      "type": "CommentLine",
+      "value": " ),",
+      "start": 430,
+      "end": 435,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 31
+          "line": 7,
+          "column": 2
         },
         "end": {
-          "line": 4,
-          "column": 32
+          "line": 7,
+          "column": 7
         }
       }
     },
     {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "Custom Default Value",
-      "start": 147,
-      "end": 169,
+      "type": "CommentLine",
+      "value": " EditFormUtils.javaScriptValue('Calculated Value', 'calculateValue', 'calculateValue', 130,",
+      "start": 439,
+      "end": 532,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 32
+          "line": 8,
+          "column": 2
         },
         "end": {
-          "line": 4,
-          "column": 54
+          "line": 8,
+          "column": 95
         }
       }
     },
     {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 169,
-      "end": 170,
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>',",
+      "start": 536,
+      "end": 612,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 54
+          "line": 9,
+          "column": 2
         },
         "end": {
-          "line": 4,
-          "column": 55
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "customDefaultValue",
-      "start": 171,
-      "end": 191,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 56
-        },
-        "end": {
-          "line": 4,
-          "column": 76
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 191,
-      "end": 192,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 76
-        },
-        "end": {
-          "line": 4,
-          "column": 77
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "customDefaultValue",
-      "start": 193,
-      "end": 213,
-      "loc": {
-        "start": {
-          "line": 4,
+          "line": 9,
           "column": 78
-        },
-        "end": {
-          "line": 4,
-          "column": 98
         }
       }
     },
     {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 213,
-      "end": 214,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 98
-        },
-        "end": {
-          "line": 4,
-          "column": 99
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "num",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": 120,
-      "start": 215,
-      "end": 218,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 100
-        },
-        "end": {
-          "line": 4,
-          "column": 103
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 218,
-      "end": 219,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 103
-        },
-        "end": {
-          "line": 4,
-          "column": 104
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "<p><h4>Example:</h4><pre>value = data.firstName + \" \" + data.lastName;</pre></p>",
-      "start": 224,
-      "end": 306,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 4
-        },
-        "end": {
-          "line": 5,
-          "column": 86
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 306,
-      "end": 307,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 86
-        },
-        "end": {
-          "line": 5,
-          "column": 87
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "<p><h4>Example:</h4><pre>{\"cat\": [{\"var\": \"data.firstName\"}, \" \", {\"var\": \"data.lastName\"}]}</pre>",
-      "start": 312,
-      "end": 412,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 4
-        },
-        "end": {
-          "line": 6,
-          "column": 104
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 415,
-      "end": 416,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 2
-        },
-        "end": {
-          "line": 7,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 416,
-      "end": 417,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 3
-        },
-        "end": {
-          "line": 7,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "EditFormUtils",
-      "start": 420,
-      "end": 433,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 2
-        },
-        "end": {
-          "line": 8,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ".",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 433,
-      "end": 434,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 15
-        },
-        "end": {
-          "line": 8,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "javaScriptValue",
-      "start": 434,
-      "end": 449,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 16
-        },
-        "end": {
-          "line": 8,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 449,
-      "end": 450,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 31
-        },
-        "end": {
-          "line": 8,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "Calculated Value",
-      "start": 450,
-      "end": 468,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 32
-        },
-        "end": {
-          "line": 8,
-          "column": 50
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 468,
-      "end": 469,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 50
-        },
-        "end": {
-          "line": 8,
-          "column": 51
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "calculateValue",
-      "start": 470,
-      "end": 486,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 52
-        },
-        "end": {
-          "line": 8,
-          "column": 68
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 486,
-      "end": 487,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 68
-        },
-        "end": {
-          "line": 8,
-          "column": 69
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "calculateValue",
-      "start": 488,
-      "end": 504,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 70
-        },
-        "end": {
-          "line": 8,
-          "column": 86
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 504,
-      "end": 505,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 86
-        },
-        "end": {
-          "line": 8,
-          "column": 87
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "num",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": 130,
-      "start": 506,
-      "end": 509,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 88
-        },
-        "end": {
-          "line": 8,
-          "column": 91
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 509,
-      "end": 510,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 91
-        },
-        "end": {
-          "line": 8,
-          "column": 92
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "<p><h4>Example:</h4><pre>value = data.a + data.b + data.c;</pre></p>",
-      "start": 515,
-      "end": 585,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 4
-        },
-        "end": {
-          "line": 9,
-          "column": 74
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 585,
-      "end": 586,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 74
-        },
-        "end": {
-          "line": 9,
-          "column": 75
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>",
-      "start": 591,
-      "end": 815,
+      "type": "CommentLine",
+      "value": "   '<p><h4>Example:</h4><pre>{\"sum\": [{\"var\": \"data.a\"}, {\"var\": \"data.b\"}, {\"var\": \"data.c\"}]}</pre><p><a target=\"_blank\" href=\"http://formio.github.io/formio.js/app/examples/calculated.html\">Click here for an example</a></p>'",
+      "start": 616,
+      "end": 845,
       "loc": {
         "start": {
           "line": 10,
-          "column": 4
+          "column": 2
         },
         "end": {
           "line": 10,
-          "column": 228
+          "column": 231
         }
       }
     },
     {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 818,
-      "end": 819,
+      "type": "CommentLine",
+      "value": " )",
+      "start": 849,
+      "end": 853,
       "loc": {
         "start": {
           "line": 11,
@@ -1727,7 +869,7 @@
         },
         "end": {
           "line": 11,
-          "column": 3
+          "column": 6
         }
       }
     },
@@ -1744,8 +886,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 820,
-      "end": 821,
+      "start": 855,
+      "end": 856,
       "loc": {
         "start": {
           "line": 12,
@@ -1770,8 +912,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 821,
-      "end": 822,
+      "start": 856,
+      "end": 857,
       "loc": {
         "start": {
           "line": 12,
@@ -1786,8 +928,8 @@
     {
       "type": "CommentBlock",
       "value": " eslint-enable max-len ",
-      "start": 823,
-      "end": 850,
+      "start": 859,
+      "end": 886,
       "loc": {
         "start": {
           "line": 13,
@@ -1812,8 +954,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 851,
-      "end": 851,
+      "start": 888,
+      "end": 888,
       "loc": {
         "start": {
           "line": 14,

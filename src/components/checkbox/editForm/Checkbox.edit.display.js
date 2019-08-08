@@ -13,9 +13,9 @@ export default [
     type: 'select',
     input: true,
     weight: 350,
-    label: 'Shortcut',
+    label: '超出隐藏',
     key: 'shortcut',
-    tooltip: 'Shortcut for this component.',
+    tooltip: '超出隐藏',
     dataSrc: 'custom',
     data: {
       custom({
@@ -34,14 +34,14 @@ export default [
     type: 'select',
     input: true,
     key: 'inputType',
-    label: 'Input Type',
-    tooltip: 'This is the input type used for this checkbox.',
+    label: '控件类型',
+    tooltip: '用于此复选框的输入类型',
     dataSrc: 'values',
     weight: 410,
     data: {
       values: [
-        { label: 'Checkbox', value: 'checkbox' },
-        { label: 'Radio', value: 'radio' },
+        { label: '多选按钮', value: 'checkbox' },
+        { label: '单选按钮', value: 'radio' },
       ],
     },
   },
@@ -49,8 +49,8 @@ export default [
     type: 'textfield',
     input: true,
     key: 'name',
-    label: 'Radio Key',
-    tooltip: 'The key used to trigger the radio button toggle.',
+    label: '单选按钮Key',
+    tooltip: '用来触发单选按钮切换的Key',
     weight: 420,
     conditional: {
       json: { '===': [{ var: 'data.inputType' }, 'radio'] },
@@ -59,9 +59,9 @@ export default [
   {
     type: 'textfield',
     input: true,
-    label: 'Radio Value',
+    label: '单选按钮值',
     key: 'value',
-    tooltip: 'The value used with this radio button.',
+    tooltip: '单选按钮传递的值',
     weight: 430,
     conditional: {
       json: { '===': [{ var: 'data.inputType' }, 'radio'] },

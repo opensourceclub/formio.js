@@ -18,19 +18,19 @@ export default function(...extend) {
     },
     {
       key: 'day',
-      label: 'Day',
+      label: '日',
       weight: 3,
       components: DayEditDay
     },
     {
       key: 'month',
-      label: 'Month',
+      label: '月',
       weight: 3,
       components: DayEditMonth
     },
     {
       key: 'year',
-      label: 'Year',
+      label: '年',
       weight: 3,
       components: DayEditYear
     },

@@ -25,20 +25,20 @@ export default [
   },
   {
     type: 'number',
-    label: 'Minimum Value',
+    label: '最小值',
     key: 'validate.min',
     input: true,
-    placeholder: 'Minimum Value',
-    tooltip: 'The minimum value this field must have before the form can be submitted.',
+    placeholder: '最小值',
+    tooltip: '此字段的最小输入',
     weight: 150
   },
   {
     type: 'number',
-    label: 'Maximum Value',
+    label: '最大值',
     key: 'validate.max',
     input: true,
-    placeholder: 'Maximum Value',
-    tooltip: 'The maximum value this field can have before the form can be submitted.',
+    placeholder: '最大值',
+    tooltip: '此字段的最大输入',
     weight: 160
   }
 ];

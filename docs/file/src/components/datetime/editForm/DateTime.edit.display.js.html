@@ -222,67 +222,67 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/datetime/editForm/DateTime.edit.display.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default [
-  {
-    type: &apos;select&apos;,
-    input: true,
-    key: &apos;displayInTimezone&apos;,
-    label: &apos;Display in Timezone&apos;,
-    tooltip: &apos;This will display the captured date time in the select timezone.&apos;,
-    weight: 30,
-    defaultValue: &apos;viewer&apos;,
-    dataSrc: &apos;values&apos;,
-    data: {
-      values: [
-        { label: &apos;of Viewer&apos;, value: &apos;viewer&apos; },
-        { label: &apos;of Submission&apos;, value: &apos;submission&apos; },
-        { label: &apos;of Location&apos;, value: &apos;location&apos; },
-        { label: &apos;UTC&apos;, value: &apos;utc&apos; }
-      ]
-    }
-  },
-  {
-    type: &apos;select&apos;,
-    input: true,
-    key: &apos;timezone&apos;,
-    label: &apos;Select Timezone&apos;,
-    tooltip: &apos;Select the timezone you wish to display this Date&apos;,
-    weight: 31,
-    lazyLoad: true,
-    defaultValue: &apos;&apos;,
-    valueProperty: &apos;name&apos;,
-    dataSrc: &apos;url&apos;,
-    data: {
-      url: &apos;https://formio.github.io/formio.js/resources/timezones.json&apos;
-    },
-    template: &apos;&lt;span&gt;{{ item.label }}&lt;/span&gt;&apos;,
-    conditional: {
-      json: { &apos;===&apos;: [{ var: &apos;data.displayInTimezone&apos; }, &apos;location&apos;] }
-    }
-  },
+  // {
+  //   type: &apos;select&apos;,
+  //   input: true,
+  //   key: &apos;displayInTimezone&apos;,
+  //   label: &apos;&#x65F6;&#x533A;&apos;,
+  //   tooltip: &apos;&#x9009;&#x62E9;&#x663E;&#x793A;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x533A;&apos;,
+  //   weight: 30,
+  //   defaultValue: &apos;viewer&apos;,
+  //   dataSrc: &apos;values&apos;,
+  //   data: {
+  //     values: [
+  //       { label: &apos;of Viewer&apos;, value: &apos;viewer&apos; },
+  //       { label: &apos;of Submission&apos;, value: &apos;submission&apos; },
+  //       { label: &apos;of Location&apos;, value: &apos;location&apos; },
+  //       { label: &apos;UTC&apos;, value: &apos;utc&apos; }
+  //     ]
+  //   }
+  // },
+  // {
+  //   type: &apos;select&apos;,
+  //   input: true,
+  //   key: &apos;timezone&apos;,
+  //   label: &apos;Select Timezone&apos;,
+  //   tooltip: &apos;Select the timezone you wish to display this Date&apos;,
+  //   weight: 31,
+  //   lazyLoad: true,
+  //   defaultValue: &apos;&apos;,
+  //   valueProperty: &apos;name&apos;,
+  //   dataSrc: &apos;url&apos;,
+  //   data: {
+  //     url: &apos;https://formio.github.io/formio.js/resources/timezones.json&apos;
+  //   },
+  //   template: &apos;&lt;span&gt;{{ item.label }}&lt;/span&gt;&apos;,
+  //   conditional: {
+  //     json: { &apos;===&apos;: [{ var: &apos;data.displayInTimezone&apos; }, &apos;location&apos;] }
+  //   }
+  // },
   {
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;useLocaleSettings&apos;,
-    label: &apos;Use Locale Settings&apos;,
-    tooltip: &apos;Use locale settings to display date and time.&apos;,
+    label: &apos;&#x533A;&#x57DF;&#x8BBE;&#x7F6E;&apos;,
+    tooltip: &apos;&#x4F7F;&#x7528;&#x533A;&#x57DF;&#x8BBE;&#x7F6E;&#x6765;&#x663E;&#x793A;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x3002;&apos;,
     weight: 51
   },
   {
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;allowInput&apos;,
-    label: &apos;Allow Manual Input&apos;,
-    tooltip: &apos;Check this if you would like to allow the user to manually enter in the date.&apos;,
+    label: &apos;&#x5141;&#x8BB8;&#x624B;&#x52A8;&#x8F93;&#x5165;&apos;,
+    tooltip: &apos;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8BA9;&#x7528;&#x6237;&#x624B;&#x52A8;&#x8F93;&#x5165;&#x65E5;&#x671F;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x6B64;&#x9009;&#x9879;&#x3002;&apos;,
     weight: 51
   },
   {
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;format&apos;,
-    label: &apos;Format&apos;,
-    placeholder: &apos;Format&apos;,
-    description: &apos;Use formats provided by &lt;a href=&quot;https://github.com/angular-ui/bootstrap/tree/master/src/dateparser/docs#uibdateparsers-format-codes&quot; target=&quot;_blank&quot;&gt;DateParser Codes&lt;/a&gt;&apos;,
-    tooltip: &apos;The date format for displaying the datetime value.&apos;,
+    label: &apos;&#x683C;&#x5F0F;&apos;,
+    placeholder: &apos;&#x65E5;&#x671F;&#x683C;&#x5F0F;&apos;,
+    description: &apos;&#x663E;&#x793A;&#x7684;&#x65E5;&#x671F;&#x683C;&#x5F0F;&apos;,
+    tooltip: &apos;&#x663E;&#x793A;&#x7684;&#x65E5;&#x671F;&#x683C;&#x5F0F;&apos;,
     weight: 52
   }
 ];

@@ -8,11 +8,11 @@ export default [
     data: {
       values: [
         {
-          label: 'Number',
+          label: '数字',
           value: 'number'
         },
         {
-          label: 'Select',
+          label: '选择',
           value: 'select'
         },
       ]
@@ -23,23 +23,23 @@ export default [
     type: 'textfield',
     input: true,
     key: 'fields.day.placeholder',
-    label: 'Placeholder',
-    placeholder: 'Day Placeholder',
-    tooltip: 'The placeholder text that will appear when Day field is empty.'
+    label: '占位符',
+    placeholder: '占位符',
+    tooltip: '当"日"字段为空时将出现的占位符文本'
   },
   {
     weight: 215,
     type: 'checkbox',
-    label: 'Hidden',
-    tooltip: 'Hide the Day part of the component.',
+    label: '隐藏',
+    tooltip: '当"日"字段为空时将出现的占位符文本',
     key: 'fields.day.hide',
     input: true
   },
   {
     weight: 214,
     type: 'checkbox',
-    label: 'Day First',
-    tooltip: 'Display the Day field before the Month field.',
+    label: '日在前',
+    tooltip: '在"月"字段之前显示"日"字段。',
     key: 'dayFirst',
     input: true
   },

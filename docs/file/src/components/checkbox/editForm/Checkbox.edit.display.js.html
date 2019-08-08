@@ -236,9 +236,9 @@ export default [
     type: &apos;select&apos;,
     input: true,
     weight: 350,
-    label: &apos;Shortcut&apos;,
+    label: &apos;&#x8D85;&#x51FA;&#x9690;&#x85CF;&apos;,
     key: &apos;shortcut&apos;,
-    tooltip: &apos;Shortcut for this component.&apos;,
+    tooltip: &apos;&#x8D85;&#x51FA;&#x9690;&#x85CF;&apos;,
     dataSrc: &apos;custom&apos;,
     data: {
       custom({
@@ -257,14 +257,14 @@ export default [
     type: &apos;select&apos;,
     input: true,
     key: &apos;inputType&apos;,
-    label: &apos;Input Type&apos;,
-    tooltip: &apos;This is the input type used for this checkbox.&apos;,
+    label: &apos;&#x63A7;&#x4EF6;&#x7C7B;&#x578B;&apos;,
+    tooltip: &apos;&#x7528;&#x4E8E;&#x6B64;&#x590D;&#x9009;&#x6846;&#x7684;&#x8F93;&#x5165;&#x7C7B;&#x578B;&apos;,
     dataSrc: &apos;values&apos;,
     weight: 410,
     data: {
       values: [
-        { label: &apos;Checkbox&apos;, value: &apos;checkbox&apos; },
-        { label: &apos;Radio&apos;, value: &apos;radio&apos; },
+        { label: &apos;&#x591A;&#x9009;&#x6309;&#x94AE;&apos;, value: &apos;checkbox&apos; },
+        { label: &apos;&#x5355;&#x9009;&#x6309;&#x94AE;&apos;, value: &apos;radio&apos; },
       ],
     },
   },
@@ -272,8 +272,8 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;name&apos;,
-    label: &apos;Radio Key&apos;,
-    tooltip: &apos;The key used to trigger the radio button toggle.&apos;,
+    label: &apos;&#x5355;&#x9009;&#x6309;&#x94AE;Key&apos;,
+    tooltip: &apos;&#x7528;&#x6765;&#x89E6;&#x53D1;&#x5355;&#x9009;&#x6309;&#x94AE;&#x5207;&#x6362;&#x7684;Key&apos;,
     weight: 420,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.inputType&apos; }, &apos;radio&apos;] },
@@ -282,9 +282,9 @@ export default [
   {
     type: &apos;textfield&apos;,
     input: true,
-    label: &apos;Radio Value&apos;,
+    label: &apos;&#x5355;&#x9009;&#x6309;&#x94AE;&#x503C;&apos;,
     key: &apos;value&apos;,
-    tooltip: &apos;The value used with this radio button.&apos;,
+    tooltip: &apos;&#x5355;&#x9009;&#x6309;&#x94AE;&#x4F20;&#x9012;&#x7684;&#x503C;&apos;,
     weight: 430,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.inputType&apos; }, &apos;radio&apos;] },

@@ -28,7 +28,7 @@ export default function(...extend) {
         label: 'Enable Row Groups',
         weight: 50,
       }, {
-        label: 'Groups',
+        label: '组',
         disableAddingRemovingRows: false,
         defaultOpen: false,
         addAnother: '',
@@ -42,7 +42,7 @@ export default function(...extend) {
         reorder: true,
         components: [
           {
-            label: 'Label',
+            label: '标签',
             allowMultipleMasks: false,
             showWordCount: false,
             showCharCount: false,
@@ -57,7 +57,7 @@ export default function(...extend) {
             row: '0-0'
           },
           {
-            label: 'Number of Rows',
+            label: '行数',
             mask: false,
             tableView: true,
             alwaysEnabled: false,

@@ -228,9 +228,9 @@
   },
   {
     type: &apos;checkbox&apos;,
-    label: &apos;Disable Adding / Removing Rows&apos;,
+    label: &apos;&#x7981;&#x7528;&#x6DFB;&#x52A0;/&#x5220;&#x9664;&#x884C;&apos;,
     key: &apos;disableAddingRemovingRows&apos;,
-    tooltip: &apos;Check if you want to hide Add Another button and Remove Row button&apos;,
+    tooltip: &apos;&#x662F;&#x5426;&#x8981;&#x9690;&#x85CF;&#x201C;&#x6DFB;&#x52A0;&#x53E6;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x201D;&#x548C;&#x201C;&#x5220;&#x9664;&#x884C;&#x201D;&#x6309;&#x94AE;&apos;,
     weight: 405,
     input: true,
     clearOnHide: false,
@@ -239,34 +239,34 @@
   },
   {
     type: &apos;checkbox&apos;,
-    label: &apos;Allow Reorder&apos;,
+    label: &apos;&#x5141;&#x8BB8;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&apos;,
     key: &apos;reorder&apos;,
     weight: 407,
     input: true,
   },
   {
     type: &apos;textfield&apos;,
-    label: &apos;Add Another Text&apos;,
+    label: &apos;&#x6DFB;&#x52A0;&#x6587;&#x672C;&apos;,
     key: &apos;addAnother&apos;,
-    tooltip: &apos;Set the text of the Add Another button.&apos;,
-    placeholder: &apos;Add Another&apos;,
+    tooltip: &apos;&#x8BBE;&#x7F6E;&#x6DFB;&#x52A0;&#x6309;&#x94AE;&#x7684;&#x6587;&#x672C;&apos;,
+    placeholder: &apos;&#x6DFB;&#x52A0;&apos;,
     weight: 410,
     input: true,
     customConditional: &apos;show = !data.disableAddingRemovingRows&apos;
   },
   {
     type: &apos;select&apos;,
-    label: &apos;Add Another Position&apos;,
+    label: &apos;&#x6DFB;&#x52A0;&#x4F4D;&#x7F6E;&apos;,
     key: &apos;addAnotherPosition&apos;,
     dataSrc: &apos;values&apos;,
-    tooltip: &apos;Position for Add Another button with respect to Data Grid Array.&apos;,
+    tooltip: &apos;&#x7528;&#x4E8E;&#x76F8;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x7F51;&#x683C;&#x6570;&#x7EC4;&#xFF0C;&#x6DFB;&#x52A0;&#x6309;&#x94AE;&#x7684;&#x4F4D;&#x7F6E;&apos;,
     defaultValue: &apos;bottom&apos;,
     input: true,
     data: {
       values: [
-        { label: &apos;Top&apos;, value: &apos;top&apos; },
-        { label: &apos;Bottom&apos;, value: &apos;bottom&apos; },
-        { label: &apos;Both&apos;, value: &apos;both&apos; }
+        { label: &apos;&#x9876;&#x90E8;&apos;, value: &apos;top&apos; },
+        { label: &apos;&#x5E95;&#x90E8;&apos;, value: &apos;bottom&apos; },
+        { label: &apos;&#x90FD;&apos;, value: &apos;both&apos; }
       ]
     },
     weight: 411,
@@ -274,15 +274,15 @@
   },
   {
     type: &apos;checkbox&apos;,
-    label: &apos;Default Open Rows&apos;,
+    label: &apos;&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x7684;&#x884C;&apos;,
     key: &apos;defaultOpen&apos;,
-    tooltip: &apos;Check this if you would like for the rows of the edit grid to be defaulted to opened if values exist.&apos;,
+    tooltip: &apos;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x7F16;&#x8F91;&#x7F51;&#x683C;&#x7684;&#x884C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;(&#x5982;&#x679C;&#x5B58;&#x5728;&#x503C;)&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x6B64;&#x9009;&#x9879;&#x3002;&apos;,
     weight: 420,
     input: true
   },
   {
     type: &apos;checkbox&apos;,
-    label: &apos;Equal column width&apos;,
+    label: &apos;&#x76F8;&#x7B49;&#x7684;&#x5217;&#x5BBD;&apos;,
     key: &apos;layoutFixed&apos;,
     weight: 430,
     input: true,
@@ -290,7 +290,7 @@
   {
     key: &apos;enableRowGroups&apos;,
     type: &apos;checkbox&apos;,
-    label: &apos;Enable Row Groups&apos;,
+    label: &apos;&#x5141;&#x8BB8;&#x884C;&#x7EC4;&apos;,
     weight: 440,
     input: true
   },
@@ -324,7 +324,7 @@
         row: &apos;0-0&apos;
       },
       {
-        label: &apos;Number of Rows&apos;,
+        label: &apos;&#x884C;&#x6570;&apos;,
         mask: false,
         tableView: true,
         alwaysEnabled: false,
@@ -338,7 +338,7 @@
     conditional: { json: { var: &apos;data.enableRowGroups&apos; } }
   },
   {
-    label: &apos;Hide Group on Header Click&apos;,
+    label: &apos;&#x5728;&#x6807;&#x9898;&#x5355;&#x51FB;&#x4E0A;&#x65F6;&#x9690;&#x85CF;&#x7EC4;&apos;,
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;groupToggle&apos;,

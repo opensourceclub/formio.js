@@ -241,21 +241,21 @@ export default [
     type: &apos;number&apos;,
     input: true,
     key: &apos;rows&apos;,
-    label: &apos;Rows&apos;,
+    label: &apos;&#x884C;&#x6570;&apos;,
     weight: 210,
-    tooltip: &apos;This allows control over how many rows are visible in the text area.&apos;,
-    placeholder: &apos;Enter the amount of rows&apos;
+    tooltip: &apos;&#x5141;&#x8BB8;&#x63A7;&#x5236;&#x6587;&#x672C;&#x533A;&#x57DF;&#x4E2D;&#x53EF;&#x89C1;&#x7684;&#x884C;&#x6570;&apos;,
+    placeholder: &apos;&#x8F93;&#x5165;&#x884C;&#x6570;&apos;
   },
   {
     type: &apos;select&apos;,
     input: true,
     key: &apos;editor&apos;,
-    label: &apos;Editor&apos;,
-    tooltip: &apos;Select the type of WYSIWYG editor to use for this text area.&apos;,
+    label: &apos;&#x7F16;&#x8F91;&#x5668;&apos;,
+    tooltip: &apos;&#x9009;&#x62E9;&#x8981;&#x7528;&#x4E8E;&#x6B64;&#x6587;&#x672C;&#x533A;&#x57DF;&#x53EF;&#x89C1;&#x7F16;&#x8F91;&#x5668;&#x7684;&#x7C7B;&#x578B;&apos;,
     dataSrc: &apos;values&apos;,
     data: {
       values: [
-        { label: &apos;None&apos;, value: &apos;&apos; },
+        { label: &apos;&#x65E0;&apos;, value: &apos;&apos; },
         { label: &apos;CKEditor&apos;, value: &apos;ckeditor&apos; },
         { label: &apos;ACE&apos;, value: &apos;ace&apos; },
         { label: &apos;Quill&apos;, value: &apos;quill&apos; }
@@ -267,8 +267,8 @@ export default [
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;autoExpand&apos;,
-    label: &apos;Auto Expand&apos;,
-    tooltip: &apos;This will make the TextArea auto expand it\&apos;s height as the user is typing into the area.&apos;,
+    label: &apos;&#x81EA;&#x9002;&#x5E94;&apos;,
+    tooltip: &apos;&#x8FD9;&#x5C06;&#x4F7F;&#x7528;&#x6237;&#x5728;&#x8F93;&#x5165;&#x6587;&#x672C;&#x533A;&#x57DF;&#x65F6;&#x81EA;&#x52A8;&#x6269;&#x5C55;&#x6587;&#x672C;&#x533A;&#x57DF;&#x7684;&#x9AD8;&#x5EA6;&apos;,
     weight: 415,
     conditional: {
       json: {
@@ -283,7 +283,7 @@ export default [
     type: &apos;checkbox&apos;,
     input: true,
     key: &apos;isUploadEnabled&apos;,
-    label: &apos;Enable Image Upload&apos;,
+    label: &apos;&#x652F;&#x6301;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&apos;,
     weight: 415.1,
     conditional: {
       json: {
@@ -302,10 +302,10 @@ export default [
     type: &apos;select&apos;,
     input: true,
     key: &apos;uploadStorage&apos;,
-    label: &apos;Image Upload Storage&apos;,
-    placeholder: &apos;Select your file storage provider&apos;,
+    label: &apos;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x5B58;&#x50A8;&apos;,
+    placeholder: &apos;&#x9009;&#x62E9;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&apos;,
     weight: 415.2,
-    tooltip: &apos;Which storage to save the files in.&apos;,
+    tooltip: &apos;&#x5C06;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x54EA;&#x4E2A;&#x5B58;&#x50A8;&#x533A;&apos;,
     valueProperty: &apos;value&apos;,
     dataSrc: &apos;custom&apos;,
     data: {
@@ -329,10 +329,10 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;uploadUrl&apos;,
-    label: &apos;Image Upload Url&apos;,
+    label: &apos;&#x56FE;&#x7247;&#x4E0A;&#x4F20;Url&apos;,
     weight: 415.3,
-    placeholder: &apos;Enter the url to post the files to.&apos;,
-    tooltip: &apos;See &lt;a href=\&apos;https://github.com/danialfarid/ng-file-upload#server-side\&apos; target=\&apos;_blank\&apos;&gt;https://github.com/danialfarid/ng-file-upload#server-side&lt;/a&gt; for how to set up the server.&apos;,
+    placeholder: &apos;&#x8F93;&#x5165;&#x8981;&#x5C06;&#x6587;&#x4EF6;&#x53D1;&#x9001;&#x5230;&#x4E3A;url&apos;,
+    tooltip: &apos;&#x53C2;&#x770B; &lt;a href=\&apos;https://github.com/danialfarid/ng-file-upload#server-side\&apos; target=\&apos;_blank\&apos;&gt;https://github.com/danialfarid/ng-file-upload#server-side&lt;/a&gt; &#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x670D;&#x52A1;&#x5668;&apos;,
     conditional: {
       json: { &apos;===&apos;: [{ var: &apos;data.uploadStorage&apos; }, &apos;url&apos;] }
     }
@@ -340,8 +340,8 @@ export default [
   {
     type: &apos;textarea&apos;,
     key: &apos;uploadOptions&apos;,
-    label: &apos;Image Upload Custom request options&apos;,
-    tooltip: &apos;Pass your custom xhr options(optional)&apos;,
+    label: &apos;&#x56FE;&#x50CF;&#x4E0A;&#x4F20;&#x81EA;&#x5B9A;&#x4E49;&#x8BF7;&#x6C42;&#x9009;&#x9879;&apos;,
+    tooltip: &apos;&#x4F20;&#x9012;&#x81EA;&#x5B9A;&#x4E49;xhr&#x9009;&#x9879;(&#x53EF;&#x9009;)&apos;,
     rows: 5,
     editor: &apos;ace&apos;,
     input: true,
@@ -361,9 +361,9 @@ export default [
     type: &apos;textfield&apos;,
     input: true,
     key: &apos;uploadDir&apos;,
-    label: &apos;Image Upload Directory&apos;,
-    placeholder: &apos;(optional) Enter a directory for the files&apos;,
-    tooltip: &apos;This will place all the files uploaded in this field in the directory&apos;,
+    label: &apos;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;&apos;,
+    placeholder: &apos;(&#x53EF;&#x9009;)&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&apos;,
+    tooltip: &apos;&#x5C06;&#x628A;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4E2D;&#x4E0A;&#x4F20;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x653E;&#x5230;&#x76EE;&#x5F55;&#x4E2D;&apos;,
     weight: 415.5,
     conditional: {
       json: {
@@ -378,9 +378,9 @@ export default [
     type: &apos;select&apos;,
     input: true,
     key: &apos;as&apos;,
-    label: &apos;Save As&apos;,
+    label: &apos;&#x53E6;&#x5B58;&#x4E3A;&apos;,
     dataSrc: &apos;values&apos;,
-    tooltip: &apos;This setting determines how the value should be entered and stored in the database.&apos;,
+    tooltip: &apos;&#x6B64;&#x8BBE;&#x7F6E;&#x786E;&#x5B9A;&#x5E94;&#x5982;&#x4F55;&#x5B58;&#x50A8;&#x8BE5;&#x503C;&#x5E76;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&apos;,
     clearOnHide: true,
     data: {
       values: [
@@ -411,8 +411,8 @@ export default [
     editor: &apos;ace&apos;,
     rows: 10,
     as: &apos;json&apos;,
-    label: &apos;Editor Settings&apos;,
-    tooltip: &apos;Enter the WYSIWYG editor JSON configuration.&apos;,
+    label: &apos;&#x7F16;&#x8F91;&#x5668;&#x8BBE;&#x7F6E;&apos;,
+    tooltip: &apos;&#x7F16;&#x8F91;&#x5668;JSON&#x914D;&#x7F6E;&apos;,
     key: &apos;wysiwyg&apos;,
     customDefaultValue(value, component, row, data, instance) {
       return instance ? instance.wysiwygDefault : &apos;&apos;;

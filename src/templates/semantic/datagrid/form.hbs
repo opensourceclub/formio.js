@@ -20,7 +20,7 @@
       <th>
         {% if (hasAddButton && hasTopSubmit) { %}
         <button class="ui button primary" ref="{{datagridKey}}-addRow">
-          <i class="{{iconClass('plus')}}"></i> Add Another
+          <i class="{{iconClass('plus')}}"></i> 添加
         </button>
         {% } %}
       </th>
@@ -73,7 +73,7 @@
     <tr>
       <td colspan="{{numColumns + 1}}">
         <button class="ui button primary" ref="{{datagridKey}}-addRow">
-          <i class="{{iconClass('plus')}}"></i> {{t(component.addAnother || 'Add Another')}}
+          <i class="{{iconClass('plus')}}"></i> {{t(component.addAnother || '添加')}}
         </button>
       </td>
     </tr>

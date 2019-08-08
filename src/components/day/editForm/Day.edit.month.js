@@ -8,11 +8,11 @@ export default [
     data: {
       values: [
         {
-          label: 'Number',
+          label: '数字',
           value: 'number'
         },
         {
-          label: 'Select',
+          label: '选择',
           value: 'select'
         },
       ]
@@ -23,15 +23,15 @@ export default [
     type: 'textfield',
     input: true,
     key: 'fields.month.placeholder',
-    label: 'Placeholder',
-    placeholder: 'Month Placeholder',
-    tooltip: 'The placeholder text that will appear when Month field is empty.'
+    label: '占位符',
+    placeholder: '月份占位符',
+    tooltip: '当月份字段为空时将出现的占位符文本'
   },
   {
     weight: 215,
     type: 'checkbox',
     label: 'Hidden',
-    tooltip: 'Hide the Month part of the component.',
+    tooltip: '隐藏组件的月份部分',
     key: 'fields.month.hide',
     input: true
   },
