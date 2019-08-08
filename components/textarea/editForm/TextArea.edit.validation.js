@@ -7,18 +7,18 @@ exports.default = void 0;
 var _default = [{
   weight: 125,
   key: 'validate.minWords',
-  label: 'Minimum Word Length',
-  placeholder: 'Minimum Word Length',
+  label: '最小单词长度',
+  placeholder: '最小单词长度',
   type: 'number',
-  tooltip: 'The minimum amount of words that can be added to this field.',
+  tooltip: '添加到此字段的最小单词数量',
   input: true
 }, {
   weight: 126,
   key: 'validate.maxWords',
-  label: 'Maximum Word Length',
-  placeholder: 'Maximum Word Length',
+  label: '最大单词长度',
+  placeholder: '最大单词长度',
   type: 'number',
-  tooltip: 'The maximum amount of words that can be added to this field.',
+  tooltip: '可添加到此字段的最大单词数量',
   input: true
 }];
 exports.default = _default;

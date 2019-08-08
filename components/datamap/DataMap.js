@@ -104,7 +104,7 @@ function (_DataGridComponent) {
         key: 'dataMap',
         type: 'datamap',
         clearOnHide: true,
-        addAnother: 'Add Another',
+        addAnother: '添加',
         disableAddingRemovingRows: false,
         keyBeforeValue: true,
         valueComponent: {

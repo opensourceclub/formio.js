@@ -556,40 +556,40 @@ function (_Field) {
         label: _lodash.default.get(this.component, 'fields.month.placeholder') || (this.hideInputLabels ? this.t('Month') : '')
       }, {
         value: 1,
-        label: 'January'
+        label: '一月'
       }, {
         value: 2,
-        label: 'February'
+        label: '二月'
       }, {
         value: 3,
-        label: 'March'
+        label: '三月'
       }, {
         value: 4,
-        label: 'April'
+        label: '四月'
       }, {
         value: 5,
-        label: 'May'
+        label: '五月'
       }, {
         value: 6,
-        label: 'June'
+        label: '六月'
       }, {
         value: 7,
-        label: 'July'
+        label: '七月'
       }, {
         value: 8,
-        label: 'August'
+        label: '八月'
       }, {
         value: 9,
-        label: 'September'
+        label: '九月'
       }, {
         value: 10,
-        label: 'October'
+        label: '十月'
       }, {
         value: 11,
-        label: 'November'
+        label: '十一月'
       }, {
         value: 12,
-        label: 'December'
+        label: '十二月'
       }];
       return this._months;
     }

@@ -12,29 +12,29 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'delimeter',
-  label: 'Delimiter',
-  tooltip: 'What is used to separate the tags.</a>'
+  label: '分隔符',
+  tooltip: '用来分隔标签.</a>'
 }, {
   weight: 22,
   type: 'number',
   input: true,
   key: 'maxTags',
-  label: 'Max Tags',
+  label: '最大标签数',
   defaultValue: 0,
-  tooltip: 'The maximum amount of tags that can be added. 0 for infinity.'
+  tooltip: '可以添加的标记的最大数量；0为无穷大'
 }, {
   weight: 24,
   type: 'select',
   input: true,
   key: 'storeas',
-  label: 'Store As',
+  label: '存储为',
   dataSrc: 'values',
   data: {
     values: [{
-      label: 'String (CSV)',
+      label: '字符串 (CSV)',
       value: 'string'
     }, {
-      label: 'Array of Tags',
+      label: '标签组',
       value: 'array'
     }]
   }

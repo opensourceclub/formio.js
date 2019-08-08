@@ -215,7 +215,7 @@ function (_Field) {
   }, {
     key: "addAnother",
     get: function get() {
-      return this.t(this.component.addAnother || ' Add Another');
+      return this.t(this.component.addAnother || ' 添加');
     }
   }]);
 

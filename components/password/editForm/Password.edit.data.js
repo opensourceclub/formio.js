@@ -37,6 +37,6 @@ var _default = [{
   type: 'htmlelement',
   tag: 'div',
   className: 'alert alert-info',
-  content: 'Password fields are automatically encrypted using 1-way salted bcrypt hashes. These hashes are also protected and not returned in the API.'
+  content: '密码字段使用单向bcrypt hash自动加密。这些hash也受到保护，不会在API中返回'
 }];
 exports.default = _default;

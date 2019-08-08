@@ -26,20 +26,20 @@ var _default = [{
   type: 'number',
   input: true,
   key: 'rows',
-  label: 'Rows',
+  label: '行数',
   weight: 210,
-  tooltip: 'This allows control over how many rows are visible in the text area.',
-  placeholder: 'Enter the amount of rows'
+  tooltip: '允许控制文本区域中可见的行数',
+  placeholder: '输入行数'
 }, {
   type: 'select',
   input: true,
   key: 'editor',
-  label: 'Editor',
-  tooltip: 'Select the type of WYSIWYG editor to use for this text area.',
+  label: '编辑器',
+  tooltip: '选择要用于此文本区域可见编辑器的类型',
   dataSrc: 'values',
   data: {
     values: [{
-      label: 'None',
+      label: '无',
       value: ''
     }, {
       label: 'CKEditor',
@@ -57,8 +57,8 @@ var _default = [{
   type: 'checkbox',
   input: true,
   key: 'autoExpand',
-  label: 'Auto Expand',
-  tooltip: 'This will make the TextArea auto expand it\'s height as the user is typing into the area.',
+  label: '自适应',
+  tooltip: '这将使用户在输入文本区域时自动扩展文本区域的高度',
   weight: 415,
   conditional: {
     json: {
@@ -71,7 +71,7 @@ var _default = [{
   type: 'checkbox',
   input: true,
   key: 'isUploadEnabled',
-  label: 'Enable Image Upload',
+  label: '支持图片上传',
   weight: 415.1,
   conditional: {
     json: {
@@ -86,10 +86,10 @@ var _default = [{
   type: 'select',
   input: true,
   key: 'uploadStorage',
-  label: 'Image Upload Storage',
-  placeholder: 'Select your file storage provider',
+  label: '图片上传存储',
+  placeholder: '选择文件存储方式',
   weight: 415.2,
-  tooltip: 'Which storage to save the files in.',
+  tooltip: '将文件保存在哪个存储区',
   valueProperty: 'value',
   dataSrc: 'custom',
   data: {
@@ -113,10 +113,10 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'uploadUrl',
-  label: 'Image Upload Url',
+  label: '图片上传Url',
   weight: 415.3,
-  placeholder: 'Enter the url to post the files to.',
-  tooltip: 'See <a href=\'https://github.com/danialfarid/ng-file-upload#server-side\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#server-side</a> for how to set up the server.',
+  placeholder: '输入要将文件发送到为url',
+  tooltip: '参看 <a href=\'https://github.com/danialfarid/ng-file-upload#server-side\' target=\'_blank\'>https://github.com/danialfarid/ng-file-upload#server-side</a> 如何设置服务器',
   conditional: {
     json: {
       '===': [{
@@ -127,8 +127,8 @@ var _default = [{
 }, {
   type: 'textarea',
   key: 'uploadOptions',
-  label: 'Image Upload Custom request options',
-  tooltip: 'Pass your custom xhr options(optional)',
+  label: '图像上传自定义请求选项',
+  tooltip: '传递自定义xhr选项(可选)',
   rows: 5,
   editor: 'ace',
   input: true,
@@ -145,9 +145,9 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'uploadDir',
-  label: 'Image Upload Directory',
-  placeholder: '(optional) Enter a directory for the files',
-  tooltip: 'This will place all the files uploaded in this field in the directory',
+  label: '图片上传目录',
+  placeholder: '(可选)输入文件目录',
+  tooltip: '将把这个字段中上传的所有文件都放到目录中',
   weight: 415.5,
   conditional: {
     json: {
@@ -160,9 +160,9 @@ var _default = [{
   type: 'select',
   input: true,
   key: 'as',
-  label: 'Save As',
+  label: '另存为',
   dataSrc: 'values',
-  tooltip: 'This setting determines how the value should be entered and stored in the database.',
+  tooltip: '此设置确定应如何存储该值并将其存储在数据库中',
   clearOnHide: true,
   data: {
     values: [{
@@ -196,8 +196,8 @@ var _default = [{
   editor: 'ace',
   rows: 10,
   as: 'json',
-  label: 'Editor Settings',
-  tooltip: 'Enter the WYSIWYG editor JSON configuration.',
+  label: '编辑器设置',
+  tooltip: '编辑器JSON配置',
   key: 'wysiwyg',
   customDefaultValue: function customDefaultValue(value, component, row, data, instance) {
     return instance ? instance.wysiwygDefault : '';

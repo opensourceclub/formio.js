@@ -8,29 +8,29 @@ var _default = [{
   type: 'checkbox',
   input: true,
   key: 'enableTime',
-  label: 'Enable Time Input',
-  tooltip: 'Enables time input for this field.',
+  label: '允许输入时间',
+  tooltip: '启用此字段的时间输入',
   weight: 0
 }, {
   type: 'number',
   input: true,
   key: 'timePicker.hourStep',
-  label: 'Hour Step Size',
-  tooltip: 'The number of hours to increment/decrement in the time picker.',
+  label: '小时步长',
+  tooltip: '在时间选择器中要增加/减少的小时数',
   weight: 10
 }, {
   type: 'number',
   input: true,
   key: 'timePicker.minuteStep',
-  label: 'Minute Step Size',
-  tooltip: 'The number of minutes to increment/decrement in the time picker.',
+  label: '分钟步长',
+  tooltip: '在时间选择器中要增加/减少的分钟数',
   weight: 20
 }, {
   type: 'checkbox',
   input: true,
   key: 'timePicker.showMeridian',
-  label: '12 Hour Time (AM/PM)',
-  tooltip: 'Display time in 12 hour time with AM/PM.',
+  label: '12小时制 (AM/PM)',
+  tooltip: '显示时间为AM/PM 12小时',
   weight: 30
 }];
 exports.default = _default;

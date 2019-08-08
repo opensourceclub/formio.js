@@ -21,17 +21,17 @@ var _default = [{
   type: 'select',
   input: true,
   key: 'labelPosition',
-  label: 'Label Position',
-  tooltip: 'Position for the label for this field.',
+  label: '标签位置',
+  tooltip: '标签字段的位置',
   weight: 20,
   defaultValue: 'top',
   dataSrc: 'values',
   data: {
     values: [{
-      label: 'Top',
+      label: '顶部',
       value: 'top'
     }, {
-      label: 'Bottom',
+      label: '底部',
       value: 'bottom'
     }]
   }
@@ -40,90 +40,76 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'placeholder',
-  label: 'Placeholder',
-  placeholder: 'Placeholder',
-  tooltip: 'The placeholder text that will appear when this field is empty.'
+  label: '占位符',
+  placeholder: '占位文本',
+  tooltip: '字段为空时将出现的占位符文本'
 }, {
   weight: 200,
   type: 'textfield',
   input: true,
   key: 'description',
-  label: 'Description',
-  placeholder: 'Description for this field.',
-  tooltip: 'The description is text that will appear below the input field.'
+  label: '描述',
+  placeholder: '字段的描述',
+  tooltip: '将出现在输入字段下方的描述文本。'
 }, {
   weight: 300,
   type: 'textarea',
   input: true,
   key: 'tooltip',
-  label: 'Tooltip',
-  placeholder: 'To add a tooltip to this field, enter text here.',
-  tooltip: 'Adds a tooltip to the side of this field.'
+  label: '多行文本输入区',
+  placeholder: '添加提示，请在这里输入文本',
+  tooltip: '在此字段的旁添加提示'
 }, {
   weight: 500,
   type: 'textfield',
   input: true,
   key: 'customClass',
-  label: 'Custom CSS Class',
-  placeholder: 'Custom CSS Class',
-  tooltip: 'Custom CSS class to add to this component.'
+  label: '自定义CSS Class',
+  placeholder: '自定义CSS Class',
+  tooltip: '添加自定义CSS Class到该组件'
 }, {
   weight: 600,
   type: 'textfield',
   input: true,
   key: 'tabindex',
-  label: 'Tab Index',
+  label: ' tab 序列',
   placeholder: '0',
-  tooltip: 'Sets the tabindex attribute of this component to override the tab order of the form. See the <a href=\\\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\\\'>MDN documentation</a> on tabindex for more information.'
+  tooltip: '设置此组件的tabindex属性以覆盖表单的Tab顺序. 参考 <a href=\\\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\\\'>MDN documentation</a> on tabindex for more information.'
 }, {
   weight: 1100,
   type: 'checkbox',
-  label: 'Hidden',
-  tooltip: 'A hidden field is still a part of the form, but is hidden from view.',
+  label: '隐藏',
+  tooltip: '隐藏字段仍然是表单的一部分，但是隐藏在视图之外。',
   key: 'hidden',
   input: true
 }, {
   weight: 1200,
   type: 'checkbox',
-  label: 'Hide Label',
-  tooltip: 'Hide the label of this component. This allows you to show the label in the form builder, but not when it is rendered.',
+  label: '隐藏标签',
+  tooltip: '隐藏此组件的标签。这允许您在表单构建器中显示标签，但在渲染时不显示。',
   key: 'hideLabel',
   input: true
 }, {
   weight: 1350,
   type: 'checkbox',
-  label: 'Initial Focus',
-  tooltip: 'Make this field the initially focused element on this form.',
+  label: '初始聚焦',
+  tooltip: '使该字段成为表单上最初聚焦的元素',
   key: 'autofocus',
   input: true
 }, {
   weight: 1370,
   type: 'checkbox',
   label: 'Show Label in DataGrid',
-  tooltip: 'Show the label when in a Datagrid.',
+  tooltip: '在数据表格中显示标签',
   key: 'dataGridLabel',
   input: true,
   customConditional: 'show = instance.root.editComponent.inDataGrid'
 }, {
   weight: 1400,
   type: 'checkbox',
-  label: 'Disabled',
-  tooltip: 'Disable the form input.',
+  label: '不可编辑',
+  tooltip: '不可编辑',
   key: 'disabled',
-  input: true
-}, {
-  weight: 1450,
-  type: 'checkbox',
-  label: 'Always enabled',
-  tooltip: 'Make this field always enabled, even if the form is disabled',
-  key: 'alwaysEnabled',
-  input: true
-}, {
-  weight: 1500,
-  type: 'checkbox',
-  label: 'Table View',
-  tooltip: 'Shows this value within the table view of the submissions.',
-  key: 'tableView',
   input: true
 }];
 /* eslint-enable max-len */

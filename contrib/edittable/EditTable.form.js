@@ -42,7 +42,7 @@ function _default() {
       label: 'Enable Row Groups',
       weight: 50
     }, {
-      label: 'Groups',
+      label: '组',
       disableAddingRemovingRows: false,
       defaultOpen: false,
       addAnother: '',
@@ -55,7 +55,7 @@ function _default() {
       key: 'rowGroups',
       reorder: true,
       components: [{
-        label: 'Label',
+        label: '标签',
         allowMultipleMasks: false,
         showWordCount: false,
         showCharCount: false,
@@ -69,7 +69,7 @@ function _default() {
         },
         row: '0-0'
       }, {
-        label: 'Number of Rows',
+        label: '行数',
         mask: false,
         tableView: true,
         alwaysEnabled: false,

@@ -14,9 +14,9 @@ var _default = [{
   type: 'select',
   input: true,
   key: 'widget.type',
-  label: 'Widget',
-  placeholder: 'Select a widget',
-  tooltip: 'The widget is the display UI used to input the value of the field.',
+  label: '控件',
+  placeholder: '选择控件',
+  tooltip: '控件是用于输入字段值的显示UI',
   defaultValue: 'input',
   onChange: function onChange(context) {
     context.data.widget = _lodash.default.pick(context.data.widget, 'type');
@@ -24,10 +24,10 @@ var _default = [{
   dataSrc: 'values',
   data: {
     values: [{
-      label: 'Input Field',
+      label: '输入字段',
       value: 'input'
     }, {
-      label: 'Calendar Picker',
+      label: '日历选择器',
       value: 'calendar'
     }]
   },
@@ -43,32 +43,32 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'inputMask',
-  label: 'Input Mask',
-  tooltip: 'An input mask helps the user with input by ensuring a predefined format.<br><br>9: numeric<br>a: alphabetical<br>*: alphanumeric<br><br>Example telephone mask: (999) 999-9999<br><br>See the <a target=\'_blank\' href=\'https://github.com/RobinHerbots/jquery.inputmask\'>jquery.inputmask documentation</a> for more information.</a>',
+  label: '输入掩码',
+  tooltip: '通过预定义的格式帮助用户输入掩码.<br><br>9: 数字<br>a: 字母顺序排列<br>*: 字母数字<br><br>电话掩码举例: (999) 999-9999<br><br>参看 <a target=\'_blank\' href=\'https://github.com/RobinHerbots/jquery.inputmask\'>jquery.inputmask文档</a>获取更多信息</a>',
   customConditional: 'show = !data.allowMultipleMasks;'
 }, {
   weight: 413,
   type: 'checkbox',
   input: true,
   key: 'allowMultipleMasks',
-  label: 'Allow Multiple Masks'
+  label: '允许多重掩码'
 }, {
   weight: 417,
   type: 'datagrid',
   input: true,
   key: 'inputMasks',
-  label: 'Input Masks',
+  label: '输入掩码',
   customConditional: 'show = data.allowMultipleMasks === true;',
   reorder: true,
   components: [{
     type: 'textfield',
     key: 'label',
-    label: 'Label',
+    label: '标签',
     input: true
   }, {
     type: 'textfield',
     key: 'mask',
-    label: 'Mask',
+    label: '掩码',
     input: true
   }]
 }, {
@@ -76,24 +76,24 @@ var _default = [{
   type: 'checkbox',
   input: true,
   key: 'allowMultipleMasks',
-  label: 'Allow Multiple Masks'
+  label: '允许多重掩码'
 }, {
   weight: 417,
   type: 'datagrid',
   input: true,
   key: 'inputMasks',
-  label: 'Input Masks',
+  label: '输入掩码',
   customConditional: 'show = data.allowMultipleMasks === true;',
   reorder: true,
   components: [{
     type: 'textfield',
     key: 'label',
-    label: 'Label',
+    label: '标签',
     input: true
   }, {
     type: 'textfield',
     key: 'mask',
-    label: 'Mask',
+    label: '掩码',
     input: true
   }]
 }, {
@@ -101,32 +101,32 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'prefix',
-  label: 'Prefix'
+  label: '前置文本'
 }, {
   weight: 330,
   type: 'textfield',
   input: true,
   key: 'suffix',
-  label: 'Suffix'
+  label: '后置文本'
 }, {
   weight: 1300,
   type: 'checkbox',
-  label: 'Hide Input',
-  tooltip: 'Hide the input in the browser. This does not encrypt on the server. Do not use for passwords.',
+  label: '隐藏输入',
+  tooltip: '在浏览器中隐藏输入。在服务器上不加密，不适用于密码',
   key: 'mask',
   input: true
 }, {
   weight: 1200,
   type: 'checkbox',
-  label: 'Show Word Counter',
-  tooltip: 'Show a live count of the number of words.',
+  label: '显示单词数',
+  tooltip: '实时显示单词数量',
   key: 'showWordCount',
   input: true
 }, {
   weight: 1201,
   type: 'checkbox',
-  label: 'Show Character Counter',
-  tooltip: 'Show a live count of the number of characters.',
+  label: '显示字符计数',
+  tooltip: '实时显示字符计数',
   key: 'showCharCount',
   input: true
 }];

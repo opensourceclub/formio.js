@@ -6,22 +6,22 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = [{
   type: 'select',
-  label: 'Input Format',
+  label: '输入格式',
   key: 'inputFormat',
   weight: 105,
-  placeholder: 'Input Format',
-  tooltip: 'Force the output of this field to be sanitized in a specific format.',
+  placeholder: '输入格式',
+  tooltip: '强制以特定格式对该字段进行格式化输出',
   template: '<span>{{ item.label }}</span>',
   data: {
     values: [{
       value: 'plain',
-      label: 'Plain'
+      label: '无格式'
     }, {
       value: 'html',
       label: 'HTML'
     }, {
       value: 'raw',
-      label: 'Raw (Insecure)'
+      label: '原始(不安全)'
     }]
   },
   defaultValue: 'plain',

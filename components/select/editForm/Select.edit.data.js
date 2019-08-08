@@ -11,10 +11,10 @@ var _default = [{
   type: 'select',
   input: true,
   weight: 0,
-  tooltip: 'The source to use for the select data. Values lets you provide your own values and labels. JSON lets you provide raw JSON data. URL lets you provide a URL to retrieve the JSON data from.',
+  tooltip: '用于选择数据的源。"Values"允许您提供自己的值和标签。"JSON"允许您提供原始JSON数据。"URL"允许您提供一个URL来检索JSON数据。',
   key: 'dataSrc',
   defaultValue: 'values',
-  label: 'Data Source Type',
+  label: '数据源类型',
   dataSrc: 'values',
   data: {
     values: [{
@@ -42,8 +42,8 @@ var _default = [{
   weight: 10,
   input: true,
   key: 'indexeddb.database',
-  label: 'Database name',
-  tooltip: 'The name of the indexeddb database.',
+  label: '数据库名称',
+  tooltip: '索引数据库的名称。',
   conditional: {
     json: {
       '===': [{
@@ -55,9 +55,9 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'indexeddb.table',
-  label: 'Table name',
+  label: '表名',
   weight: 16,
-  tooltip: 'The name of table in the indexeddb database.',
+  tooltip: '索引数据库中表的名称',
   conditional: {
     json: {
       '===': [{
@@ -72,8 +72,8 @@ var _default = [{
   weight: 18,
   input: true,
   key: 'indexeddb.filter',
-  label: 'Row Filter',
-  tooltip: 'Filter table items that match the object.',
+  label: '行过滤',
+  tooltip: '筛选匹配对象的表项',
   defaultValue: {},
   conditional: {
     json: {
@@ -89,8 +89,8 @@ var _default = [{
   weight: 10,
   input: true,
   key: 'data.json',
-  label: 'Data Source Raw JSON',
-  tooltip: 'A raw JSON array to use as a data source.',
+  label: '数据源原始JSON',
+  tooltip: '用作数据源的原始JSON数组',
   conditional: {
     json: {
       '===': [{
@@ -103,9 +103,9 @@ var _default = [{
   input: true,
   key: 'data.url',
   weight: 10,
-  label: 'Data Source URL',
-  placeholder: 'Data Source URL',
-  tooltip: 'A URL that returns a JSON array to use as the data source.',
+  label: '数据源URL',
+  placeholder: '数据源URL',
+  tooltip: '返回一个JSON数组作为数据源URL',
   conditional: {
     json: {
       '===': [{
@@ -116,7 +116,7 @@ var _default = [{
 }, {
   type: 'checkbox',
   input: true,
-  label: 'Lazy Load Data',
+  label: '数据懒加载',
   key: 'lazyLoad',
   tooltip: 'When set, this will not fire off the request to the URL until this control is within focus. This can improve performance if you have many Select dropdowns on your form where the API\'s will only fire when the control is activated.',
   weight: 11,

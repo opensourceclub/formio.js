@@ -8,41 +8,41 @@ var _default = [{
   type: 'textfield',
   input: true,
   key: 'footer',
-  label: 'Footer Label',
-  tooltip: 'The footer text that appears below the signature area.',
-  placeholder: 'Footer Label',
+  label: '页脚标签',
+  tooltip: '出现在签名区域下方的页脚文本',
+  placeholder: '页脚标签',
   weight: 10
 }, {
   type: 'textfield',
   input: true,
   key: 'width',
-  label: 'Width',
-  tooltip: 'The width of the signature area.',
-  placeholder: 'Width',
+  label: '宽度',
+  tooltip: '签名区域的宽度',
+  placeholder: '宽度',
   weight: 50
 }, {
   type: 'textfield',
   input: true,
   key: 'height',
-  label: 'Height',
-  tooltip: 'The height of the signature area.',
-  placeholder: 'Height',
+  label: '高度',
+  tooltip: '签名区域的高度',
+  placeholder: '高度',
   weight: 51
 }, {
   type: 'textfield',
   input: true,
   key: 'backgroundColor',
-  label: 'Background Color',
-  tooltip: 'The background color of the signature area.',
-  placeholder: 'Background Color',
+  label: '背景颜色',
+  tooltip: '签名区域的背景颜色',
+  placeholder: '背景颜色',
   weight: 52
 }, {
   type: 'textfield',
   input: true,
   key: 'penColor',
-  label: 'Pen Color',
-  tooltip: 'The ink color for the signature area.',
-  placeholder: 'Pen Color',
+  label: '字颜色',
+  tooltip: '签名区域的字颜色',
+  placeholder: '字颜色',
   weight: 53
 }, {
   key: 'placeholder',

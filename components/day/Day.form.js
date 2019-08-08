@@ -34,17 +34,17 @@ function _default() {
     components: _DayEdit2.default
   }, {
     key: 'day',
-    label: 'Day',
+    label: '日',
     weight: 3,
     components: _DayEdit3.default
   }, {
     key: 'month',
-    label: 'Month',
+    label: '月',
     weight: 3,
     components: _DayEdit4.default
   }, {
     key: 'year',
-    label: 'Year',
+    label: '年',
     weight: 3,
     components: _DayEdit5.default
   }]].concat(extend));

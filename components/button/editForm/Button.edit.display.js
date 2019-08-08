@@ -21,41 +21,41 @@ var _default = [{
 }, {
   type: 'select',
   key: 'action',
-  label: 'Action',
+  label: '操作',
   input: true,
   dataSrc: 'values',
   weight: 110,
-  tooltip: 'This is the action to be performed by this button.',
+  tooltip: '这个按钮要执行的操作',
   data: {
     values: [{
-      label: 'Submit',
+      label: '提交',
       value: 'submit'
     }, {
-      label: 'Save in state',
+      label: '保存状态',
       value: 'saveState'
     }, {
-      label: 'Event',
+      label: '事件',
       value: 'event'
     }, {
-      label: 'Custom',
+      label: '自定义',
       value: 'custom'
     }, {
-      label: 'Reset',
+      label: '充值',
       value: 'reset'
     }, {
-      label: 'OAuth',
+      label: '身份验证',
       value: 'oauth'
     }, {
-      label: 'POST to URL',
+      label: 'POST请求URL',
       value: 'url'
     }]
   }
 }, {
   type: 'textfield',
-  label: 'Save in state',
+  label: '保存状态',
   key: 'state',
   weight: 112,
-  tooltip: 'The state you wish to save the submission under when this button is pressed. Example "draft" would save the submission in Draft Mode.',
+  tooltip: '当按下此按钮时，希望将提交保存在下面的状态。示例“草稿”将以草稿模式保存提交',
   placeholder: 'submitted',
   input: true,
   conditional: {
@@ -70,9 +70,9 @@ var _default = [{
   input: true,
   inputType: 'checkbox',
   key: 'showValidations',
-  label: 'Show Validations',
+  label: '显示验证',
   weight: 115,
-  tooltip: 'When the button is pressed, show any validation errors on the form.',
+  tooltip: '当按下按钮时，在表单上显示任何验证的错误',
   conditional: {
     json: {
       '!==': [{
@@ -82,11 +82,11 @@ var _default = [{
   }
 }, {
   type: 'textfield',
-  label: 'Button Event',
+  label: '按钮事件',
   key: 'event',
   input: true,
   weight: 120,
-  tooltip: 'The event to fire when the button is clicked.',
+  tooltip: '单击按钮时要触发的事件',
   conditional: {
     json: {
       '===': [{
@@ -100,9 +100,9 @@ var _default = [{
   key: 'url',
   input: true,
   weight: 120,
-  label: 'Button URL',
-  tooltip: 'The URL where the submission will be sent.',
-  placeholder: 'https://example.form.io',
+  label: '按钮 URL',
+  tooltip: '提交将发送到的URL',
+  placeholder: 'https://example.wctsoft.io',
   conditional: {
     json: {
       '===': [{
@@ -115,17 +115,17 @@ var _default = [{
   key: 'headers',
   input: true,
   weight: 130,
-  label: 'Headers',
-  addAnother: 'Add Header',
-  tooltip: 'Headers Properties and Values for your request',
+  label: '头部信息',
+  addAnother: '增加头部信息',
+  tooltip: '请求的头属性和值',
   components: [{
     key: 'header',
-    label: 'Header',
+    label: '请求头属性',
     input: true,
     type: 'textfield'
   }, {
     key: 'value',
-    label: 'Value',
+    label: '请求头值',
     input: true,
     type: 'textfield'
   }],
@@ -139,8 +139,8 @@ var _default = [{
 }, {
   type: 'textarea',
   key: 'custom',
-  label: 'Button Custom Logic',
-  tooltip: 'The custom logic to evaluate when the button is clicked.',
+  label: '按钮自定义逻辑',
+  tooltip: '要在单击按钮时触发的自定义逻辑',
   rows: 5,
   editor: 'ace',
   input: true,
@@ -156,9 +156,9 @@ var _default = [{
 }, {
   type: 'select',
   key: 'theme',
-  label: 'Theme',
+  label: '主题',
   input: true,
-  tooltip: 'The color theme of this button.',
+  tooltip: '这个按钮的颜色主题',
   dataSrc: 'values',
   weight: 140,
   data: {
@@ -185,49 +185,49 @@ var _default = [{
 }, {
   type: 'select',
   key: 'size',
-  label: 'Size',
+  label: '大小',
   input: true,
-  tooltip: 'The size of this button.',
+  tooltip: '按钮的大小',
   dataSrc: 'values',
   weight: 150,
   data: {
     values: [{
-      label: 'Extra Small',
+      label: '极小',
       value: 'xs'
     }, {
-      label: 'Small',
+      label: '小',
       value: 'sm'
     }, {
-      label: 'Medium',
+      label: '中',
       value: 'md'
     }, {
-      label: 'Large',
+      label: '大',
       value: 'lg'
     }]
   }
 }, {
   type: 'textfield',
   key: 'leftIcon',
-  label: 'Left Icon',
+  label: '左图标',
   input: true,
-  placeholder: 'Enter icon classes',
-  tooltip: "This is the full icon class string to show the icon. Example: 'fa fa-plus'",
+  placeholder: '输入图标Class',
+  tooltip: "这是显示图标的完整图标类字符串。例如:'fa fa-plus'",
   weight: 160
 }, {
   type: 'textfield',
   key: 'rightIcon',
-  label: 'Right Icon',
+  label: '右图标',
   input: true,
-  placeholder: 'Enter icon classes',
-  tooltip: "This is the full icon class string to show the icon. Example: 'fa fa-plus'",
+  placeholder: '输入图标Class',
+  tooltip: "这是显示图标的完整图标类字符串。例如:'fa fa-plus'",
   weight: 170
 }, {
   type: 'select',
   input: true,
   weight: 180,
-  label: 'Shortcut',
+  label: '快照',
   key: 'shortcut',
-  tooltip: 'Shortcut for this component.',
+  tooltip: '显示的快照',
   dataSrc: 'custom',
   data: {
     custom: function custom(_ref) {
@@ -243,15 +243,15 @@ var _default = [{
 }, {
   type: 'checkbox',
   key: 'block',
-  label: 'Block Button',
+  label: '整行按钮',
   input: true,
   weight: 155,
-  tooltip: 'This control should span the full width of the bounding container.'
+  tooltip: '此控件应跨越边界容器的整个宽度'
 }, {
   type: 'checkbox',
   key: 'disableOnInvalid',
-  label: 'Disable on Form Invalid',
-  tooltip: 'This will disable this field if the form is invalid.',
+  label: '表单无效',
+  tooltip: '如果表单无效，将禁用此字段',
   input: true,
   weight: 620
 }];
