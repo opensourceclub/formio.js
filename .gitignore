@@ -1,7 +1,6 @@
 _site
 dist
 docs
-app
 lib
 dump.rdb
 .DS_Store
