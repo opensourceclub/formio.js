@@ -3,9 +3,9 @@ export default [
     type: 'checkbox',
     input: true,
     key: 'enableDate',
-    label: 'Enable Date Input',
+    label: '允许手动输入',
     weight: 0,
-    tooltip: 'Enables date input for this field.'
+    tooltip: '启用此字段的日期手动输入'
   },
   {
     type: 'textfield',

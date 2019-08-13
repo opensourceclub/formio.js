@@ -1,4 +1,4 @@
-import EditFormUtils from './utils';
+// import EditFormUtils from './utils';
 /* eslint-disable max-len */
 export default [
   {

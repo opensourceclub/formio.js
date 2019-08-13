@@ -12,13 +12,13 @@ export default function(...extend) {
       components: DateTimeEditDisplay
     },
     {
-      label: 'Date',
+      label: '日期',
       key: 'date',
       weight: 1,
       components: DateTimeEditDate
     },
     {
-      label: 'Time',
+      label: '时间',
       key: 'time',
       weight: 2,
       components: DateTimeEditTime

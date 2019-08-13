@@ -823,7 +823,7 @@ export function getCurrencyAffixes({
     regex += `${decimalSeparator === '.' ? '\\.' : decimalSeparator}0{${decimalLimit}}`;
   }
   regex += '(.*)?';
-  const parts = (100).toLocaleString(lang, {
+  const parts = Number(100).toLocaleString(lang, {
     style: 'currency',
     currency,
     useGrouping: true,

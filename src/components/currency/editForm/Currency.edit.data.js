@@ -4,8 +4,8 @@ export default [
     input: true,
     weight: 50,
     key: 'currency',
-    label: 'Currency',
-    tooltip: 'The currency to use in currency formatting. Possible values are (ISO-4217) currency codes.',
+    label: '货币单位',
+    tooltip: '货币格式中使用的货币。可能的值是(ISO-4217)货币代码',
     defaultValue: 'USD',
     dataSrc: 'values',
     data: {

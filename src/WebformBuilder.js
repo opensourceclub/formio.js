@@ -215,7 +215,7 @@ export default class WebformBuilder extends Component {
         new Tooltip(component.refs.copyComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: this.t('Copy')
+          title: this.t('复制')
         });
 
         component.addEventListener(component.refs.copyComponent, 'click', () =>
@@ -226,7 +226,7 @@ export default class WebformBuilder extends Component {
         const pasteToolTip = new Tooltip(component.refs.pasteComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: this.t('Paste below')
+          title: this.t('粘贴')
         });
 
         component.addEventListener(component.refs.pasteComponent, 'click', () => {
@@ -239,7 +239,7 @@ export default class WebformBuilder extends Component {
         new Tooltip(component.refs.moveComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: this.t('Move')
+          title: this.t('移动')
         });
       }
 
@@ -249,7 +249,7 @@ export default class WebformBuilder extends Component {
         new Tooltip(component.refs.editComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: this.t('Edit')
+          title: this.t('编辑')
         });
 
         component.addEventListener(component.refs.editComponent, 'click', () =>
@@ -260,7 +260,7 @@ export default class WebformBuilder extends Component {
         new Tooltip(component.refs.removeComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: this.t('Remove')
+          title: this.t('删除')
         });
 
         component.addEventListener(component.refs.removeComponent, 'click', () =>
