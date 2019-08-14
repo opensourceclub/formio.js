@@ -570,7 +570,7 @@ export default class SelectComponent extends Field {
       }], 'value', 'label', true);
     }
     else {
-      this.addOption('', this.t('loading...'));
+      this.addOption('', this.t('加载中...'));
     }
     this.triggerUpdate();
   }
@@ -661,9 +661,9 @@ export default class SelectComponent extends Field {
       addItemText: false,
       placeholder: !!this.component.placeholder,
       placeholderValue: placeholderValue,
-      noResultsText: this.t('No results found'),
-      noChoicesText: this.t('No choices to choose from'),
-      searchPlaceholderValue: this.t('Type to search'),
+      noResultsText: this.t('未找到结果'),
+      noChoicesText: this.t('没有可选项'),
+      searchPlaceholderValue: this.t('搜索'),
       shouldSort: false,
       position: (this.component.dropdown || 'auto'),
       searchEnabled: useSearch,

@@ -76,7 +76,7 @@ export default [
           <small>
             <p>输入自定义验证代码</p>
             <p>必须将 <strong>valid</strong> 变量指定为 <strong>true</strong> 或者错误消息提示.</p>
-            <h5>Example:</h5>
+            <h5>例如:</h5>
             <pre>valid = (input === '乔') ? true : '你名字必须是 "乔"';</pre>
           </small>`
       },
@@ -109,7 +109,7 @@ export default [
         tag: 'div',
         /* eslint-disable prefer-template */
         content: '<p>使用执行自定义逻辑 <a href="http://jsonlogic.com/" target="_blank">JSON</a>.</p>' +
-          '<h5>举例:</h5>' +
+          '<h5>例如:</h5>' +
           '<pre>' + JSON.stringify({
             "if": [
               { "===": [{ "var": "input" }, "博"] },
