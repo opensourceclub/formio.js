@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _TextField = _interopRequireDefault(require("../textfield/TextField"));
+var _Component2 = _interopRequireDefault(require("../_classes/component/Component"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,36 +53,58 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var HTMLComponent =
 /*#__PURE__*/
-function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+function (_Component) {
+  _inherits(HTMLComponent, _Component);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function HTMLComponent() {
+    _classCallCheck(this, HTMLComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(HTMLComponent).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
+  _createClass(HTMLComponent, [{
+    key: "render",
+    value: function render() {
+      return _get(_getPrototypeOf(HTMLComponent.prototype), "render", this).call(this, this.renderTemplate('html', {
+        component: this.component,
+        tag: this.component.tag,
+        attrs: this.component.attrs || {},
+        content: this.content
+      }));
+    }
+  }, {
+    key: "attach",
+    value: function attach(element) {
+      var _this = this;
 
-      this.validators.push('email');
+      this.loadRefs(element, {
+        html: 'single'
+      });
+
+      if (this.component.refreshOnChange) {
+        this.on('change', function () {
+          if (_this.refs.html) {
+            _this.setContent(_this.refs.html, _this.content);
+          }
+        }, true);
+      }
+
+      _get(_getPrototypeOf(HTMLComponent.prototype), "attach", this).call(this, element);
     }
   }, {
     key: "defaultSchema",
     get: function get() {
-      return EmailComponent.schema();
+      return HTMLComponent.schema();
     }
   }, {
-    key: "inputInfo",
+    key: "content",
     get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
-
-      info.attr.type = this.component.mask ? 'password' : 'email';
-      return info;
+      return this.component.content ? this.interpolate(this.component.content, {
+        data: this.data,
+        row: this.row
+      }) : '';
     }
   }], [{
     key: "schema",
@@ -91,31 +113,31 @@ function (_TextFieldComponent) {
         extend[_key] = arguments[_key];
       }
 
-      return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+      return _Component2.default.schema.apply(_Component2.default, [{
+        label: 'HTML',
+        type: 'htmlelement',
+        tag: 'p',
+        attrs: [],
+        content: '',
+        input: false,
+        persistent: false
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
-        group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        title: 'HTML Element',
+        group: 'layout',
+        icon: 'code',
+        weight: 0,
+        documentation: 'http://help.form.io/userguide/#html-element-component',
+        schema: HTMLComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
-}(_TextField.default);
+  return HTMLComponent;
+}(_Component2.default);
 
-exports.default = EmailComponent;
+exports.default = HTMLComponent;

@@ -6,8 +6,6 @@ require("core-js/modules/es.symbol.description");
 
 require("core-js/modules/es.symbol.iterator");
 
-require("core-js/modules/es.array.concat");
-
 require("core-js/modules/es.array.iterator");
 
 require("core-js/modules/es.object.get-own-property-descriptor");
@@ -20,6 +18,8 @@ require("core-js/modules/es.reflect.get");
 
 require("core-js/modules/es.string.iterator");
 
+require("core-js/modules/es.string.replace");
+
 require("core-js/modules/web.dom-collections.iterator");
 
 Object.defineProperty(exports, "__esModule", {
@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _TextField = _interopRequireDefault(require("../textfield/TextField"));
+var _Component2 = _interopRequireDefault(require("../component/Component"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,69 +53,33 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var Field =
 /*#__PURE__*/
-function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+function (_Component) {
+  _inherits(Field, _Component);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function Field() {
+    _classCallCheck(this, Field);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Field).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
-
-      this.validators.push('email');
-    }
-  }, {
-    key: "defaultSchema",
-    get: function get() {
-      return EmailComponent.schema();
-    }
-  }, {
-    key: "inputInfo",
-    get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
-
-      info.attr.type = this.component.mask ? 'password' : 'email';
-      return info;
-    }
-  }], [{
-    key: "schema",
-    value: function schema() {
-      for (var _len = arguments.length, extend = new Array(_len), _key = 0; _key < _len; _key++) {
-        extend[_key] = arguments[_key];
+  _createClass(Field, [{
+    key: "render",
+    value: function render(element) {
+      if (this.noField) {
+        return _get(_getPrototypeOf(Field.prototype), "render", this).call(this, element);
+      } else {
+        return _get(_getPrototypeOf(Field.prototype), "render", this).call(this, this.renderTemplate('field', {
+          label: this.labelInfo,
+          element: element,
+          tooltip: this.interpolate(this.component.tooltip || '').replace(/(?:\r\n|\r|\n)/g, '<br />')
+        }));
       }
-
-      return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
-      }].concat(extend));
-    }
-  }, {
-    key: "builderInfo",
-    get: function get() {
-      return {
-        title: '电子邮箱',
-        group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
-      };
     }
   }]);
 
-  return EmailComponent;
-}(_TextField.default);
+  return Field;
+}(_Component2.default);
 
-exports.default = EmailComponent;
+exports.default = Field;

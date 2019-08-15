@@ -29,6 +29,8 @@ exports.default = void 0;
 
 var _TextField = _interopRequireDefault(require("../textfield/TextField"));
 
+var _lodash = _interopRequireDefault(require("lodash"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -53,35 +55,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var PasswordComponent =
 /*#__PURE__*/
 function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+  _inherits(PasswordComponent, _TextFieldComponent);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function PasswordComponent() {
+    _classCallCheck(this, PasswordComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(PasswordComponent).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
-
-      this.validators.push('email');
-    }
-  }, {
+  _createClass(PasswordComponent, [{
     key: "defaultSchema",
     get: function get() {
-      return EmailComponent.schema();
+      return _lodash.default.omit(PasswordComponent.schema(), ['protected', 'tableView']);
     }
   }, {
     key: "inputInfo",
     get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
+      var info = _get(_getPrototypeOf(PasswordComponent.prototype), "inputInfo", this);
 
-      info.attr.type = this.component.mask ? 'password' : 'email';
+      info.attr.type = 'password';
       return info;
     }
   }], [{
@@ -92,30 +87,28 @@ function (_TextFieldComponent) {
       }
 
       return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+        type: 'password',
+        label: '密码框',
+        key: 'password',
+        protected: true,
+        tableView: false
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
-        group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        title: '密码框',
+        icon: 'asterisk',
+        group: 'basic',
+        documentation: 'http://help.form.io/userguide/#password',
+        weight: 40,
+        schema: PasswordComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
+  return PasswordComponent;
 }(_TextField.default);
 
-exports.default = EmailComponent;
+exports.default = PasswordComponent;

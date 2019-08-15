@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _TextField = _interopRequireDefault(require("../textfield/TextField"));
+var _Select = _interopRequireDefault(require("../select/Select"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,36 +53,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var ResourceComponent =
 /*#__PURE__*/
-function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+function (_SelectComponent) {
+  _inherits(ResourceComponent, _SelectComponent);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function ResourceComponent() {
+    _classCallCheck(this, ResourceComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ResourceComponent).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
+  _createClass(ResourceComponent, [{
     key: "init",
     value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
+      _get(_getPrototypeOf(ResourceComponent.prototype), "init", this).call(this);
 
-      this.validators.push('email');
+      this.component.dataSrc = 'resource';
+      this.component.data = {
+        resource: this.component.resource
+      };
     }
   }, {
     key: "defaultSchema",
     get: function get() {
-      return EmailComponent.schema();
-    }
-  }, {
-    key: "inputInfo",
-    get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
-
-      info.attr.type = this.component.mask ? 'password' : 'email';
-      return info;
+      return ResourceComponent.schema();
     }
   }], [{
     key: "schema",
@@ -91,31 +86,31 @@ function (_TextFieldComponent) {
         extend[_key] = arguments[_key];
       }
 
-      return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+      return _Select.default.schema.apply(_Select.default, [{
+        type: 'resource',
+        label: 'Resource',
+        key: 'resource',
+        dataSrc: 'resource',
+        resource: '',
+        project: '',
+        template: '<span>{{ item.data }}</span>'
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
-        group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        title: 'Resource',
+        group: 'premium',
+        icon: 'files-o',
+        weight: 90,
+        documentation: 'http://help.form.io/userguide/#resource',
+        schema: ResourceComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
-}(_TextField.default);
+  return ResourceComponent;
+}(_Select.default);
 
-exports.default = EmailComponent;
+exports.default = ResourceComponent;

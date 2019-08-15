@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _TextField = _interopRequireDefault(require("../textfield/TextField"));
+var _Input2 = _interopRequireDefault(require("../_classes/input/Input"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,36 +53,51 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var HiddenComponent =
 /*#__PURE__*/
-function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+function (_Input) {
+  _inherits(HiddenComponent, _Input);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function HiddenComponent() {
+    _classCallCheck(this, HiddenComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(HiddenComponent).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
-
-      this.validators.push('email');
+  _createClass(HiddenComponent, [{
+    key: "labelIsHidden",
+    value: function labelIsHidden() {
+      return true;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(value, flags) {
+      return this.updateValue(value, flags);
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.dataValue;
     }
   }, {
     key: "defaultSchema",
     get: function get() {
-      return EmailComponent.schema();
+      return HiddenComponent.schema();
     }
   }, {
     key: "inputInfo",
     get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
+      var info = _get(_getPrototypeOf(HiddenComponent.prototype), "elementInfo", this).call(this);
 
-      info.attr.type = this.component.mask ? 'password' : 'email';
+      info.type = 'input';
+      info.attr.type = 'hidden';
+      info.changeEvent = 'change';
       return info;
+    }
+  }, {
+    key: "emptyValue",
+    get: function get() {
+      return '';
     }
   }], [{
     key: "schema",
@@ -91,31 +106,27 @@ function (_TextFieldComponent) {
         extend[_key] = arguments[_key];
       }
 
-      return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+      return _Input2.default.schema.apply(_Input2.default, [{
+        type: 'hidden',
+        tableView: false,
+        inputType: 'hidden'
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
-        group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        title: 'Hidden',
+        group: 'data',
+        icon: 'user-secret',
+        weight: 0,
+        documentation: 'http://help.form.io/userguide/#hidden',
+        schema: HiddenComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
-}(_TextField.default);
+  return HiddenComponent;
+}(_Input2.default);
 
-exports.default = EmailComponent;
+exports.default = HiddenComponent;

@@ -35,10 +35,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
@@ -49,42 +45,20 @@ function _superPropBase(object, property) { while (!Object.prototype.hasOwnPrope
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var UrlComponent =
 /*#__PURE__*/
 function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+  _inherits(UrlComponent, _TextFieldComponent);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
-  }
-
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
-
-      this.validators.push('email');
-    }
-  }, {
-    key: "defaultSchema",
-    get: function get() {
-      return EmailComponent.schema();
-    }
-  }, {
-    key: "inputInfo",
-    get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
-
-      info.attr.type = this.component.mask ? 'password' : 'email';
-      return info;
-    }
-  }], [{
+  _createClass(UrlComponent, null, [{
     key: "schema",
     value: function schema() {
       for (var _len = arguments.length, extend = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -92,30 +66,54 @@ function (_TextFieldComponent) {
       }
 
       return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+        type: 'url',
+        label: 'Url',
+        key: 'url',
+        inputType: 'url'
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
+        title: 'Url',
         group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        icon: 'link',
+        documentation: 'http://help.form.io/userguide/#url',
+        weight: 20,
+        schema: UrlComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
+  function UrlComponent(component, options, data) {
+    var _this;
+
+    _classCallCheck(this, UrlComponent);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UrlComponent).call(this, component, options, data));
+
+    _this.validators.push('url');
+
+    return _this;
+  }
+
+  _createClass(UrlComponent, [{
+    key: "elementInfo",
+    value: function elementInfo() {
+      var info = _get(_getPrototypeOf(UrlComponent.prototype), "elementInfo", this).call(this);
+
+      info.attr.type = this.component.mask ? 'password' : 'url';
+      return info;
+    }
+  }, {
+    key: "defaultSchema",
+    get: function get() {
+      return UrlComponent.schema();
+    }
+  }]);
+
+  return UrlComponent;
 }(_TextField.default);
 
-exports.default = EmailComponent;
+exports.default = UrlComponent;

@@ -10,13 +10,9 @@ require("core-js/modules/es.array.concat");
 
 require("core-js/modules/es.array.iterator");
 
-require("core-js/modules/es.object.get-own-property-descriptor");
-
 require("core-js/modules/es.object.get-prototype-of");
 
 require("core-js/modules/es.object.to-string");
-
-require("core-js/modules/es.reflect.get");
 
 require("core-js/modules/es.string.iterator");
 
@@ -43,46 +39,27 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
-
-function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var EmailComponent =
+var PhoneNumberComponent =
 /*#__PURE__*/
 function (_TextFieldComponent) {
-  _inherits(EmailComponent, _TextFieldComponent);
+  _inherits(PhoneNumberComponent, _TextFieldComponent);
 
-  function EmailComponent() {
-    _classCallCheck(this, EmailComponent);
+  function PhoneNumberComponent() {
+    _classCallCheck(this, PhoneNumberComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EmailComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(PhoneNumberComponent).apply(this, arguments));
   }
 
-  _createClass(EmailComponent, [{
-    key: "init",
-    value: function init() {
-      _get(_getPrototypeOf(EmailComponent.prototype), "init", this).call(this);
-
-      this.validators.push('email');
-    }
-  }, {
+  _createClass(PhoneNumberComponent, [{
     key: "defaultSchema",
     get: function get() {
-      return EmailComponent.schema();
-    }
-  }, {
-    key: "inputInfo",
-    get: function get() {
-      var info = _get(_getPrototypeOf(EmailComponent.prototype), "inputInfo", this);
-
-      info.attr.type = this.component.mask ? 'password' : 'email';
-      return info;
+      return PhoneNumberComponent.schema();
     }
   }], [{
     key: "schema",
@@ -92,30 +69,28 @@ function (_TextFieldComponent) {
       }
 
       return _TextField.default.schema.apply(_TextField.default, [{
-        type: 'email',
-        label: '电子邮箱',
-        key: 'email',
-        inputType: 'email',
-        kickbox: {
-          enabled: false
-        }
+        type: 'phoneNumber',
+        label: '手机号码',
+        key: 'phoneNumber',
+        inputType: 'tel',
+        inputMask: '13511111111'
       }].concat(extend));
     }
   }, {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '电子邮箱',
+        title: '手机号码',
         group: 'advanced',
-        icon: 'at',
-        documentation: 'http://help.form.io/userguide/#email',
-        weight: 10,
-        schema: EmailComponent.schema()
+        icon: 'phone-square',
+        weight: 30,
+        documentation: 'http://help.form.io/userguide/#phonenumber',
+        schema: PhoneNumberComponent.schema()
       };
     }
   }]);
 
-  return EmailComponent;
+  return PhoneNumberComponent;
 }(_TextField.default);
 
-exports.default = EmailComponent;
+exports.default = PhoneNumberComponent;
