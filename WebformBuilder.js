@@ -355,7 +355,7 @@ function (_Component) {
         new _tooltip.default(component.refs.copyComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: _this.t('Copy')
+          title: _this.t('复制')
         });
         component.addEventListener(component.refs.copyComponent, 'click', function () {
           return _this.copyComponent(component);
@@ -366,7 +366,7 @@ function (_Component) {
         var pasteToolTip = new _tooltip.default(component.refs.pasteComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: _this.t('Paste below')
+          title: _this.t('粘贴')
         });
         component.addEventListener(component.refs.pasteComponent, 'click', function () {
           pasteToolTip.hide();
@@ -379,7 +379,7 @@ function (_Component) {
         new _tooltip.default(component.refs.moveComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: _this.t('Move')
+          title: _this.t('移动')
         });
       }
 
@@ -389,7 +389,7 @@ function (_Component) {
         new _tooltip.default(component.refs.editComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: _this.t('Edit')
+          title: _this.t('编辑')
         });
         component.addEventListener(component.refs.editComponent, 'click', function () {
           return _this.editComponent(component.component, parent);
@@ -400,7 +400,7 @@ function (_Component) {
         new _tooltip.default(component.refs.removeComponent, {
           trigger: 'hover',
           placement: 'top',
-          title: _this.t('Remove')
+          title: _this.t('删除')
         });
         component.addEventListener(component.refs.removeComponent, 'click', function () {
           return _this.removeComponent(component.component, parent);

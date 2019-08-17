@@ -4,10 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _utils = _interopRequireDefault(require("../../_classes/component/editForm/utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+// import EditFormUtils from '../../_classes/component/editForm/utils';
 
 /* eslint-disable max-len */
 var _default = [// EditFormUtils.javaScriptValue('Custom Default Value', 'customDefaultValue', 'customDefaultValue', 120,

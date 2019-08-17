@@ -78,7 +78,7 @@ var _default = [{
   }, {
     type: 'htmlelement',
     tag: 'div',
-    content: "\n          <small>\n            <p>\u8F93\u5165\u81EA\u5B9A\u4E49\u9A8C\u8BC1\u4EE3\u7801</p>\n            <p>\u5FC5\u987B\u5C06 <strong>valid</strong> \u53D8\u91CF\u6307\u5B9A\u4E3A <strong>true</strong> \u6216\u8005\u9519\u8BEF\u6D88\u606F\u63D0\u793A.</p>\n            <h5>Example:</h5>\n            <pre>valid = (input === '\u4E54') ? true : '\u4F60\u540D\u5B57\u5FC5\u987B\u662F \"\u4E54\"';</pre>\n          </small>"
+    content: "\n          <small>\n            <p>\u8F93\u5165\u81EA\u5B9A\u4E49\u9A8C\u8BC1\u4EE3\u7801</p>\n            <p>\u5FC5\u987B\u5C06 <strong>valid</strong> \u53D8\u91CF\u6307\u5B9A\u4E3A <strong>true</strong> \u6216\u8005\u9519\u8BEF\u6D88\u606F\u63D0\u793A.</p>\n            <h5>\u4F8B\u5982:</h5>\n            <pre>valid = (input === '\u4E54') ? true : '\u4F60\u540D\u5B57\u5FC5\u987B\u662F \"\u4E54\"';</pre>\n          </small>"
   }, {
     type: 'well',
     components: [{
@@ -103,7 +103,7 @@ var _default = [{
     tag: 'div',
 
     /* eslint-disable prefer-template */
-    content: '<p>使用执行自定义逻辑 <a href="http://jsonlogic.com/" target="_blank">JSON</a>.</p>' + '<h5>举例:</h5>' + '<pre>' + JSON.stringify({
+    content: '<p>使用执行自定义逻辑 <a href="http://jsonlogic.com/" target="_blank">JSON</a>.</p>' + '<h5>例如:</h5>' + '<pre>' + JSON.stringify({
       "if": [{
         "===": [{
           "var": "input"

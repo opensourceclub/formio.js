@@ -11,7 +11,7 @@ var _default = [{
   tooltip: 'Select the type of widget you\'d like to use',
   key: 'widget',
   defaultValue: 'choicesjs',
-  label: 'Widget Type',
+  label: '控件类型',
   dataSrc: 'values',
   data: {
     values: [{

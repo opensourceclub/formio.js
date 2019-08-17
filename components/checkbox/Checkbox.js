@@ -286,7 +286,7 @@ function (_Field) {
       return _Field2.default.schema.apply(_Field2.default, [{
         type: 'checkbox',
         inputType: 'checkbox',
-        label: '多选框',
+        label: '复选框',
         key: 'checkbox',
         dataGridLabel: true,
         labelPosition: 'right',
@@ -298,7 +298,7 @@ function (_Field) {
     key: "builderInfo",
     get: function get() {
       return {
-        title: '多选框',
+        title: '复选框',
         group: 'basic',
         icon: 'check-square',
         documentation: 'http://help.form.io/userguide/#checkbox',

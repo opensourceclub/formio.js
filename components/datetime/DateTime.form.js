@@ -28,12 +28,12 @@ function _default() {
     key: 'display',
     components: _DateTimeEdit3.default
   }, {
-    label: 'Date',
+    label: '日期',
     key: 'date',
     weight: 1,
     components: _DateTimeEdit2.default
   }, {
-    label: 'Time',
+    label: '时间',
     key: 'time',
     weight: 2,
     components: _DateTimeEdit4.default

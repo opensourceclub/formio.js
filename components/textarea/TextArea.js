@@ -710,7 +710,7 @@ function (_TextFieldComponent) {
         label: '文本域',
         key: 'textArea',
         rows: 3,
-        wysiwyg: false,
+        // wysiwyg: false,
         editor: '',
         inputFormat: 'html',
         validate: {

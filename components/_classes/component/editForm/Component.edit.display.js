@@ -56,7 +56,7 @@ var _default = [{
   type: 'textarea',
   input: true,
   key: 'tooltip',
-  label: '多行文本输入区',
+  label: '提示文本',
   placeholder: '添加提示，请在这里输入文本',
   tooltip: '在此字段的旁添加提示'
 }, {
@@ -74,7 +74,7 @@ var _default = [{
   key: 'tabindex',
   label: ' tab 序列',
   placeholder: '0',
-  tooltip: '设置此组件的tabindex属性以覆盖表单的Tab顺序. 参考 <a href=\\\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\\\'>MDN documentation</a> on tabindex for more information.'
+  tooltip: '设置此组件的tabindex属性以覆盖表单的Tab顺序. 参考 <a href=\\\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\\\'>MDN 文档</a> 获取 tabindex 更多信息'
 }, {
   weight: 1100,
   type: 'checkbox',
@@ -99,7 +99,7 @@ var _default = [{
 }, {
   weight: 1370,
   type: 'checkbox',
-  label: 'Show Label in DataGrid',
+  label: '在数据表格中显示标签',
   tooltip: '在数据表格中显示标签',
   key: 'dataGridLabel',
   input: true,

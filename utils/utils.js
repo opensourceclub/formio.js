@@ -1034,12 +1034,12 @@ function getNumberDecimalLimit(component) {
 }
 
 function getCurrencyAffixes(_ref) {
-  var _ref$currency = _ref.currency,
-      currency = _ref$currency === void 0 ? 'USD' : _ref$currency,
+  var currency = _ref.currency,
       decimalLimit = _ref.decimalLimit,
       decimalSeparator = _ref.decimalSeparator,
       lang = _ref.lang;
-  // Get the prefix and suffix from the localized string.
+  currency = currency ? currency : 'USD'; // Get the prefix and suffix from the localized string.
+
   var regex = '(.*)?100';
 
   if (decimalLimit) {
@@ -1047,7 +1047,7 @@ function getCurrencyAffixes(_ref) {
   }
 
   regex += '(.*)?';
-  var parts = 100 .toLocaleString(lang, {
+  var parts = Number(100).toLocaleString(lang, {
     style: 'currency',
     currency: currency,
     useGrouping: true,
