@@ -6,7 +6,7 @@ export default class CheckBoxComponent extends Field {
     return Field.schema({
       type: 'checkbox',
       inputType: 'checkbox',
-      label: '多选框',
+      label: '复选框',
       key: 'checkbox',
       dataGridLabel: true,
       labelPosition: 'right',
@@ -17,7 +17,7 @@ export default class CheckBoxComponent extends Field {
 
   static get builderInfo() {
     return {
-      title: '多选框',
+      title: '复选框',
       group: 'basic',
       icon: 'check-square',
       documentation: 'http://help.form.io/userguide/#checkbox',
