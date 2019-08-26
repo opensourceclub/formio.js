@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<div class=\"{{classes}} ui form\" ref=\"webform\" novalidate>{{children}}</div>\r\n";
+var form = "<div class=\"{{classes}} ui form\" ref=\"webform\" novalidate>{{children}}</div>\n";
 
 /* babel-plugin-inline-import './builder.hbs' */
-var builder = "<div class=\"ui visible message\"><p>{{ component.title }}</p></div>\r\n";
+var builder = "<div class=\"ui visible message\"><p>{{ component.title }}</p></div>\n";
 var _default = {
   form: form,
   builder: builder

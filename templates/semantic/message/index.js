@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<div class=\"ui pointing red basic label\">\r\n  {{message}}\r\n</div>\r\n";
+var form = "<div class=\"ui pointing red basic label\">\n  {{message}}\n</div>\n";
 var _default = {
   form: form
 };

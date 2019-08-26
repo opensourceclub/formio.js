@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<tr ref=\"row\">\r\n  <td>\r\n    {{element}}\r\n  </td>\r\n  {% if (!disabled) { %}\r\n  <td>\r\n    <button type=\"button\" class=\"btn btn-secondary\" ref=\"removeRow\">\r\n      <i class=\"{{iconClass('remove-circle')}}\"></i>\r\n    </button>\r\n  </td>\r\n  {% } %}\r\n</tr>\r\n";
+var form = "<tr ref=\"row\">\n  <td>\n    {{element}}\n  </td>\n  {% if (!disabled) { %}\n  <td>\n    <button type=\"button\" class=\"btn btn-secondary\" ref=\"removeRow\">\n      <i class=\"{{iconClass('remove-circle')}}\"></i>\n    </button>\n  </td>\n  {% } %}\n</tr>\n";
 var _default = {
   form: form
 };

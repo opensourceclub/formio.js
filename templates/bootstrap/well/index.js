@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<div class=\"card card-body bg-light\">\r\n  <div ref=\"{{nestedKey}}\">\r\n    {{children}}\r\n  </div>\r\n</div>\r\n";
+var form = "<div class=\"card card-body bg-light\">\n  <div ref=\"{{nestedKey}}\">\n    {{children}}\n  </div>\n</div>\n";
 var _default = {
   form: form
 };

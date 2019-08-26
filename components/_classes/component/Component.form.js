@@ -11,11 +11,19 @@ exports.default = _default;
 
 var _lodash = _interopRequireDefault(require("lodash"));
 
-var _ComponentEdit = _interopRequireDefault(require("./editForm/Component.edit.data"));
+var _ComponentEdit = _interopRequireDefault(require("./editForm/Component.edit.conditional"));
 
-var _ComponentEdit2 = _interopRequireDefault(require("./editForm/Component.edit.display"));
+var _ComponentEdit2 = _interopRequireDefault(require("./editForm/Component.edit.data"));
 
-var _ComponentEdit3 = _interopRequireDefault(require("./editForm/Component.edit.validation"));
+var _ComponentEdit3 = _interopRequireDefault(require("./editForm/Component.edit.api"));
+
+var _ComponentEdit4 = _interopRequireDefault(require("./editForm/Component.edit.display"));
+
+var _ComponentEdit5 = _interopRequireDefault(require("./editForm/Component.edit.logic"));
+
+var _ComponentEdit6 = _interopRequireDefault(require("./editForm/Component.edit.validation"));
+
+var _ComponentEdit7 = _interopRequireDefault(require("./editForm/Component.edit.layout"));
 
 var _utils = _interopRequireDefault(require("./editForm/utils"));
 
@@ -33,17 +41,37 @@ function _default() {
       label: '属性',
       key: 'display',
       weight: 0,
-      components: _ComponentEdit2.default
+      components: _ComponentEdit4.default
     }, {
       label: '数据',
       key: 'data',
       weight: 10,
-      components: _ComponentEdit.default
+      components: _ComponentEdit2.default
     }, {
       label: '验证',
       key: 'validation',
       weight: 20,
+      components: _ComponentEdit6.default
+    }, {
+      label: 'API',
+      key: 'api',
+      weight: 30,
       components: _ComponentEdit3.default
+    }, {
+      label: '条件',
+      key: 'conditional',
+      weight: 40,
+      components: _ComponentEdit.default
+    }, {
+      label: '逻辑',
+      key: 'logic',
+      weight: 50,
+      components: _ComponentEdit5.default
+    }, {
+      label: '布局',
+      key: 'layout',
+      weight: 60,
+      components: _ComponentEdit7.default
     }]
   }]).concat(extend.map(function (items) {
     return {

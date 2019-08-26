@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<div class=\"builder-components drag-container {{type}}\" ref=\"{{key}}-container\">\r\n  {{html}}\r\n</div>\r\n";
+var form = "<div class=\"builder-components drag-container {{type}}\" ref=\"{{key}}-container\">\n  {{html}}\n</div>\n";
 var _default = {
   form: form
 };

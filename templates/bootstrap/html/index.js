@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 /* babel-plugin-inline-import './form.hbs' */
-var form = "<{{tag}} class=\"{{ component.className }}\" ref=\"html\"\r\n  {% attrs.forEach(function(attr) { %}\r\n    {{attr.attr}}=\"{{attr.value}}\"\r\n  {% }) %}\r\n>{{content}}</{{tag}}>\r\n";
+var form = "<{{tag}} class=\"{{ component.className }}\" ref=\"html\"\n  {% attrs.forEach(function(attr) { %}\n    {{attr.attr}}=\"{{attr.value}}\"\n  {% }) %}\n>{{content}}</{{tag}}>\n";
 var _default = {
   form: form
 };

@@ -1089,19 +1089,19 @@ function (_Component) {
         advanced: {
           title: '特殊控件',
           weight: 10
-        } // layout: {
-        //   title: 'UI布局',
-        //   weight: 20
-        // },
-        // data: {
-        //   title: '数据展示',
-        //   weight: 30
-        // },
-        // premium: {
-        //   title: '高级控件',
-        //   weight: 40
-        // },
-
+        },
+        layout: {
+          title: 'UI布局',
+          weight: 20
+        },
+        data: {
+          title: '数据展示',
+          weight: 30
+        },
+        premium: {
+          title: '高级控件',
+          weight: 40
+        }
       };
     }
   }, {
