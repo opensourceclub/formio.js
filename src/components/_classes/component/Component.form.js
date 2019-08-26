@@ -1,8 +1,12 @@
 import _ from 'lodash';
 
+import ComponentEditConditional from './editForm/Component.edit.conditional';
 import ComponentEditData from './editForm/Component.edit.data';
+import ComponentEditAPI from './editForm/Component.edit.api';
 import ComponentEditDisplay from './editForm/Component.edit.display';
+import ComponentEditLogic from './editForm/Component.edit.logic';
 import ComponentEditValidation from './editForm/Component.edit.validation';
+import ComponentEditLayout from './editForm/Component.edit.layout';
 import EditFormUtils from './editForm/utils';
 
 export default function(...extend) {
@@ -28,6 +32,30 @@ export default function(...extend) {
           key: 'validation',
           weight: 20,
           components: ComponentEditValidation
+        },
+        {
+          label: 'API',
+          key: 'api',
+          weight: 30,
+          components: ComponentEditAPI
+        },
+        {
+          label: '条件',
+          key: 'conditional',
+          weight: 40,
+          components: ComponentEditConditional
+        },
+        {
+          label: '逻辑',
+          key: 'logic',
+          weight: 50,
+          components: ComponentEditLogic
+        },
+        {
+          label: '布局',
+          key: 'layout',
+          weight: 60,
+          components: ComponentEditLayout
         }
       ]
     }
